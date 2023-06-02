@@ -15,4 +15,6 @@ divSquare.onclick = function() {
 
   /* Создаём заголовок третьей величины с текущей датой */
   divSquare.innerHTML = "<h3>" + date + "</h3>";
+
+  
 };
