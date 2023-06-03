@@ -1,12 +1,14 @@
 body {
-  /* width: 100%; */
-  /* height: 100%; */
   min-width: 100vh;
   min-height: 100vh;
 
   margin: 0;
-  
+
   background-image: url(../images/background/white_4750x3250.jpg);
+
+  /* Хотел навесить сверху на картинку полупрозрачный чёрный, чтоб её затемнить
+     но, сук, это не так-то просто */
+  /* background-color: rgba(0, 0, 0, 0.5); */
 
   /* фон под размер вкладки: */
   background-size: cover;
@@ -16,24 +18,34 @@ body {
 
   /* делает невозможным прокручивание страницы (даже если контент выходит за неё): */
   /* overflow: hidden;  */
+  
 }
 
-.green_background {
+.green-background {
   background-color: green;
 }
 
 .h3_date {
   margin: 0 auto;
+  margin-top: 50px;
+
+  display: table;
 }
 
-.red_background {
+.red-background {
   background-color: brown;
 }
 
-.square {
+.div_square {
   width: 300px;
   height: 300px;
 
   margin: 0 auto;
-  /* margin-top: 300px; */
+  margin-top: 300px;
+
+  /* border-top: 1px solid #CADADD; Линия сверху, цвет совпадает с цветом фона */
+
+  /* Добавил "настройку прокрутки"?..
+     только для того, чтобы margin дочерних элементов работал внутри этого */
+  overflow: auto; 
 }
