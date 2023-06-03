@@ -1,0 +1,11 @@
+{
+  "name": "gallows",
+  "version": "1.0.0",
+  "description": "Group 31 project for practice in June 2023",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "31 Group",
+  "license": "ISC"
+}
