@@ -22,6 +22,10 @@ body {
   background-color: green;
 }
 
+.h3_date {
+  margin: 0 auto;
+}
+
 .red_background {
   background-color: brown;
 }
@@ -31,5 +35,5 @@ body {
   height: 300px;
 
   margin: 0 auto;
-  /* padding-top: 300px; */
+  /* margin-top: 300px; */
 }

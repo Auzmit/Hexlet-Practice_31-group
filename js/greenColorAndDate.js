@@ -14,6 +14,6 @@ divSquare.onclick = function() {
   divSquare.classList.add('green_background');
 
   /* Создаём заголовок третьей величины с текущей датой */
-  divSquare.innerHTML = "<h3>" + date + "</h3>";
+  divSquare.innerHTML = "<h3 class='h3_date'>" + date + "</h3>";
   
 };
