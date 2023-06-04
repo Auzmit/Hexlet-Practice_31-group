@@ -40,6 +40,10 @@ body {
   margin: 117px auto 117px auto;
 
   text-align: center;
+
+  /* Если на компе тыкать даже просто по пустому месту квадрата,
+     то заголовок может выделится - это бесит, поэтому отменяем */
+  user-select: none;
 }
 
 .red-background {
