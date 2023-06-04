@@ -1,5 +1,3 @@
-let date = new Date();
-
 /* Создайм константу h3, создающую заголовок третьего уровня */
 const h3 = document.createElement('h3');
 
@@ -20,7 +18,7 @@ divSquare.onclick = function() {
 
     /* Добавляем в divSquare элемент h3, в который добаляем текущую дату */
     this.appendChild(h3);
-    h3.innerHTML = date;
+    h3.innerHTML = new Date();
     h3.classList.add('h3_date');
     // console.log(divSquare.children);
   } else {

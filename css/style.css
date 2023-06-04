@@ -1,9 +1,16 @@
+.all {
+  width: inherit;
+  height: 100vh;
+  /* border-top: 1px solid transparent; */
+  overflow: auto;
+}
+
 body {
   min-width: 100vh;
   min-height: 100vh;
 
   margin: 0;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 
   background-image: url(../images/background/white_4750x3250.jpg);
 
@@ -13,6 +20,7 @@ body {
 
   /* фон под размер вкладки: */
   background-size: cover;
+  /* background-size: contain; */
 
   /* фон при прокручивании страницы будет на одном месте: */
   background-attachment: fixed;
@@ -29,10 +37,11 @@ body {
 }
 
 .h3_date {
-  margin: 0 auto;
-  margin-top: 50px;
-
   display: table;
+
+  margin: 117px auto 117px auto;
+
+  text-align: center;
 }
 
 .red-background {
@@ -45,8 +54,6 @@ body {
 
   margin: 0 auto;
   margin-top: 300px;
-
-  /* border-top: 1px solid #CADADD; Линия сверху, цвет совпадает с цветом фона */
 
   /* Добавил "настройку прокрутки"?..
      только для того, чтобы margin дочерних элементов работал внутри этого */
