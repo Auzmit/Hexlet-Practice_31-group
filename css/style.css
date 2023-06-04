@@ -34,10 +34,12 @@ body {
   background-color: green;
 }
 
-.h3_date {
+.h1_date {
   display: table;
 
-  margin: 117px auto 117px auto;
+  margin: auto;
+  margin-top: 20%;
+  /* margin: 117px auto 117px auto; */
 
   text-align: center;
 
@@ -53,6 +55,8 @@ body {
 .div_square {
   width: 300px;
   height: 300px;
+  /* width: 40%;
+  height = width; */
 
   margin: 0 auto;
   margin-top: 300px;

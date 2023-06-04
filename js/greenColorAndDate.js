@@ -1,5 +1,5 @@
-/* Создайм константу h3, создающую заголовок третьего уровня */
-const h3 = document.createElement('h3');
+/* Создайм константу h1, создающую заголовок первого уровня */
+const h1 = document.createElement('h1');
 
 /* Ищем в документе элемент с классом ".square" и заводим его в переменную */
 let divSquare = document.querySelector('.div_square');
@@ -16,18 +16,15 @@ divSquare.onclick = function() {
     /* Добавляем ему класс green_background */
     this.classList.add("green-background");
 
-    /* Добавляем в divSquare элемент h3, в который добаляем текущую дату */
-    this.appendChild(h3);
-    h3.innerHTML = new Date();
-    h3.classList.add('h3_date');
-    // console.log(divSquare.children);
+    /* Добавляем в divSquare элемент h1, в который добаляем текущую дату */
+    this.appendChild(h1);
+    h1.innerHTML = new Date();
+    h1.classList.add('h1_date');
   } else {
 
     /* ну, тут аналогично */
     this.classList.remove("green-background");
     this.classList.add("red-background");
-    this.removeChild(h3);
-
-    // divSquare.removeChild(h3);
+    this.removeChild(h1);
   }
 };
