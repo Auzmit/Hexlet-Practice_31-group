@@ -30,38 +30,62 @@ body {
   overflow: auto; 
 }
 
-.green-background {
-  background-color: green;
-}
+.div_click-me {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
 
-.h1_date {
-  display: table;
+  background-image: url(../images/up-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
 
-  margin: auto;
-  margin-top: 20%;
-  /* margin: 117px auto 117px auto; */
-
-  text-align: center;
-
-  /* Если на компе тыкать даже просто по пустому месту квадрата,
-     то заголовок может выделится - это бесит, поэтому отменяем */
-  user-select: none;
-}
-
-.red-background {
-  background-color: brown;
+  overflow: auto;
 }
 
 .div_square {
   width: 300px;
   height: 300px;
   /* width: 40%;
-  height = width; */
+  height: 40%; */
 
   margin: 0 auto;
   margin-top: 300px;
 
   /* Добавил "настройку прокрутки"?..
-     только для того, чтобы margin дочерних элементов работал внутри этого */
-  overflow: auto; 
+    только для того, чтобы margin дочерних элементов работал внутри этого */
+  overflow: auto;
 }
+
+.green-background {
+  background-color: green;
+}
+
+.h1_date {
+  /* я хз зачем это добавил */
+  display: table;
+
+  margin: auto;
+
+  /* Насколько я понял, любые проценты указываются от только
+    либо ширины либо высоты родителя */
+  margin-top: 20%;
+  /* margin: 117px auto 117px auto; */
+
+  text-align: center;
+
+  /* Если на компе тыкать даже просто по пустому месту квадрата,
+    то заголовок может выделится - это бесит, поэтому отменяем */
+  user-select: none;
+}
+
+.h2_click-me {
+  margin-top: 20%;
+  margin-left: 10%;
+
+  text-align: center;
+}
+
+.red-background {
+  background-color: brown;
+}
+
