@@ -1,4 +1,4 @@
-const a = 1;
+const a = 0;
 
 /* Создайм константу h1, создающую заголовок первого уровня */
 const h1 = document.createElement('h1');
