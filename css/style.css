@@ -11,11 +11,8 @@ body {
 
   margin: 0;
 
-  background-image: url(../images/background/white_4750x3250.jpg);
-
-  /* Хотел навесить сверху на картинку полупрозрачный чёрный, чтоб её затемнить
-     но, сук, это не так-то просто */
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-image: url(../images/background/old-man.jfif);
+  background-position: center;
 
   /* фон под размер вкладки: */
   background-size: cover;
