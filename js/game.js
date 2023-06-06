@@ -44,6 +44,12 @@ const gameState = {
     return this.attempts === maxAttempts;
   },
   isWin() {
+    /* terrible close keyboard after win + 1 attempt */
+    if (!this.isGameOver() && this
+      .getWordLetters().every((letter) => this.openedLetters.includes(letter))) {
+      this.endGame();
+    }
+    /*  */
     return !this.isGameOver() && this
       .getWordLetters().every((letter) => this.openedLetters.includes(letter));
   },
