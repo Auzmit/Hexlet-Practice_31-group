@@ -10,19 +10,23 @@
 
   overflow: auto; 
 }
+
 .word {
   font-size: 36px;
   font-weight: bold;
 }
+
 .letter {
   margin: 0 4px;
 }
+
 .hangman {
   background: url(images/img.png) no-repeat top left;
   background-size: auto 100%;
   width: var(--width);
   height: var(--height);
 }
+
 .hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
 .hangman[data-step="1"] { background-position-x: calc(var(--width) * -1) }
 .hangman[data-step="2"] { background-position-x: calc(var(--width) * -2) }
