@@ -4,8 +4,7 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  /* background-image: url(../images/background/white_4750x3250.jpg); */
-  background-image: url(../images/background/2023-06-06\ 16_34_45-Clipboard.jpg);
+  background-image: url(../images/background/white_4750x3250.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
