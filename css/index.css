@@ -1,10 +1,10 @@
 body {
-  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur),
+          auto;
 
   min-height: 100vh;
   margin: 0;
 
-  /* background-image: url(../images/background/old-man.jfif); */
   background-image: url(../images/background/white_4750x3250.jpg);
   background-position: center;
   background-size: cover;
