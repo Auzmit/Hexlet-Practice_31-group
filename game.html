@@ -38,6 +38,12 @@
 <body>
     <main>
         <h1 id="topic">Тут будет тема</h1>
+        <div>
+            	
+            <a href="#" onclick="history.back();return false;" class="history-back">
+            <img src="images/house-icon-vector-illustration.jpg" width="50" height="50" class="home-page"></i></a>
+
+        </div>
         <section id="hangman">
             <div class="hangman"></div>
         </section>
@@ -49,6 +55,15 @@
         </section>
         <section id="gameover" style="display: none">
             <button id="restartButton" onclick="location.reload()">Начать заново</button>
+        </section>
+        <section id="word-guess2">
+            <div class="word"></div>
+        </section>
+        <section id="keyboard">
+
+        </section>
+        <section id="win" style="display: none">
+            <button id="restartButton" onclick="location.reload()">Выйграешь еще раз?</button>
         </section>
     </main>
 </body>

@@ -1,3 +1,7 @@
+
+3628800
+
+
 /* .all {
   width: inherit;
   height: 100vh;
@@ -11,7 +15,7 @@ body {
 
   margin: 0;
 
-  background-image: url(../images/background/old-man.jfif);
+  /*background-image: url(../images/background/old-man.jfif);
   background-position: center;
 
   /* фон под размер вкладки: */
@@ -24,7 +28,7 @@ body {
   /* overflow: hidden;  */
   
   /* поэтому добавим тупо auto */
-  overflow: auto; 
+/*  overflow: auto; 
 }
 
 .div_click-me {
@@ -86,3 +90,88 @@ body {
   background-color: brown;
 }
  */
+
+
+.home-page {
+  margin-top: auto;
+  right: 100px;
+
+}
+
+
+
+
+/*body {
+  min-width: 100vh;
+  min-height: 100vh;
+
+  margin: 0;
+}
+
+
+ .parallax {
+  background-image: url(../images/background/closeup-greyscale-shot-of-a-rope-knot.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 60px;
+  align-items: center;
+  position: relative;
+}
+.parallax .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: 2;
+}
+.parallax h1 {
+  z-index: 3;
+}
+
+
+.parallax2 {
+  background-image: url(../images/background/closeup-greyscale-shot-of-a-rope-knot.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 40px;
+  align-items: center;
+  position: relative;
+}
+.parallax2 .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: 2;
+}
+.parallax2 h1 {
+  z-index: 3;
+}
+
+.parallax3 {
+  background-image: url(../images/background/closeup-greyscale-shot-of-a-rope-knot.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 40px;
+  align-items: center;
+  position: relative;
+}
+.parallax3 .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: 2;
+}
+.parallax3 h1 {
+  z-index: 3;
+} /*
