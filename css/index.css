@@ -1,0 +1,87 @@
+body {
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+
+  height: 100vh;
+  margin: auto;
+
+  background-image: url(../images/background/old-man.jfif);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  overflow: auto;
+}
+
+main {
+  margin-top: 25vh;
+}
+
+main section {
+  margin: auto;
+}
+
+.gallows {
+  margin: auto;
+  padding-top: 3vh;
+  padding-left: 5vh;
+
+  color: rgb(255, 165, 0);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.themes {
+  box-sizing: border-box;
+  margin-bottom: 18vh;
+}
+
+.themes .header,
+.rules .header {
+  color: rgb(255, 165, 0);
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.theme,
+.rule {
+  display: inline-block;
+
+  margin: 5px;
+  padding: 5px;
+
+  list-style-type: none;
+
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 10px;
+
+  background-color: rgb(255, 255, 255);
+  opacity: 70%;
+
+}
+
+.theme a {
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.theme a:link,
+.theme a:visited {
+  color: rgb(255, 0, 0);
+}
+
+.theme a:hover,
+.theme a:active {
+  color: rgb(255, 132, 0);
+}
+
+.themes .line_1,
+.themes .line_2,
+.rules  .line_1 {
+  width: 80%;
+
+  margin-left: auto;
+  margin-right: auto;
+  
+  text-align: center;
+}

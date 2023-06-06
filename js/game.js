@@ -6,7 +6,6 @@ const wordLists = {
   berries: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
   space: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   music: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
-
 };
 
 //максимальное кол-во попыток
@@ -32,6 +31,7 @@ const gameState = {
   init() {
     this.topic = new URLSearchParams(window.location.search).get('topic');
     this.word = pickRandomWord(wordLists[this.topic]);
+    /* remove here code which renames topic into Russian */
   },
   //добавляем в массив выбранную букву 
   openLetter(letter) {
@@ -56,6 +56,12 @@ const gameState = {
   },
   //если не проигрыш, то победа и в разбитом на массивы букв слове есть совпадение с выбранной буквой
   isWin() {
+    /* terrible close keyboard after win + 1 attempt */
+    if (!this.isGameOver() && this
+      .getWordLetters().every((letter) => this.openedLetters.includes(letter))) {
+      this.endGame();
+    }
+    /*  */
     return !this.isGameOver() && this
       .getWordLetters().every((letter) => this.openedLetters.includes(letter));
   },
@@ -67,9 +73,20 @@ const gameState = {
 
 //объект визуала игры, кнопки клавиатуры []
 const view = {
+  /* why we have this one line?
+  (it isn't used anywhere) */
   keyboardButtons: [],
 //заголовок темы игры берется с помощью id в html, innerText извлекает текст
   renderTitle() {
+    /* rename topic into Russian (shit but workable) */
+    /* eslint-disable */
+    (gameState.topic === 'animals') ? (gameState.topic = 'животные') :
+      (gameState.topic === 'fish') ? (gameState.topic = 'рыбы') :
+        (gameState.topic === 'transport') ? (gameState.topic = 'транспорт') :
+          (gameState.topic === 'berries') ? (gameState.topic = 'ягоды') :
+            (gameState.topic === 'space') ? (gameState.topic = 'космос') :
+              (gameState.topic = 'музыка');
+    /* eslint-enable */
     document.getElementById('topic').innerText = gameState.topic;
   },
 
@@ -131,8 +148,15 @@ const view = {
   },
 //при победе делаем слово зеленым
   renderWin() {
+<<<<<<< HEAD
     document.getElementById('win').style.display = 'block';
     document.getElementById('word-guess2').style.color = 'green';
+=======
+    /* add same restartButton as in the renderTryAgain */
+    document.getElementById('gameover').style.display = 'block';
+    /*  */
+    document.getElementById('word-guess').style.color = 'green';
+>>>>>>> d515eaaef4fcbc0db83f11e9f979c0e5421fef0a
   },
 
   //отрисовка всей страницы 

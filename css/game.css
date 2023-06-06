@@ -1,0 +1,39 @@
+:root {
+  --step: 10px;
+  --width: calc(var(--step) * 3);
+  --height: calc(var(--step) * 8);
+
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+
+  background-image: url(../images/background/white_4750x3250.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  overflow: auto; 
+}
+
+.word {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.letter {
+  margin: 0 4px;
+}
+
+.hangman {
+  background: url(../images/human_525x200.png) no-repeat top left;
+  background-size: auto 100%;
+
+  width: var(--width);
+  height: var(--height);
+}
+
+.hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
+.hangman[data-step="1"] { background-position-x: calc(var(--width) * -1) }
+.hangman[data-step="2"] { background-position-x: calc(var(--width) * -2) }
+.hangman[data-step="3"] { background-position-x: calc(var(--width) * -3) }
+.hangman[data-step="4"] { background-position-x: calc(var(--width) * -4) }
+.hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
+.hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }

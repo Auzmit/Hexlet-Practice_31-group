@@ -1,0 +1,52 @@
+[Version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+CopyFiles = Scheme.Cur, 
+AddReg    = Scheme.Reg
+
+[DestinationDirs]
+Scheme.Cur = 10,"%CUR_DIR%"
+Scheme.Txt = 10,"%CUR_DIR%"
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%pointer%,%10%\%CUR_DIR%\%help%,%10%\%CUR_DIR%\%work%,%10%\%CUR_DIR%\%busy%,%10%\%CUR_DIR%\%Cross%,%10%\%CUR_DIR%\%Text%,%10%\%CUR_DIR%\%Hand%,%10%\%CUR_DIR%\%Unavailiable%,%10%\%CUR_DIR%\%Vert%,%10%\%CUR_DIR%\%Horz%,%10%\%CUR_DIR%\%Dgn1%,%10%\%CUR_DIR%\%Dgn2%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%alternate%,%10%\%CUR_DIR%\%link%"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Runonce\Setup\","",,"rundll32.exe shell32.dll,Control_RunDLL main.cpl,,1"
+
+; -- Common Information
+
+[Scheme.Cur]
+"cursor.cur"
+"cursor_question.cur"
+"cursor_waiting.ani"
+"cursor_busy.ani"
+"move.cur"
+"cursor_textwrite.cur"
+"pencil.cur"
+"unvailable.ani"
+"cursor_vertical_size.cur"
+"cursor_horizontally_size.cur"
+"cursor_diagonal1_size.cur"
+"cursor_diagonal2.cur"
+"move.cur"
+"cursor_spec.cur"
+"cursor_arm.cur"
+
+[Strings]
+CUR_DIR         = "Cursors\pixel_mouse"
+SCHEME_NAME     = "pixel_mouse"
+pointer		= "cursor.cur"
+help		= "cursor_question.cur"
+work		= "cursor_waiting.ani"
+busy		= "cursor_busy.ani"
+cross		= "move.cur"
+text		= "cursor_textwrite.cur"
+hand		= "pencil.cur"
+unavailiable	= "unvailable.ani"
+vert		= "cursor_vertical_size.cur"
+horz		= "cursor_horizontally_size.cur"
+dgn1		= "cursor_diagonal1_size.cur"
+dgn2		= "cursor_diagonal2.cur"
+move		= "move.cur"
+alternate		= "cursor_spec.cur"
+link		= "cursor_arm.cur"
