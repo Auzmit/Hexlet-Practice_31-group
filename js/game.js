@@ -5,7 +5,6 @@ const wordLists = {
   berries: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
   space: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   music: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
-
 };
 
 const maxAttempts = 6;
@@ -25,6 +24,7 @@ const gameState = {
   init() {
     this.topic = new URLSearchParams(window.location.search).get('topic');
     this.word = pickRandomWord(wordLists[this.topic]);
+    /* remove here code which renames topic into Russian */
   },
   openLetter(letter) {
     this.openedLetters.push(letter);
@@ -53,9 +53,20 @@ const gameState = {
 };
 
 const view = {
+  /* why we have this one line?
+  (it isn't used anywhere) */
   keyboardButtons: [],
 
   renderTitle() {
+    /* rename topic into Russian
+    (shit but workable) */
+    if (gameState.topic === 'animals') { gameState.topic = 'животные';
+    } else if (gameState.topic === 'fish') { gameState.topic = 'рыбы';
+    } else if (gameState.topic === 'transport') { gameState.topic = 'транспорт';
+    } else if (gameState.topic === 'berries') { gameState.topic = 'ягоды';
+    } else if (gameState.topic === 'space') { gameState.topic = 'космос';
+    } else if (gameState.topic === 'music') { gameState.topic = 'музыка'; }
+    /*  */
     document.getElementById('topic').innerText = gameState.topic;
   },
 
@@ -104,6 +115,9 @@ const view = {
   },
 
   renderWin() {
+    /* add same restartButton as in the renderTryAgain */
+    document.getElementById('gameover').style.display = 'block';
+    /*  */
     document.getElementById('word-guess').style.color = 'green';
   },
 
