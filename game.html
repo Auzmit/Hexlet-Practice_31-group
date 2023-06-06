@@ -1,56 +1,31 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<style>
-    :root {
-        --step: 10px;
-        --width: calc(var(--step) * 3);
-        --height: calc(var(--step) * 8);
+    <head>
+        <link rel="stylesheet" href="css/game.css">
 
-    }
-    .word {
-        font-size: 36px;
-        font-weight: bold;
-    }
-    .letter {
-        margin: 0 4px;
-    }
-    .hangman {
-        background: url(images/img.png) no-repeat top left;
-        background-size: auto 100%;
-        width: var(--width);
-        height: var(--height);
-    }
-    .hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
-    .hangman[data-step="1"] { background-position-x: calc(var(--width) * -1) }
-    .hangman[data-step="2"] { background-position-x: calc(var(--width) * -2) }
-    .hangman[data-step="3"] { background-position-x: calc(var(--width) * -3) }
-    .hangman[data-step="4"] { background-position-x: calc(var(--width) * -4) }
-    .hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
-    .hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
-</style>
-<body>
-    <main>
-        <h1 id="topic">Тут будет тема</h1>
-        <section id="hangman">
-            <div class="hangman"></div>
-        </section>
-        <section id="word-guess">
-            <div class="word"></div>
-        </section>
-        <section id="keyboard">
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Виселица</title>
+    </head>
+    <body>
+        <main>
+            <h1 id="topic">Тут будет тема</h1>
+            <section id="hangman">
+                <div class="hangman"></div>
+            </section>
+            <section id="word-guess">
+                <div class="word"></div>
+            </section>
+            <section id="keyboard">
 
-        </section>
-        <section id="gameover" style="display: none">
-            <button id="restartButton" onclick="location.reload()">Начать заново</button>
-        </section>
-    </main>
-</body>
-<script src="js/game.js"></script>
+            </section>
+            <section id="gameover" style="display: none">
+                <button id="restartButton" onclick="location.reload()">Начать заново</button>
+            </section>
+        </main>
+        
+        <script src="js/game.js"></script>
+    </body>
 </html>
