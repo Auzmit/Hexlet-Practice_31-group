@@ -1,29 +1,14 @@
-/* .all {
-  width: inherit;
-  height: 100vh;
-
-  overflow: auto;
-}
-
 body {
   /* min-width: 100vh; */
   min-height: 100vh;
-
   margin: 0;
 
-  background-image: url(../images/background/old-man.jfif);
+  /* background-image: url(../images/background/old-man.jfif); */
+  background-image: url(../images/background/white_4750x3250.jpg);
   background-position: center;
-
-  /* фон под размер вкладки: */
   background-size: cover;
-
-  /* фон при прокручивании страницы будет на одном месте: */
   background-attachment: fixed;
 
-  /* делает невозможным прокручивание страницы (даже если контент выходит за неё): */
-  /* overflow: hidden;  */
-  
-  /* поэтому добавим тупо auto */
   overflow: auto; 
 }
 
