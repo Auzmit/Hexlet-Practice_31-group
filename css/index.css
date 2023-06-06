@@ -1,7 +1,5 @@
 body {
-  cursor: url(../src/cursor/pixel/Pixel/cursor.cur),
-          auto;
-  /* , auto, auto, auto, url(../src/cursor/pixel/Pixel/cursor_arm.cur) */
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
   /* min-width: 100vh; */
   min-height: 100vh;

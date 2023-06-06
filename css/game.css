@@ -3,6 +3,8 @@
   --width: calc(var(--step) * 3);
   --height: calc(var(--step) * 8);
 
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+
   background-image: url(../images/background/white_4750x3250.jpg);
   background-position: center;
   background-size: cover;
@@ -23,7 +25,7 @@
 .hangman {
   background: url(../images/human_525x200.png) no-repeat top left;
   background-size: auto 100%;
-  
+
   width: var(--width);
   height: var(--height);
 }
