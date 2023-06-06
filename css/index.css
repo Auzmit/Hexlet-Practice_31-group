@@ -1,7 +1,6 @@
 body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
-  /* min-width: 100vh; */
   min-height: 100vh;
   margin: 0;
 
