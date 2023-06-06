@@ -58,15 +58,15 @@ const view = {
   keyboardButtons: [],
 
   renderTitle() {
-    /* rename topic into Russian
-    (shit but workable) */
-    if (gameState.topic === 'animals') { gameState.topic = 'животные';
-    } else if (gameState.topic === 'fish') { gameState.topic = 'рыбы';
-    } else if (gameState.topic === 'transport') { gameState.topic = 'транспорт';
-    } else if (gameState.topic === 'berries') { gameState.topic = 'ягоды';
-    } else if (gameState.topic === 'space') { gameState.topic = 'космос';
-    } else if (gameState.topic === 'music') { gameState.topic = 'музыка'; }
-    /*  */
+    /* rename topic into Russian (shit but workable) */
+    /* eslint-disable */
+    (gameState.topic === 'animals') ? (gameState.topic = 'животные') :
+      (gameState.topic === 'fish') ? (gameState.topic = 'рыбы') :
+        (gameState.topic === 'transport') ? (gameState.topic = 'транспорт') :
+          (gameState.topic === 'berries') ? (gameState.topic = 'ягоды') :
+            (gameState.topic === 'space') ? (gameState.topic = 'космос') :
+              (gameState.topic = 'музыка');
+    /* eslint-enable */
     document.getElementById('topic').innerText = gameState.topic;
   },
 
