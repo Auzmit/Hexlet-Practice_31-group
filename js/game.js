@@ -1,10 +1,10 @@
 const wordLists = {
-  animals: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
-  fish: ['креветка', 'мидия', 'краб', 'осьминог', 'кальмар', 'устрица', 'скумбрия', 'лосось', 'тунец', 'корюшка', 'дельфин', 'акула', 'пиранья', 'планктон', 'коралл'],
-  transport: ['вертолёт', 'самолёт', 'автобус', 'автомобиль', 'корабль', 'грузовик', 'паром', 'мотоцикл', 'велосипед', 'самокат', 'лодка', 'самокат', 'поезд', 'метро', 'яхта'],
-  berries: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
-  space: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
-  music: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
+  Животные: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
+  Рыбы: ['креветка', 'мидия', 'краб', 'осьминог', 'кальмар', 'устрица', 'скумбрия', 'лосось', 'тунец', 'корюшка', 'дельфин', 'акула', 'пиранья', 'планктон', 'коралл'],
+  Транспорт: ['вертолёт', 'самолёт', 'автобус', 'автомобиль', 'корабль', 'грузовик', 'паром', 'мотоцикл', 'велосипед', 'самокат', 'лодка', 'самокат', 'поезд', 'метро', 'яхта'],
+  Ягоды: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
+  Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
+  Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
 
 const maxAttempts = 6;
@@ -23,6 +23,9 @@ const gameState = {
   attempts: 0,
   init() {
     this.topic = new URLSearchParams(window.location.search).get('topic');
+    /* document.querySelector('.line_1').addEventListener('click', (e) => {
+      console.log(e.target.innerHTML);
+    }); */
     this.word = pickRandomWord(wordLists[this.topic]);
   },
   openLetter(letter) {
@@ -44,10 +47,14 @@ const gameState = {
   },
   isWin() {
     /* terrible close keyboard after win + 1 attempt */
-    if (!this.isGameOver() && this
+    /* if (!this.isGameOver() &&  this
       .getWordLetters().every((letter) => this.openedLetters.includes(letter))) {
       this.endGame();
-    }
+    } */
+    /* if (!this.isGameOver()) {
+      this.getWordLetters().every((letter) => this.openedLetters.includes(letter));
+      return this.endGame();
+    } */
     /*  */
     return !this.isGameOver() && this
       .getWordLetters().every((letter) => this.openedLetters.includes(letter));
@@ -93,6 +100,8 @@ const view = {
       keyboardContainer.appendChild(button);
 
       button.addEventListener('click', () => {
+        /* this.topic = document.querySelector('.theme').innerHTML;
+        console.log(this.topic); */
         gameState.openLetter(letter);
         this.render();
       });
@@ -111,9 +120,7 @@ const view = {
   },
 
   renderWin() {
-    /* add same restartButton as in the renderTryAgain */
     document.getElementById('gameover').style.display = 'block';
-    /*  */
     document.getElementById('word-guess').style.color = 'green';
   },
 
@@ -127,6 +134,8 @@ const view = {
     }
     if (gameState.isWin()) {
       this.renderWin();
+      gameState.endGame();
+      this.renderKeyboard();
     }
   },
 };

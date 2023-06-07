@@ -1,13 +1,24 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
-  height: 100vh;
+  width: 95vw; 
+  height: 1280px;
+  /* height: 100vh; */
+  
   margin: auto;
+  margin-right: 0;
 
-  background-image: url(../images/background/old-man.jfif);
+  /* background-image: url(../images/background/old-man.jfif); */
+  background-color: rgb(0, 0, 0);
+  background-image: url(../images/background/concept_1137x1280.jpg);
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
 
   overflow: auto;
 }
