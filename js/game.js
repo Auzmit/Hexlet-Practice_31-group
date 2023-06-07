@@ -5,7 +5,6 @@ const wordLists = {
   berries: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
   space: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   music: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
-
 };
 
 const maxAttempts = 6;
@@ -44,6 +43,12 @@ const gameState = {
     return this.attempts === maxAttempts;
   },
   isWin() {
+    /* terrible close keyboard after win + 1 attempt */
+    if (!this.isGameOver() && this
+      .getWordLetters().every((letter) => this.openedLetters.includes(letter))) {
+      this.endGame();
+    }
+    /*  */
     return !this.isGameOver() && this
       .getWordLetters().every((letter) => this.openedLetters.includes(letter));
   },
@@ -53,6 +58,8 @@ const gameState = {
 };
 
 const view = {
+  /* why we have this one line?
+  (it isn't used anywhere) */
   keyboardButtons: [],
 
   renderTitle() {
@@ -104,6 +111,9 @@ const view = {
   },
 
   renderWin() {
+    /* add same restartButton as in the renderTryAgain */
+    document.getElementById('gameover').style.display = 'block';
+    /*  */
     document.getElementById('word-guess').style.color = 'green';
   },
 
