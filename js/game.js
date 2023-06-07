@@ -127,6 +127,8 @@ const view = {
     }
     if (gameState.isWin()) {
       this.renderWin();
+      gameState.endGame();
+      this.renderKeyboard();
     }
   },
 };
