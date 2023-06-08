@@ -56,10 +56,6 @@ const gameState = {
 };
 
 const view = {
-  renderTitle() {
-    document.getElementById('topic').innerText = gameState.topic;
-  },
-
   renderWord() {
     const container = document.querySelector('.word');
     container.innerHTML = '';
@@ -69,18 +65,18 @@ const view = {
       }
       return '_';
     });
-    for (const letter of displayedWord) {
+    displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       placeholder.innerText = letter;
       container.appendChild(placeholder);
-    }
+    });
   },
 
   renderKeyboard() {
     const keyboardContainer = document.getElementById('keyboard');
     keyboardContainer.innerHTML = '';
-    for (const letter of alphabetLetters) {
+    alphabetLetters.forEach((letter) => {
       const button = document.createElement('button');
       button.disabled = gameState.openedLetters.includes(letter);
       button.innerText = letter;
@@ -90,7 +86,7 @@ const view = {
         gameState.openLetter(letter);
         this.render();
       });
-    }
+    });
   },
 
   renderHangman() {
@@ -110,7 +106,6 @@ const view = {
   },
 
   render() {
-    this.renderTitle();
     this.renderWord();
     this.renderHangman();
     this.renderKeyboard();
