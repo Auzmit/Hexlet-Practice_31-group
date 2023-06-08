@@ -57,3 +57,15 @@ main h1 {
 .hangman[data-step="4"] { background-position-x: calc(var(--width) * -4) }
 .hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
 .hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
+
+button {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 10%;
+}
+.buttonStartAgain {
+  width: 80px;
+  height: 40px;
+}
