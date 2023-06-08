@@ -24,6 +24,7 @@ const gameState = {
   init() {
     this.topic = new URLSearchParams(window.location.search).get('topic');
     this.word = pickRandomWord(wordLists[this.topic]);
+    document.getElementById('word-guess').style.color = 'aqua';
     /* next line for testing: */
     console.log(this.word);
   },
