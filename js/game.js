@@ -23,10 +23,9 @@ const gameState = {
   attempts: 0,
   init() {
     this.topic = new URLSearchParams(window.location.search).get('topic');
-    /* document.querySelector('.line_1').addEventListener('click', (e) => {
-      console.log(e.target.innerHTML);
-    }); */
     this.word = pickRandomWord(wordLists[this.topic]);
+    /* next line for testing: */
+    console.log(this.topic);
   },
   openLetter(letter) {
     this.openedLetters.push(letter);
@@ -55,8 +54,7 @@ const gameState = {
 };
 
 const view = {
-  /* why we have this one line?
-  (it isn't used anywhere) */
+  /* why we have this one line? (it isn't used anywhere) */
   keyboardButtons: [],
 
   renderTitle() {

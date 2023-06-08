@@ -2,28 +2,20 @@
   --step: 10px;
   --width: calc(var(--step) * 3);
   --height: calc(var(--step) * 8);
-
-  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
-
-  background-image: url(../images/background/white_4750x3250.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-
-  overflow: auto; 
 }
 
-main {
+.game {
   width: 40%;
   margin: auto;
 }
 
-main section {
+.game section {
   width: 100%;
   margin: auto;
 }
 
-main h1 {
+.game h1 {
+  color: rgb(255, 165, 0);
   text-align: center;
 }
 
@@ -34,6 +26,7 @@ main h1 {
 .word {
   margin: auto;
 
+  color: aqua;
   font-size: 36px;
   font-weight: bold;
 }
@@ -57,3 +50,15 @@ main h1 {
 .hangman[data-step="4"] { background-position-x: calc(var(--width) * -4) }
 .hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
 .hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
+
+button {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 10%;
+}
+.buttonStartAgain {
+  width: 80px;
+  height: 40px;
+}
