@@ -6,7 +6,7 @@ body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
   width: 100vw;
-  height: 113vw;
+  /* height: 113vw; */
   
   margin: 0 auto;
 
@@ -20,15 +20,13 @@ body {
   overflow: auto;
 }
 
-main {
-  margin-top: 25vh;
+
+/* TITLE page (first) */
+.base {
+  height: 100vh;
 }
 
-main section {
-  margin: auto;
-}
-
-.gallows {
+.header {
   margin: auto;
   padding-top: 3vh;
   padding-left: 5vh;
@@ -92,4 +90,71 @@ main section {
   margin-right: auto;
   
   text-align: center;
+}
+
+
+/* GAME page (second) */
+:root {
+  --step: 10px;
+  --width: calc(var(--step) * 3);
+  --height: calc(var(--step) * 8);
+}
+
+.game {
+  width: 40%;
+  height: 100vh;
+  margin: auto;
+}
+
+.game section {
+  width: 100%;
+  margin: auto;
+}
+
+.game h1 {
+  color: rgb(255, 165, 0);
+  text-align: center;
+}
+
+.hangman {
+  margin: auto;
+}
+
+.word {
+  margin: auto;
+
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.letter {
+  margin: 0 4px;
+}
+
+.hangman {
+  background: url(../images/human_525x200.png) no-repeat top left;
+  background-size: auto 100%;
+
+  width: var(--width);
+  height: var(--height);
+}
+
+.hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
+.hangman[data-step="1"] { background-position-x: calc(var(--width) * -1) }
+.hangman[data-step="2"] { background-position-x: calc(var(--width) * -2) }
+.hangman[data-step="3"] { background-position-x: calc(var(--width) * -3) }
+.hangman[data-step="4"] { background-position-x: calc(var(--width) * -4) }
+.hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
+.hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
+
+button {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 10%;
+}
+.buttonStartAgain {
+  width: 80px;
+  height: 40px;
 }

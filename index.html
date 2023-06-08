@@ -4,7 +4,7 @@
     <head>
         <link rel="icon" href="images/favicon/Dicemen_492х492/white_black.svg">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/game.css">
+        <!-- <link rel="stylesheet" href="css/game.css"> -->
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport"
@@ -15,60 +15,69 @@
     </head>
     
     <body>
-        <div class="gallows">Виселица</div>
-        <main>
-            <section class="themes">
-                <div class="header">Темы</div>
-                <div class="line_1">
-                    <!-- 
-                        Животные
-                        Рыбы
-                        Транспорт
-                        Ягоды
-                        Космос
-                        Музыка
-                     -->
-                    <div class="theme"><a href="index.html?topic=animals">  animals</a></div>
-                    <div class="theme"><a href="index.html?topic=fish">     fish</a></div>
-                    <div class="theme"><a href="index.html?topic=transport">transport</a></div>
-                </div>
-                <div class="line_2">
-                    <div class="theme"><a href="index.html?topic=berries">  berries</a></div>
-                    <div class="theme"><a href="index.html?topic=space">    space</a></div>
-                    <div class="theme"><a href="index.html?topic=music">    music</a></div>
-                </ul>
-            </section>
-            <section class="rules">
-                <div class="header">Правила</div>
-                <div class="line_1">
-                    <div class="rule"> Раз    </div>
-                    <div class="rule"> Два    </div>
-                    <div class="rule"> Три    </div>
-                    <div class="rule"> Четыре </div>
-                    <div class="rule"> Пять   </div>
-                </div>
-            </section>
+        <!-- TITLE page (first) -->
+        <section class="base">
+            <div class="header">Виселица</div>
+                <section class="themes">
+                    <div class="header">Темы</div>
+                    <div class="line_1">
+                        <!-- 
+                            Животные
+                            Рыбы
+                            Транспорт
+                            Ягоды
+                            Космос
+                            Музыка
+                         -->
+                        <!-- 
+                            <a href="index.html?topic=animals">
+                            <a href="index.html?topic=fish">
+                            <a href="index.html?topic=transport">
+                            <a href="index.html?topic=berries">
+                            <a href="index.html?topic=space">
+                            <a href="index.html?topic=music">
+                         -->
+                        <div class="theme">animals</div>
+                        <div class="theme">fish</div>
+                        <div class="theme">transport</div>
+                    </div>
+                    <div class="line_2">
+                        <div class="theme">berries</div>
+                        <div class="theme">space</div>
+                        <div class="theme">music</div>
+                    </ul>
+                </section>
+                <section class="rules">
+                    <div class="header">Правила</div>
+                    <div class="line_1">
+                        <div class="rule"> Раз    </div>
+                        <div class="rule"> Два    </div>
+                        <div class="rule"> Три    </div>
+                        <div class="rule"> Четыре </div>
+                        <div class="rule"> Пять   </div>
+                    </div>
+                </section>
+        </section>
 
-            <!-- GAME -->
-            <section class="game">
-                <h1 id="topic"></h1>
-                <section id="hangman">
-                    <div class="hangman"></div>
-                </section>
-                <section id="word-guess">
-                    <div class="word"></div>
-                </section>
-                <section id="keyboard">
-    
-                </section>
-                <section id="gameover" style="display: none">
-                    <button class="buttonStartAgain" id="restartButton" onclick="location.reload()">Начать заново</button>
-                </section>
+        <!-- GAME page (second) -->
+        <section id="Game" class="game">
+            <h1 id="topic"></h1>
+            <section id="hangman">
+                <div class="hangman"></div>
             </section>
+            <section id="word-guess">
+                <div class="word"></div>
+            </section>
+            <section id="keyboard">
 
-        </main>
+            </section>
+            <section id="gameover" style="display: none">
+                <button class="buttonStartAgain" id="restartButton" onclick="location.reload()">Начать заново</button>
+            </section>
+        </section>
 
         <script src="js/game.js"></script>
+        <!-- <script src="js/my_test.js"></script> -->
     </body>
 
 </html>
