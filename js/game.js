@@ -129,6 +129,3 @@ document.querySelectorAll('.theme').forEach((theme) => {
     view.render();
   });
 });
-
-gameState.init();
-view.render();
