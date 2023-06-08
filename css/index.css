@@ -66,9 +66,15 @@ body {
 
 }
 
-.theme a {
+.theme {
+  font-size: 35px;
+  color: rgb(255, 132, 0);
+}
+
+/* .theme a {
   font-size: 35px;
   text-decoration: none;
+  
 }
 
 .theme a:link,
@@ -79,7 +85,7 @@ body {
 .theme a:hover,
 .theme a:active {
   color: rgb(255, 132, 0);
-}
+} */
 
 .themes .line_1,
 .themes .line_2,

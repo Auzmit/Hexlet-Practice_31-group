@@ -22,20 +22,6 @@ const gameState = {
   openedLetters: [],
   attempts: 0,
   init() {
-    // this.topic = new URLSearchParams(window.location.search).get('topic');
-    /* Experiments */
-    /* const gameTopic = document.getElementById('Game');
-    const Themes = document.querySelectorAll('.theme');
-    Themes.forEach((theme) => {
-      theme.addEventListener('click', () => {
-        // console.log(1);
-        gameTopic.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        gameState.topic = theme.innerHTML;
-        gameState.word = pickRandomWord(wordLists[this.topic]);
-        // console.log(gameState.topic);
-        // console.log(gameState.word);
-      });
-    }); */
     this.topic = document.getElementById('topic').innerHTML;
     this.word = pickRandomWord(wordLists[this.topic]);
     document.getElementById('word-guess').style.color = 'aqua';
@@ -70,9 +56,6 @@ const gameState = {
 };
 
 const view = {
-  /* why we have this one line? (it isn't used anywhere) */
-  keyboardButtons: [],
-
   renderTitle() {
     document.getElementById('topic').innerText = gameState.topic;
   },
@@ -151,3 +134,6 @@ document.querySelectorAll('.theme').forEach((theme) => {
     view.render();
   });
 });
+
+gameState.init();
+view.render();
