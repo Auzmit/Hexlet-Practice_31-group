@@ -25,7 +25,7 @@ const gameState = {
     this.topic = new URLSearchParams(window.location.search).get('topic');
     this.word = pickRandomWord(wordLists[this.topic]);
     /* next line for testing: */
-    console.log(this.topic);
+    console.log(this.word);
   },
   openLetter(letter) {
     this.openedLetters.push(letter);
@@ -88,8 +88,6 @@ const view = {
       keyboardContainer.appendChild(button);
 
       button.addEventListener('click', () => {
-        /* this.topic = document.querySelector('.theme').innerHTML;
-        console.log(this.topic); */
         gameState.openLetter(letter);
         this.render();
       });
