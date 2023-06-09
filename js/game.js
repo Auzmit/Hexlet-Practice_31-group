@@ -22,6 +22,8 @@ const gameState = {
   openedLetters: [],
   attempts: 0,
   init() {
+    this.attempts = 0;
+    this.openedLetters = [];
     this.topic = document.getElementById('topic').innerHTML;
     this.word = pickRandomWord(wordLists[this.topic]);
     document.getElementById('word-guess').style.color = 'aqua';
@@ -127,5 +129,7 @@ document.querySelectorAll('.theme').forEach((theme) => {
     gameTopic.innerHTML = theme.innerHTML;
     gameState.init();
     view.render();
+   
   });
 });
+
