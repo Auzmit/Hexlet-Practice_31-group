@@ -14,7 +14,7 @@ body {
   background-image: url(../images/background/concept_1137x1280.jpg);
   background-repeat: no-repeat;
   /* background-position: center; */
-  background-size: cover;
+  background-size: 100% auto;
   /* background-attachment: fixed; */
 
   overflow: auto;
