@@ -129,7 +129,5 @@ document.querySelectorAll('.theme').forEach((theme) => {
     gameTopic.innerHTML = theme.innerHTML;
     gameState.init();
     view.render();
-   
   });
 });
-
