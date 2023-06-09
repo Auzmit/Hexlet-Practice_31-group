@@ -141,6 +141,8 @@ body {
 }
 
 .hangman {
+  opacity: 0;
+
   background: url(../images/human_525x200.png) no-repeat top left;
   background-size: auto 100%;
 

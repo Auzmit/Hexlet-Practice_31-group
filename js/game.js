@@ -27,6 +27,7 @@ const gameState = {
     this.topic = document.getElementById('topic').innerHTML;
     this.word = pickRandomWord(wordLists[this.topic]);
     document.getElementById('word-guess').style.color = 'aqua';
+    document.querySelector('.hangman').style.opacity = '100%';
     /* for testing: */
     console.log(this.topic);
     console.log(this.word);
