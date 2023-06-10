@@ -55,28 +55,7 @@ Group 31 project for practice in June 2023
             <sub style="font-size:14px"><b>Vladimir</b></sub>
         </a>
     </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/darencard>
-            <img src=https://avatars.githubusercontent.com/u/8263623?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Daren Card/>
-            <br />
-            <sub style="font-size:14px"><b>Daren Card</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/BicaBenedicto>
-            <img src=https://avatars.githubusercontent.com/u/87337551?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Gabriel Pereira Benedicto/>
-            <br />
-            <sub style="font-size:14px"><b>Gabriel Pereira Benedicto</b></sub>
-        </a>
-    </td>
+    
 </tr>
-<tr>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Milo40>
-            <img src=https://avatars.githubusercontent.com/u/33132706?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=PF1×3R/>
-            <br />
-            <sub style="font-size:14px"><b>PF1×3R</b></sub>
-        </a>
-    </td>
-</tr>
+
 </table>
