@@ -1,4 +1,4 @@
-# 31_group
+# Gallows online
 Group 31 project for practice in June 2023
 
 ### Github actions (test on push)
