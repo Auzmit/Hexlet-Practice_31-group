@@ -99,12 +99,12 @@ const view = {
   },
 
   renderTryAgain() {
-    document.getElementById('gameover').style.display = 'block';
+    // document.getElementById('gameover').style.display = 'block';
     document.getElementById('word-guess').style.color = 'red';
   },
 
   renderWin() {
-    document.getElementById('gameover').style.display = 'block';
+    // document.getElementById('gameover').style.display = 'block';
     document.getElementById('word-guess').style.color = 'green';
   },
 
@@ -112,6 +112,7 @@ const view = {
     this.renderWord();
     this.renderHangman();
     this.renderKeyboard();
+    document.getElementById('gameover').style.display = 'block';
     if (gameState.isGameOver()) {
       this.renderTryAgain();
     }
