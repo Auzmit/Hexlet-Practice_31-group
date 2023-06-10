@@ -10,10 +10,5 @@
 make install
 ```
 
-## Run tests
-```bash
-make test
-```
-
 # 31_group
 #Group 31 project for practice in June 2023
