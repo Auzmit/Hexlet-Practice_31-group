@@ -40,9 +40,9 @@ make install
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Daria-Savicheva>
-            <img src=https://avatars.githubusercontent.com/u/124240208?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Daria-Savicheva/>
+            <img src=https://avatars.githubusercontent.com/u/124240208?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Daria Savicheva/>
             <br />
-            <sub style="font-size:14px"><b>Daria-Savicheva</b></sub>
+            <sub style="font-size:14px"><b>Daria Savicheva</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
