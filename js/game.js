@@ -133,3 +133,9 @@ document.querySelectorAll('.theme').forEach((theme) => {
     view.render();
   });
 });
+
+document.querySelector('.buttonStartAgain').addEventListener('click', () => {
+  // gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+  gameState.init();
+  view.render();
+});
