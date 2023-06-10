@@ -1,8 +1,8 @@
 # Gallows online
 Group 31 project for practice in June 2023
 
-### Try it now!
-![Website](https://img.shields.io/website?down_color=red&down_message=offline&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fauzmit.github.io%2F31_group%2F)
+# Try it now!
+[![Website](https://img.shields.io/website?style=plastic&url=https%3A%2F%2Fauzmit.github.io%2F31_group%2F)](https://auzmit.github.io/31_group/)
 
 <br />
 
@@ -64,3 +64,4 @@ make install
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Auzmit/31_group)
 ![last commit](https://img.shields.io/github/last-commit/Auzmit/31_group.svg)
+![Watchers](https://img.shields.io/github/watchers/Auzmit/31_group.svg)
