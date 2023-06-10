@@ -60,5 +60,7 @@ make install
 </tr>
 </table>
 
+<br />
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/Auzmit/31_group)
 ![last commit](https://img.shields.io/github/last-commit/Auzmit/31_group.svg)
