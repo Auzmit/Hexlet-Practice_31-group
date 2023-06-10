@@ -28,31 +28,31 @@ Group 31 project for practice in June 2023
 <table>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Envoy-VC>
+        <a href=https://github.com/Auzmit>
             <img src=https://avatars.githubusercontent.com/u/123180357?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Trudkov Andrew‎/>
             <br />
             <sub style="font-size:14px"><b>Trudkov Andrew‎</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Anmol-Baranwal>
-            <img src=https://avatars.githubusercontent.com/u/74038190?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Anmol Baranwal/>
+        <a href=https://github.com/IzarlyShark>
+            <img src=https://avatars.githubusercontent.com/u/115780892?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Yesenia/>
             <br />
-            <sub style="font-size:14px"><b>Anmol Baranwal</b></sub>
+            <sub style="font-size:14px"><b>Yesenia</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Natha-Rey>
-            <img src=https://avatars.githubusercontent.com/u/75953657?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Nathaly Reyes/>
+        <a href=https://github.com/Daria-Savicheva>
+            <img src=https://avatars.githubusercontent.com/u/124240208?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Daria-Savicheva/>
             <br />
-            <sub style="font-size:14px"><b>Nathaly Reyes</b></sub>
+            <sub style="font-size:14px"><b>Daria-Savicheva</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/Cubik65536>
-            <img src=https://avatars.githubusercontent.com/u/72877496?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Qian Qian "Cubik"/>
+        <a href=https://github.com/Rigoprogrammist>
+            <img src=https://avatars.githubusercontent.com/u/113303530?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Vladimir/>
             <br />
-            <sub style="font-size:14px"><b>Qian Qian "Cubik"</b></sub>
+            <sub style="font-size:14px"><b>Vladimir</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
