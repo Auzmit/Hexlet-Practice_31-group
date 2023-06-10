@@ -126,7 +126,7 @@ const view = {
 const gameTopic = document.getElementById('topic');
 document.querySelectorAll('.theme').forEach((theme) => {
   theme.addEventListener('click', () => {
-    gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth',inline: 'end'});
+    gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
     gameState.init();
     view.render();
