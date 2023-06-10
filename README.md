@@ -64,4 +64,4 @@ make install
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Auzmit/31_group)
 ![last commit](https://img.shields.io/github/last-commit/Auzmit/31_group.svg)
-![Watchers](https://img.shields.io/github/watchers/{username}/{repo-name}.svg)
+![Watchers](https://img.shields.io/github/watchers/Auzmit/31_group.svg)
