@@ -1,7 +1,7 @@
 # Gallows online
 Group 31 project for practice in June 2023
 
-# Try it online!
+# Try it now!
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fauzmit.github.io%2F31_group%2F)
 
 ### Github actions (test on push)
