@@ -8,7 +8,7 @@ const wordLists = {
 };
 
 const maxAttempts = 6;
-const alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюя';
+const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
 
 function pickRandomWord(list) {
