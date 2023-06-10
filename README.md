@@ -31,9 +31,9 @@ make install
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Auzmit>
-            <img src=https://avatars.githubusercontent.com/u/123180357?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Trudkov Andrew‎/>
+            <img src=https://avatars.githubusercontent.com/u/123180357?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Auzmit‎/>
             <br />
-            <sub style="font-size:14px"><b>Trudkov Andrew‎</b></sub>
+            <sub style="font-size:14px"><b>Auzmit‎</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
