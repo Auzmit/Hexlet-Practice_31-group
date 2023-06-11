@@ -139,3 +139,4 @@ document.querySelector('.buttonStartAgain').addEventListener('click', () => {
   gameState.init();
   view.render();
 });
+//пул владимир 1.1
