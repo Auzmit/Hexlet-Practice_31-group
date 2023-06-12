@@ -92,14 +92,22 @@ body {
 }
 
 .game {
-  width: 40%;
+  width: 100vw;
   height: 100vh;
-  margin: auto;
+  /* margin: auto; */
 }
 
-.game section {
-  width: 100%;
-  margin: auto;
+.game-part {
+  width: 70%;
+  height: 100vh;
+  float: left;
+  /* margin: auto; */
+}
+
+.game-keyboard {
+  width: 30%;
+  height: 100vh;
+  float: right;
 }
 
 .game h1 {
@@ -120,8 +128,6 @@ body {
 
 .letter {
   margin: 0 4px;
-
-  
 }
 
 .hangman {
