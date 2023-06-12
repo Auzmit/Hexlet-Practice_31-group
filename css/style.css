@@ -6,13 +6,14 @@ body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
   width: 100vw;
-  /* height: 113vw; */
+  height: 200vh;
   
   margin: 0 auto;
 
   background-color: rgb(0, 0, 0);
   /* background-image: url(../images/background/concept_1137x1280.jpg); */
-  background-image: url(../images/background/background_maket.jpg);
+  /* background-image: url(../images/background/background_maket.jpg); */
+  background-image: url(../images/background/reliz_1920x2160.jpg);
   background-repeat: no-repeat;
   /* background-position: center; */
   background-size: cover;
@@ -24,6 +25,7 @@ body {
 
 /* TITLE page (first) */
 .base {
+  width: 100vw;
   height: 100vh;
 }
 
@@ -89,49 +91,59 @@ body {
   --step: 10px;
   --width: calc(var(--step) * 3);
   --height: calc(var(--step) * 8);
+
+  /* --width_letter: var(--step); */
+  /* --margin_letter: calc(var(--step) / 2.5); */
 }
 
 .game {
-  width: 40%;
+  width: 100vw;
   height: 100vh;
-  margin: auto;
+  /* margin: auto; */
 }
 
-.game section {
-  width: 100%;
-  margin: auto;
+.section_game-base {
+  width: 70%;
+  height: 100vh;
+  float: left;
+}
+
+.section_game-keyboard {
+  width: 30%;
+  height: 100vh;
+  float: right;
+}
+
+.div_game-base {
+  display: block;
+  float: right;
+
+  width: calc(12 * 30 + 24 * 5);
+
+  margin-top: 20vh;
+  margin-right: 15vw;
+}
+
+.div_game-keyboard {
+  margin-top: 20vh;
 }
 
 .game h1 {
+  /* margin: 0 auto; */
+
   color: rgb(255, 165, 0);
   text-align: center;
 }
 
 .hangman {
-  margin: auto;
-}
-
-.word {
-  margin: auto;
-
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.letter {
-  margin: 0 4px;
-
-  
-}
-
-.hangman {
-  opacity: 0;
-
-  background: url(../images/human_525x200.png) no-repeat top left;
-  background-size: auto 100%;
-
   width: var(--width);
   height: var(--height);
+  opacity: 0;
+  
+  margin: 0 auto;
+
+  background: url(../images/human_525x200.png) no-repeat top right;
+  background-size: auto 100%;
 }
 
 .hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
@@ -142,14 +154,44 @@ body {
 .hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
 .hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
 
-button {
+.word {
+  display: inline-block;
   height: 50px;
-  width: 50px;
-  margin-left: 5px;
-  margin-top: 5px;
-  border-radius: 10%;
+  margin: auto;
+
+  font-size: 36px;
+  font-weight: bold;
 }
+
+.letter {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+
+  background-image: url(../images/cube/cube.svg);
+  background-position: center;
+
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  border-radius: 10%;
+
+  font-size: 36px;
+}
+
+.div_game-keyboard button {
+  margin: 20px 10px 0px;
+}
+
 .buttonStartAgain {
   width: 80px;
   height: 40px;
+
+  font-size: 15px;
 }

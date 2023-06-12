@@ -52,18 +52,22 @@
 
         <!-- GAME page (second) -->
         <section id="Game" class="game">
-            <h1 id="topic"></h1>
-            <section id="hangman">
-                <div class="hangman"></div>
+            <section class="section_game-base">
+                <div class="div_game-base">
+                    <h1 id="topic"></h1>
+                    <div id="hangman" class="hangman"></div>
+                    <section id="word-guess">
+                        <div class="word"></div>
+                    </section>
+                    <section id="gameover" style="display: none">
+                        <button class="buttonStartAgain">Начать заново</button>
+                    </section>
+                </div>
             </section>
-            <section id="word-guess">
-                <div class="word"></div>
-            </section>
-            <section id="keyboard">
+            <section class="section_game-keyboard">
+                <div id="keyboard" class="div_game-keyboard">
 
-            </section>
-            <section id="gameover" style="display: none">
-                <button class="buttonStartAgain">Начать заново</button>
+                </div>
             </section>
         </section>
 

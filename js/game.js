@@ -66,7 +66,7 @@ const view = {
       if (gameState.openedLetters.includes(letter)) {
         return letter;
       }
-      return '_';
+      return '';
     });
     displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
