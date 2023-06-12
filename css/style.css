@@ -106,11 +106,9 @@ body {
   width: 70%;
   height: 100vh;
   float: left;
-  /* margin-right: 20%; */
 }
 
-
-.game-keyboard {
+.section_game-keyboard {
   width: 30%;
   height: 100vh;
   float: right;
@@ -122,7 +120,12 @@ body {
 
   width: calc(12 * 30 + 24 * 5);
 
-  margin-right: 20vw;
+  margin-top: 20vh;
+  margin-right: 15vw;
+}
+
+.div_game-keyboard {
+  margin-top: 20vh;
 }
 
 .game h1 {
@@ -142,7 +145,6 @@ body {
   background: url(../images/human_525x200.png) no-repeat top right;
   background-size: auto 100%;
 }
-
 
 .hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
 .hangman[data-step="1"] { background-position-x: calc(var(--width) * -1) }
@@ -174,14 +176,22 @@ body {
 }
 
 button {
-  height: 50px;
-  width: 50px;
-  margin-left: 5px;
-  margin-top: 5px;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: auto;
   border-radius: 10%;
+
+  font-size: 36px;
+}
+
+.div_game-keyboard button {
+  margin: 20px 10px 0px;
 }
 
 .buttonStartAgain {
   width: 80px;
   height: 40px;
+
+  font-size: 15px;
 }
