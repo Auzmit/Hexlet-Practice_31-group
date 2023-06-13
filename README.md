@@ -57,6 +57,13 @@ make install
             <sub style="font-size:14px"><b>Vladimir</b></sub>
         </a>
     </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=(https://github.com/vlad-bab)>
+            <img src=https://avatars.githubusercontent.com/u/118886918?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=vlad-bab/>
+            <br />
+            <sub style="font-size:14px"><b>vlad-bab</b></sub>
+        </a>
+    </td>
 </tr>
 </table>
 
