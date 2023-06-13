@@ -1,6 +1,10 @@
 ::-webkit-scrollbar {
   width: 0;
 }
+@font-face {
+  font-family: 'Zaychik';
+  src: url("../fonts/Zaychik/Zaychik-Regular.ttf");
+}
 
 body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
@@ -35,8 +39,10 @@ body {
   padding-left: 5vh;
   padding-bottom: 5vh;
 
-  color: rgb(255, 165, 0);
-  font-size: 60px;
+  color: rgb(233, 153, 3);
+  font-family: 'Zaychik';
+  font-size: 80px;
+  text-shadow: 2px 2px black;
   font-weight: bold;
 }
 
@@ -45,18 +51,18 @@ body {
   margin-top: 15vh;
 }
 
-.themes .header {
+.themes_header {
   color: rgb(255, 165, 0);
   text-align: center;
   font-size: 60px;
-  padding-top: 3vh;
-  padding-left: 5vh;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 5vh;
 
   color: rgb(255, 165, 0);
   font-weight: bold;
   text-shadow: 2px 2px black;
-
+  
 }
 
 .rules_header {
@@ -108,7 +114,7 @@ body {
   text-align: center;
 }
 .rules {
-  padding-top: 20vh;
+  padding-top: 23vh;
 }
 
 /* GAME page (second) */
@@ -221,6 +227,8 @@ button {
   font-size: 15px;
 }
 .dekitus {
+  height: 20px;
+  width: 60px;
   padding: 14px 65px;
   font-weight: bold;
   display: inline-block;
