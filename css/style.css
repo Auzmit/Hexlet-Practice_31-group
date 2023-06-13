@@ -193,7 +193,11 @@ body {
 .hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
 
 .word {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
   height: calc(var(--index) * 2);
   margin: auto;
 
