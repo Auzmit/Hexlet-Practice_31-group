@@ -142,6 +142,7 @@ body {
   vertical-align: middle;
   /* justify-content: center; */
   /* align-items: center; */
+  transition: all 0.7s ease-out;
 }
 
 
@@ -157,12 +158,6 @@ body {
   float: left;
 }
 
-.section_game-keyboard {
-  width: 30%;
-  height: 100vh;
-  float: right;
-}
-
 .div_game-base {
   display: block;
   float: right;
@@ -171,10 +166,6 @@ body {
 
   margin-top: 20vh;
   margin-right: 15vw;
-}
-
-.div_game-keyboard {
-  margin-top: 20vh;
 }
 
 .game h1 {
@@ -243,6 +234,17 @@ button {
   width: calc(var(--index) * 14);
 }
 
+.section_game-keyboard {
+  width: 30%;
+  height: 100vh;
+  float: right;
+}
+
+.div_game-keyboard {
+  margin-top: 20vh;
+}
+
 .div_game-keyboard button {
-  margin: 20px 10px 0px;
+  margin: calc(var(--index) * 0.1);
+  margin-bottom: 0;
 }

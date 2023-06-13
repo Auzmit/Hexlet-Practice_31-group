@@ -141,3 +141,13 @@ const body = document.getElementById('body');
 document.querySelector('.bSA-category').addEventListener('click', () => {
   body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
 });
+
+const rules = document.querySelector('.rules');
+
+rules.addEventListener('mouseover', () => {
+  document.querySelector('.rule').style.opacity = 1;
+});
+
+rules.addEventListener('mouseout', () => {
+  document.querySelector('.rule').style.opacity = 0;
+});
