@@ -224,6 +224,7 @@ button {
 }
 
 .buttonStartAgain {
+  margin-top: 10%;
   width: calc(var(--index) * 5);
   height: calc(var(--index) * 3);
 
