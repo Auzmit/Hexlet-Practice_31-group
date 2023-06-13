@@ -244,7 +244,7 @@ button {
 }
 .btn12:hover {
   background-position: 99% 50%;
-  color: #fff !important;
+  color:  rgb(255, 165, 0) !important;
   border: 1px solid rgba(205, 200, 252, 0);
   background-color: black;
 }
