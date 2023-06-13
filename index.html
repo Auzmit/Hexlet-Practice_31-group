@@ -13,7 +13,9 @@
         <title>⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣Виселица онлайн</title>
     </head>
     
-    <body>
+    <!-- need flex-box for centering text on vertical -->
+    
+    <body id="body">
         <!-- TITLE page (first) -->
         <section class="base">
             <div class="header">Виселица</div>
@@ -28,24 +30,23 @@
                             Космос
                             Музыка
                          -->
-                        <div class="theme dekitus btn12">animals</div>
-                        <div class="theme dekitus btn12">fish</div>
-                        <div class="theme dekitus btn12">transport</div>
+                        <div class="theme">animals</div>
+                        <div class="theme">fish</div>
+                        <div class="theme">transport</div>
                     </div>
                     <div class="line_2">
-                        <div class="theme dekitus btn12">berries</div>
-                        <div class="theme dekitus btn12">space</div>
-                        <div class="theme dekitus btn12">music</div>
+                        <div class="theme">berries</div>
+                        <div class="theme">space</div>
+                        <div class="theme">music</div>
                     </ul>
                 </section>
                 <section class="rules">
                     <div class="rules_header">Правила</div>
-                    <div class="line_1">
-                        <div class="rule"> Раз    </div>
-                        <div class="rule"> Два    </div>
-                        <div class="rule"> Три    </div>
-                        <div class="rule"> Четыре </div>
-                        <div class="rule"> Пять   </div>
+                    <div class="rule">
+                        В этой игре вам нужно угадывать по буквам
+                        слово на выбранную тему.
+                        Если ошибётесь 7 раз - проиграете.
+                        Удачной игры!
                     </div>
                 </section>
         </section>
@@ -61,7 +62,7 @@
                     </section>
                     <section id="gameover" style="display: none">
                         <button class="buttonStartAgain">Начать заново</button>
-                        <button class="buttonStartAgain">Выбрать другую категорию</button>
+                        <button class="buttonStartAgain bSA-category">Выбрать другую категорию</button>
                     </section>
                 </div>
             </section>

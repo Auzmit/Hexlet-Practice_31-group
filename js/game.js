@@ -136,3 +136,8 @@ document.querySelector('.buttonStartAgain').addEventListener('click', () => {
   gameState.init();
   view.render();
 });
+
+const body = document.getElementById('body');
+document.querySelector('.bSA-category').addEventListener('click', () => {
+  body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+});
