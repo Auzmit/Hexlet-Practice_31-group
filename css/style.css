@@ -195,3 +195,33 @@ button {
 
   font-size: 15px;
 }
+.dekitus {
+  padding: 14px 65px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none !important;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+
+
+.btn12 {
+  background: transparent;
+  color: #efe8ea !important;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  background: -webkit-linear-gradient(180deg, rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), rgb(255, 165, 0), rgba(151, 89, 12, 0.8),);
+  background: -webkit-linear-gradient(right, rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), rgb(255, 165, 0), rgba(151, 89, 12, 0.8));
+  background: linear-gradient(270deg,  rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), );
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  border: none;
+  border: 1px solid #060607;
+}
+.btn12:hover {
+  background-position: 99% 50%;
+  color: #fff !important;
+  border: 1px solid rgba(205, 200, 252, 0);
+  background-color: black;
+}
