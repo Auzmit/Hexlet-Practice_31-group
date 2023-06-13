@@ -30,9 +30,10 @@ body {
 }
 
 .header {
-  margin: auto;
+ 
   padding-top: 3vh;
   padding-left: 5vh;
+  padding-bottom: 5vh;
 
   color: rgb(255, 165, 0);
   font-size: 60px;
@@ -41,16 +42,29 @@ body {
 
 .themes {
   box-sizing: border-box;
-  margin-bottom: 18vh;
+  margin-top: 15vh;
 }
 
-.themes .header,
-.rules .header {
+.themes .header {
   color: rgb(255, 165, 0);
   text-align: center;
   font-size: 60px;
-  font-weight: 900;
+  padding-top: 3vh;
+  padding-left: 5vh;
+  padding-bottom: 5vh;
+
+  color: rgb(255, 165, 0);
+  font-weight: bold;
 }
+
+.rules_header {
+  color: rgb(255, 165, 0);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
 
 .theme,
 .rule {
@@ -75,8 +89,7 @@ body {
 }
 
 .themes .line_1,
-.themes .line_2,
-.rules  .line_1 {
+.themes .line_2 {
   width: 80%;
 
   margin-left: auto;
@@ -85,6 +98,16 @@ body {
   text-align: center;
 }
 
+.rules  .line_1 {
+  width: 80%;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.rules {
+  padding-top: 20vh;
+}
 
 /* GAME page (second) */
 :root {
