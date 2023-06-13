@@ -226,6 +226,7 @@ button {
 
   font-size: 15px;
 }
+
 .dekitus {
   height: 20px;
   width: 60px;
@@ -236,8 +237,6 @@ button {
   font-size: 18px;
   border-radius: 3px;
 }
-
-
 
 .btn12 {
   background: transparent;
@@ -252,6 +251,7 @@ button {
   border: none;
   border: 1px solid #060607;
 }
+
 .btn12:hover {
   background-position: 99% 50%;
   color:  rgb(255, 165, 0) !important;

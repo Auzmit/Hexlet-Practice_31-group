@@ -99,12 +99,10 @@ const view = {
   },
 
   renderTryAgain() {
-    // document.getElementById('gameover').style.display = 'block';
     document.getElementById('word-guess').style.color = 'red';
   },
 
   renderWin() {
-    // document.getElementById('gameover').style.display = 'block';
     document.getElementById('word-guess').style.color = 'green';
   },
 
@@ -135,7 +133,6 @@ document.querySelectorAll('.theme').forEach((theme) => {
 });
 
 document.querySelector('.buttonStartAgain').addEventListener('click', () => {
-  // gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
   gameState.init();
   view.render();
 });
