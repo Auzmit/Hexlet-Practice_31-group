@@ -76,17 +76,13 @@ body {
   margin: calc(var(--index) * 0.2);
   padding: calc(var(--index) * 0.2);
 
-  /* border: 1px solid rgb(255, 0, 0); */
-  
-  /* background-color: rgb(255, 255, 255); */
-  /* opacity: 70%; */
-
-  color: rgb(255, 132, 0);
   font-size: calc(var(--index) * 1.5);
   font-weight: bold;
   /* !!! do we need the following?:  */
   text-decoration: none !important;
+}
 
+.button-beauty {
   background: transparent;
   color: #efe8ea !important;
   -webkit-transition: all 0.7s ease-out;
@@ -96,13 +92,12 @@ body {
   background: linear-gradient(270deg,  rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), );
   background-position: 1% 50%;
   background-size: 300% 300%;
-  border: none;
   border: 1px solid #060607;
   border-radius: calc(var(--index) * 2);
 }
 
-.theme:hover,
-.rule:hover {
+.button-beauty:hover,
+.button-beauty:hover {
   background-position: 99% 50%;
   color:  rgb(255, 165, 0) !important;
   border: 1px solid rgba(205, 200, 252, 0);
@@ -134,12 +129,17 @@ body {
 }
 
 .rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 60vw;
   height: 16vh;
   margin: 2vh 20vw 0;
+  padding: 0 1.5vw;
 
   text-align: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* justify-content: center; */
   /* align-items: center; */
   transition: all 0.7s ease-out;
@@ -194,10 +194,11 @@ body {
 
 .word {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
   height: calc(var(--index) * 2);
   margin: auto;
 
@@ -206,15 +207,16 @@ body {
 }
 
 .letter {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: calc(var(--index) * 3);
   height: calc(var(--index) * 3);
   margin: 0 calc(var(--index) * 0.2);
 
   background-image: url(../images/cube/cube.svg);
   background-position: center;
-
-  text-align: center;
 }
 
 button {
@@ -228,9 +230,9 @@ button {
 }
 
 .buttonStartAgain {
-  margin-top: 10%;
   width: calc(var(--index) * 5);
   height: calc(var(--index) * 3);
+  margin-top: 10%;
 
   font-size: calc(var(--index) * 1.1);
 }
