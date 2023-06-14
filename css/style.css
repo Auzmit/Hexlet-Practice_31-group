@@ -217,7 +217,7 @@ body {
   height: calc(var(--index) * 3);
   margin: 0 calc(var(--index) * 0.2);
 
-  background-image: url(../images/cube/cube_1000x1000.svg);
+  background-image: url(../images/cube/6/cube_100x100_6.svg);
   background-position: center;
   background-size: cover;
 }
@@ -232,8 +232,8 @@ button {
   font-size: calc(var(--index) * 1.3);
 
   background-color: rgba(0, 0, 0, 0);
-  /* background-image: url(../images/cube/cube_1000x1000.png); */
-  background-image: url(../images/cube/cube_1000x1000.svg);
+  /* background-image: url(../images/cube/6/cube_1000x1000_6.png); */
+  background-image: url(../images/cube/6/cube_100x100_6.svg);
   background-position: center;
   background-size: cover;
   border: none;
