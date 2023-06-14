@@ -142,7 +142,7 @@ document.querySelector('.bSA-category').addEventListener('click', () => {
   body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
 });
 
-const rules = document.querySelector('.rules');
+const rules = document.querySelector('.rules_header');
 
 rules.addEventListener('mouseover', () => {
   document.querySelector('.rule').style.opacity = 1;
