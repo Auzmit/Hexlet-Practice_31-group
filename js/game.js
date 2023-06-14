@@ -83,6 +83,7 @@ const view = {
       const button = document.createElement('button');
       button.disabled = gameState.openedLetters.includes(letter);
       button.innerText = letter;
+      // button.style.backgroundImage = "url('../images/cube/cube_1000x1000.png')";
       keyboardContainer.appendChild(button);
 
       button.addEventListener('click', () => {
