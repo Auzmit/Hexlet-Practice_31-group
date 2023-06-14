@@ -72,7 +72,7 @@ body {
 .theme,
 .rule {
   display: inline-block;
-  height: calc(var(--index) * 2);
+  /* height: calc(var(--index) * 1);  При уменьшении текста не удаётся разместить его в центре*/ 
   width: calc(var(--index) * 6);
   margin: calc(var(--index) * 0.2);
   padding: calc(var(--index) * 0.2);
@@ -81,6 +81,7 @@ body {
   font-weight: bold;
   /* !!! do we need the following?:  */
   text-decoration: none !important;
+
 }
 
 .button-beauty {
@@ -95,6 +96,8 @@ body {
   background-size: 300% 300%;
   border: 1px solid #060607;
   border-radius: calc(var(--index) * 2);
+  vertical-align: middle;
+  font-size: 25px;
 }
 
 .button-beauty:hover,
@@ -105,8 +108,8 @@ body {
   background-color: black;
 }
 
-.themes .line_1,
-.themes .line_2 {
+.line_1,
+.line_2 {
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
@@ -244,7 +247,8 @@ button {
   height: calc(var(--index) * 3);
   margin-top: 10%;
 
-  font-size: calc(var(--index) * 1.1);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: calc(var(--index) * 1);
 }
 
 .bSA-category {
