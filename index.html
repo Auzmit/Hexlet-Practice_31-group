@@ -4,6 +4,7 @@
     <head>
         <link rel="icon" href="images/favicon/Dicemen_492х492/white_black.svg">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/different_cubes.css">
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport"
@@ -50,7 +51,7 @@
                     <h1 id="topic"></h1>
                     <div id="hangman" class="hangman"></div>
                     <section id="word-guess">
-                        <div class="word"></div>
+                        <div id="parent-letters" class="word"></div>
                     </section>
                     <section id="gameover" style="display: none">
                         <button class="buttonStartAgain button-beauty">Начать заново</button>
@@ -64,6 +65,7 @@
         </section>
 
         <script src="js/game.js"></script>
+        <script src="js/different_cubes.js"></script>
     </body>
 
 </html>

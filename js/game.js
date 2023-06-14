@@ -72,6 +72,7 @@ const view = {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       placeholder.innerText = letter;
+      // placeholder.classList.add(`letter-${letter}`);
       container.appendChild(placeholder);
     });
   },
@@ -83,7 +84,7 @@ const view = {
       const button = document.createElement('button');
       button.disabled = gameState.openedLetters.includes(letter);
       button.innerText = letter;
-      // button.style.backgroundImage = "url('../images/cube/cube_1000x1000.png')";
+      button.classList.add(`button-${letter}`);
       keyboardContainer.appendChild(button);
 
       button.addEventListener('click', () => {

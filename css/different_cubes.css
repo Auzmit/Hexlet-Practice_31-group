@@ -1,0 +1,50 @@
+.button-а,
+.button-ё,
+.button-л,
+.button-с,
+.button-ч,
+.button-э {
+  background-image: url(../images/cube/6/cube_100x100_1.png);
+}
+
+.button-б,
+.button-ж,
+.button-м,
+.button-т,
+.button-ш,
+.button-ю {
+  background-image: url(../images/cube/6/cube_100x100_2.png);
+}
+
+.button-в,
+.button-з,
+.button-н,
+.button-у,
+.button-щ,
+.button-я {
+  background-image: url(../images/cube/6/cube_100x100_3.png);
+}
+
+.button-г,
+.button-и,
+.button-о,
+.button-ф,
+.button-ъ {
+  background-image: url(../images/cube/6/cube_100x100_4.png);
+}
+
+.button-д,
+.button-й,
+.button-п,
+.button-х,
+.button-ы {
+  background-image: url(../images/cube/6/cube_100x100_5.png);
+}
+
+.button-е,
+.button-к,
+.button-р,
+.button-ц,
+.button-ь {
+  background-image: url(../images/cube/6/cube_100x100_6.png);
+}
