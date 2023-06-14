@@ -68,10 +68,14 @@ const view = {
       }
       return '';
     });
+    let i = 0;
     displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       placeholder.innerText = letter;
+      i += 1;
+      placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
+      if (i === 6) { i = 0; }
       // placeholder.classList.add(`letter-${letter}`);
       container.appendChild(placeholder);
     });

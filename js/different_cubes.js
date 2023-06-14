@@ -76,22 +76,15 @@ console.log('2 хуй');
 
 
 
-// Выбираем целевой элемент
+/* // Выбираем целевой элемент
 var word = document.getElementById('parent-letters');
 
 // Конфигурация observer (за какими изменениями наблюдать)
-/* const config = {
-    attributes: true,
-    childList: true,
-    subtree: true
-}; */
+
 
 // Колбэк-функция при срабатывании мутации
 const callback = function(mutationsList, observer) {
     for (let mutation of mutationsList) {
-        /* if (mutation.type === 'childList') {
-          mutation.style.backgroundImage = "url('../images/cube/6/cube_100x100_3.png')";
-        } */
         // mutation.style.backgroundImage = "url('./images/cube/6/cube_100x100_3.png')";
         var children = word.childNodes;
         children.forEach((child) => {
@@ -111,4 +104,5 @@ const observer = new MutationObserver(callback);
 observer.observe(word, { childList: true});
 
 // Позже можно остановить наблюдение
-// observer.disconnect();
+// observer.disconnect(); */
+
