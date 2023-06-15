@@ -74,9 +74,9 @@ body {
 .rule {
   display: inline-block;
   /* height: calc(var(--index) * 1);  При уменьшении текста не удаётся разместить его в центре*/ 
-  width: calc(var(--index) * 6);
+  padding: 5px 8px;
   margin: calc(var(--index) * 0.2);
-  padding: calc(var(--index) * 0.2);
+  /* padding: calc(var(--index) * 0.2); */
 
   font-size: calc(var(--index) * 1.5);
   font-weight: bold;
@@ -109,8 +109,7 @@ body {
   background-color: black;
 }
 
-.line_1,
-.line_2 {
+.line_1 {
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
@@ -154,25 +153,21 @@ body {
 
 /* GAME page (second) */
 .game {
-  width: 100vw;
-  height: 100vh;
+  display: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
 }
 
-.section_game-base {
-  width: 70%;
-  height: 100vh;
-  float: left;
-}
+/* .section_game-base {
+  
 
-.div_game-base {
+  
+} */
+
+/* .div_game-base {
   display: block;
-  float: right;
-
-  width: calc(12 * 30 + 12 * 2 * 5);
-
-  margin-top: 20vh;
-  margin-right: 15vw;
-}
+} */
 
 .game h1 {
   color: rgb(255, 165, 0);
@@ -241,12 +236,16 @@ button {
   background-size: cover;
   border: none;
 }
+#gameover{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
 
 .buttonStartAgain {
+  /* display: block; */
   width: calc(var(--index) * 5);
   height: calc(var(--index) * 3);
-  margin-top: 10%;
-
   font-family:Arial, Helvetica, sans-serif;
   font-size: calc(var(--index) * 1);
 }
@@ -256,14 +255,11 @@ button {
 }
 
 .section_game-keyboard {
-  width: 30%;
-  height: 100vh;
-  float: right;
+  width: 19%;
 }
 
-.div_game-keyboard {
-  margin-top: 20vh;
-}
+/* .div_game-keyboard {
+} */
 
 .div_game-keyboard button {
   margin: calc(var(--index) * 0.1);
