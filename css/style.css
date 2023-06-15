@@ -247,15 +247,16 @@ button {
 
 .buttonStartAgain {
   /* display: block; */
-  width: calc(var(--index) * 5);
+  width: calc(var(--index) * 14)
+  /* width: calc(var(--index) * 5); */
   height: calc(var(--index) * 3);
   font-family:Arial, Helvetica, sans-serif;
   font-size: calc(var(--index) * 1);
 }
 
-.bSA-category {
+/* .bSA-category {
   width: calc(var(--index) * 14);
-}
+} */
 
 .section_game-keyboard {
   width: 19%;
