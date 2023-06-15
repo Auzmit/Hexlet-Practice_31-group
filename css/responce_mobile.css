@@ -1,0 +1,21 @@
+@media(max-width: 1090px){
+    .body{
+        background-size: cover;
+       
+    }
+    .game{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 50%;
+    }
+    .section_game-keyboard{
+        width: 88%;
+    }
+    .div_game-keyboard button{
+        width: 8%;
+        height: 25px;
+    }
+   
+    
+}

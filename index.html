@@ -4,6 +4,9 @@
     <head>
         <link rel="icon" href="images/favicon/Dicemen_492х492/white_black.svg">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/different_cubes.css">
+        <link rel="stylesheet" href="css/responce768.css">
+        <link rel="stylesheet" href="css/responce_mobile.css">
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport"
@@ -22,27 +25,17 @@
                 <section class="themes">
                     <div class="themes_header">Темы</div>
                     <div class="line_1">
-                        <!-- 
-                            Животные
-                            Рыбы
-                            Транспорт
-                            Ягоды
-                            Космос
-                            Музыка
-                         -->
-                        <div class="theme">animals</div>
-                        <div class="theme">fish</div>
-                        <div class="theme">transport</div>
+                        <div class="theme button-beauty">Животные</div>
+                        <div class="theme button-beauty">Рыбы</div>
+                        <div class="theme button-beauty">Транспорт</div>
+                        <div class="theme button-beauty">Ягоды</div>
+                        <div class="theme button-beauty">Космос</div>
+                        <div class="theme button-beauty">Музыка</div>
                     </div>
-                    <div class="line_2">
-                        <div class="theme">berries</div>
-                        <div class="theme">space</div>
-                        <div class="theme">music</div>
-                    </ul>
                 </section>
                 <div class="rules">
                     <div class="rules_header">Правила</div>
-                    <div class="rule" style="opacity: 0;">
+                    <div class="rule button-beauty" style="opacity: 0;">
                         В этой игре вам нужно угадывать по буквам
                         слово на выбранную тему.
                         Если ошибётесь 7 раз - проиграете.
@@ -58,23 +51,21 @@
                     <h1 id="topic"></h1>
                     <div id="hangman" class="hangman"></div>
                     <section id="word-guess">
-                        <div class="word"></div>
+                        <div id="parent-letters" class="word"></div>
                     </section>
-                    <section id="gameover" style="display: none">
-                        <button class="buttonStartAgain">Начать заново</button>
-                        <button class="buttonStartAgain bSA-category">Выбрать другую категорию</button>
+                    <section id="gameover" style="display: none;">
+                        <button class="buttonStartAgain button-beauty">Другое слово</button>
+                        <button class="buttonStartAgain bSA-category button-beauty">Выбрать другую категорию</button>
                     </section>
                 </div>
             </section>
             <section class="section_game-keyboard">
-                <div id="keyboard" class="div_game-keyboard">
-
-                </div>
+                <div id="keyboard" class="div_game-keyboard"></div>
             </section>
         </section>
 
         <script src="js/game.js"></script>
-        <!-- <script src="js/my_test.js"></script> -->
+        <!-- <script src="js/different_cubes.js"></script> -->
     </body>
 
 </html>
