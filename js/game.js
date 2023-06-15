@@ -117,6 +117,8 @@ const view = {
     this.renderHangman();
     this.renderKeyboard();
     document.getElementById('game').style.display = 'block';
+    // document.getElementById('gameover').style.display = 'block';
+
     if (gameState.isGameOver()) {
       this.renderTryAgain();
     }

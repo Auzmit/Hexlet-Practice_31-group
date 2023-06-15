@@ -110,7 +110,10 @@ body {
 }
 
 .line_1 {
-  width: 80vw;
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   
