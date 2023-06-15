@@ -111,7 +111,7 @@ body {
 
 .line_1 {
   display: flex;
-  width: 50%;
+  width: 30%;
   flex-wrap: wrap;
   justify-content: center;
   margin-left: auto;
@@ -156,10 +156,10 @@ body {
 
 /* GAME page (second) */
 .game {
-  display: none;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  margin-top: 3%;
 }
 
 /* .section_game-base {
@@ -173,8 +173,9 @@ body {
 } */
 
 .game h1 {
+  display: flex;
+  justify-content:center;
   color: rgb(255, 165, 0);
-  text-align: center;
 }
 
 .hangman {
@@ -246,8 +247,7 @@ button {
 }
 
 .buttonStartAgain {
-  /* display: block; */
-  width: calc(var(--index) * 14)
+  width: calc(var(--index) * 14);
   /* width: calc(var(--index) * 5); */
   height: calc(var(--index) * 3);
   font-family:Arial, Helvetica, sans-serif;
@@ -260,6 +260,7 @@ button {
 
 .section_game-keyboard {
   width: 19%;
+  margin-left: auto;
 }
 
 /* .div_game-keyboard {
