@@ -51,7 +51,9 @@ padding-top: 3vh;
   padding-bottom: 5vh;
 
   color: rgb(233, 153, 3);
-  font-family: 'Zaychik';
+  /* font-family: 'Zaychik'; */
+  font-family: 'mr_BelladonaStencilG';
+
   font-size: calc(var(--index) * 4);
   text-shadow: 2px 2px black;
   font-weight: bold;
@@ -231,6 +233,12 @@ padding-top: 3vh;
   font-weight: bold;
 }
 
+#word-guess {
+  font-family: 'mr_BelladonaStencilG';
+
+
+}
+
 .letter {
   display: flex;
   align-items: center;
@@ -244,8 +252,6 @@ padding-top: 3vh;
   /* background-image: url(../images/cube/6/cube_100x100_1.png); */
   background-position: center;
   background-size: cover;
-  font-family: 'mr_BelladonaStencilG';
-  color: rgba(244, 231, 156, 0.693);
 
 
 }
