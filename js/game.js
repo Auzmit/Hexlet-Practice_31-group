@@ -87,6 +87,7 @@ const view = {
     alphabetLetters.forEach((letter) => {
       const button = document.createElement('button');
       button.disabled = gameState.openedLetters.includes(letter);
+      if (button.hasAttribute('disabled')) { button.style.opacity = 0; }
       button.innerText = letter;
       button.classList.add(`button-${letter}`);
       keyboardContainer.appendChild(button);
