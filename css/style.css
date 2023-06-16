@@ -160,7 +160,7 @@ padding-top: 3vh;
 .div_game-base {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   margin-right: 20%;
