@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/dice-32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
@@ -15,9 +16,14 @@
     <!--Хедер сайта с навигацией-->
     <header class="primary-header">
         <div class="container">
-            <a href="#"><img src="images/icons/dice-100-0-b.svg" alt="Logo"></a>
+            <a href="#"><img src="images/icons/dice-48-dark.png" alt="Logo"></a>
+            <!-- Кнопка навигации на малых экранах -->
+            <button class="mobile-nav-bar" aria-controls="primary-navigation">
+                <img src="images/icons/menu-open.svg" alt="menu" aria-hidden="true">
+                <span class="visually-hidden"></span>
+            </button>
             <nav class="primary-navigation">
-                <ul role="list" class="nav-list">
+                <ul role="list" class="nav-list" id="primary-navigation">
                     <li><a href="#">О проекте</a></li>
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Наша команда</a></li>
@@ -106,11 +112,11 @@
     </main>
 
     <!-- Футер сайта -->
-    <footer class="padding-block-400 bg-neutral-900 text-neutral-100">
+    <footer class="padding-block-400 bg-secondary-400 text-neutral-100">
         <div class="container">
             <div class="even-columns">
                 <div>
-                    <a href="#"><img src="images/icons/dice-100-00-w.svg" alt="Logo"></a>
+                    <a href="#"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
                     <ul aria-label="social links" role="list">
                         <li><a aria-label="hexly-website" href="https://hexly.ru/">хексли</a></li>
                         <li><a aria-label="youtube" href="https://www.youtube.com/@hexlyru">ютуб</a></li>

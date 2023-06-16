@@ -7,7 +7,8 @@
     --clr-accent-400: hsl(233, 63%, 86%);
     --clr-accent-200: hsl(233, 63%, 90%);
 
-    --clr-primary-400: hsl(233, 63%, 86%);
+    --clr-primary-400: rgb(197, 202, 242);
+    --clr-secondary-400: #9C9FB5;
 
     --clr-neutral-100: hsl(0, 0%, 100%);
 
@@ -146,6 +147,9 @@ svg {
 }
 .bg-primary {
     background-color: var(--clr-primary-400);
+}
+.bg-secondary-400 {
+    background-color: var(--clr-secondary-400);
 }
 .bg-accent {
     background-color: var(--clr-accent-400);
