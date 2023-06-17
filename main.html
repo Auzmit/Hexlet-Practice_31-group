@@ -16,22 +16,25 @@
     <!--Хедер сайта с навигацией-->
     <header class="primary-header">
         <div class="container">
-            <a href="#"><img src="images/icons/dice-48-dark.png" alt="Logo"></a>
-            <!-- Кнопка навигации на малых экранах -->
-            <button class="mobile-nav-bar" aria-controls="primary-navigation">
-                <img src="images/icons/menu-open.svg" alt="menu" aria-hidden="true">
-                <span class="visually-hidden"></span>
-            </button>
-            <nav class="primary-navigation">
-                <ul role="list" class="nav-list" id="primary-navigation">
-                    <li><a href="#">О проекте</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Наша команда</a></li>
-                </ul>
-            </nav>
-            <a href="index.html">
-                <button class="button">Начать игру</button>
-            </a>
+            <div class="nav-wrapper">
+                <a href="#"><img src="images/icons/dice-48-dark.png" alt="Logo"></a>
+                <!-- Кнопка навигации на малых экранах -->
+                <button class="mobile-nav-bar" aria-controls="primary-navigation">
+                    <img class="icon-menu" src="images/icons/menu-open.svg" alt="" aria-hidden="true" width="30">
+                    <img class="icon-close" src="images/icons/menu-close.svg" alt="" aria-hidden="true" width="30">
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <nav class="primary-navigation">
+                    <ul role="list" class="nav-list" id="primary-navigation">
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html">
+                    <button class="button">Начать игру</button>
+                </a>
+            </div>
         </div>
     </header>
 
