@@ -1,7 +1,6 @@
 @media(max-width: 1090px){
     .body{
         background-size: cover;
-       
     }
     .game{
         flex-direction: column;
@@ -13,8 +12,7 @@
         width: 88%;
     }
     .div_game-keyboard button{
-        width: 8%;
-        height: 25px;
+        height: 2.2em;
     }
    
     
