@@ -1,14 +1,26 @@
 @media(max-width: 1090px){
     .body{
         background-size: cover;
+        width: auto;
+        height: auto;
     }
     .game{
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin-top: 10%;
+        margin-top: auto;
     }
+    #gameover{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+      }
     .section_game-keyboard{
+        margin-top: auto;
         width: 88%;
     }
 }

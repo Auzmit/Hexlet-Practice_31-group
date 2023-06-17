@@ -24,8 +24,8 @@
 body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: 200vh;
 
   margin: 0 auto;
 
