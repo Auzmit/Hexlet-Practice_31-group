@@ -80,13 +80,14 @@ padding-top: 3vh;
 
 .theme,
 .rule {
-  display: inline-block;
-  /* height: calc(var(--index) * 1);  При уменьшении текста не удаётся разместить его в центре*/ 
-  padding: 5px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(var(--index) * 1);
   margin: calc(var(--index) * 0.2);
-  /* padding: calc(var(--index) * 0.2); */
+  padding: calc(var(--index) * 0.6) calc(var(--index) * 1.6) calc(var(--index) * 0.6);
 
-  font-size: calc(var(--index) * 1.5);
+  font-size: calc(var(--index) * 1);
   font-weight: bold;
   /* !!! do we need the following?:  */
   text-decoration: none !important;
@@ -106,7 +107,7 @@ padding-top: 3vh;
   border: 1px solid #060607;
   border-radius: calc(var(--index) * 2);
   vertical-align: middle;
-  font-size: 25px;
+  /*font-size: 25px; */
 }
 
 .button-beauty:hover,
@@ -119,7 +120,7 @@ padding-top: 3vh;
 
 .line_1 {
   display: flex;
-  width: 30%;
+  width: 35%;
   flex-wrap: wrap;
   justify-content: center;
   margin-left: auto;
