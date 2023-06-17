@@ -262,7 +262,7 @@ padding-top: 3vh;
   /* background-image: url(../images/cube/6/cube_100x100_1.png); */
   background-position: center;
   background-size: cover;
-  text-shadow: 0.5px 0.5px rgba(12, 1, 1, 0.843);
+  text-shadow: -1px -0.5px 1px rgba(1, 6, 36, 0.578);
 
 
 }
@@ -282,7 +282,7 @@ button {
   background-size: cover;
   border: none;
   font-family: 'mr_BelladonaStencilG';
-  text-shadow: 1px 0 1px rgba(12, 1, 1, 0.843);
+  text-shadow: -1px -0.5px 1px rgba(1, 6, 36, 0.578);
 
 
 }
@@ -303,7 +303,7 @@ button {
   height: calc(var(--index) * 3);
   font-size: calc(var(--index) * 1);
   font-family: 'mr_BelladonaStencilG';
-  text-shadow: 1px 0.5px rgba(12, 1, 1, 0.843);
+  text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
 
 
 }
