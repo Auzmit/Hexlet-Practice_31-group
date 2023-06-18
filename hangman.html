@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виселица</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/dice-32.png">
+    <link rel="stylesheet" href="css/style-hangman.css">
+    <link rel="stylesheet" href="css/different_cubes.css">
+</head>
+
+<body id="body">
+
+    <header class="primary-header">
+        <div class="container nav-wrapper">
+            <a href="#"><img src="images/icons/dice-48-dark.png" alt="Logo"></a>
+            <a href="index.html">
+                <button class="button">Начать игру</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Заглавная страница -->
+    <section class="padding-block-900">
+        <div class="container hero">
+            <div class="even-colums">
+                <div>
+                    <h1>Виселица</h1>
+                </div>
+                <div>
+                    <h2 class="themes_header">Темы</h2>
+                    <ul class="line_1">
+                        <li class="theme button-beauty">Животные</li>
+                        <li class="theme button-beauty">Рыбы</li>
+                        <li class="theme button-beauty">Транспорт</li>
+                        <li class="theme button-beauty">Ягоды</li>
+                        <li class="theme button-beauty">Космос</li>
+                        <li class="theme button-beauty">Музыка</li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <!--  Правила -->
+    <section class="rules">
+        <h2 class="rules_header">Правила</h2>
+        <div class="rule button-beauty" style="opacity: 0;">
+            <p>В этой игре вам нужно угадывать по буквам
+            слово на выбранную тему.
+            Если ошибётесь шесть раз - проиграете.
+            Удачной игры!</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- GAME page (second) -->
+    <section id="Game" class="game">
+        <section class="section_game-base">
+            <div class="div_game-base">
+                <h1 id="topic"></h1>
+                <div id="hangman" class="hangman"></div>
+                <section id="word-guess">
+                    <div id="parent-letters" class="word"></div>
+                </section>
+                <section id="gameover" style="display: none;">
+                    <button class="buttonStartAgain button-beauty">Другое слово</button>
+                    <button class="buttonStartAgain bSA-category button-beauty">Сменить категорию</button>
+                </section>
+            </div>
+        </section>
+        <section class="section_game-keyboard">
+            <div id="keyboard" class="div_game-keyboard"></div>
+        </section>
+    </section>
+
+    <footer class="padding-block-400 bg-neutral-900 text-neutral-100">
+        <div class="container">
+            <div class="even-columns">
+                <div>
+                    <a href="#"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
+                </div>
+                <div>
+                    <p class="fs-300 text-neutral-100">Учебный проект студентов колледжа Хекслет, 31-я группа.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/game.js"></script>
+    <!-- <script src="js/different_cubes.js"></script> -->
+</body>
+
+</html>
