@@ -12,17 +12,8 @@
 
 <body id="body">
 
-    <header class="primary-header">
-        <div class="container nav-wrapper">
-            <a href="#"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
-            <a href="main.html">
-                <button class="button">На главную</button>
-            </a>
-        </div>
-    </header>
-
     <!-- Заглавная страница -->
-    <section class="padding-block-900">
+    <section class="padding-block-400">
         <div class="container hero">
             <div class="even-columns">
                 <div>
@@ -31,12 +22,12 @@
                 <div>
                     <h2 class="fs-secondary-heading fw-bold">Темы</h2>
                     <ul class="line_1" role="list">
-                        <li class="theme button-beauty">Животные</li>
-                        <li class="theme button-beauty">Рыбы</li>
-                        <li class="theme button-beauty">Транспорт</li>
-                        <li class="theme button-beauty">Ягоды</li>
-                        <li class="theme button-beauty">Космос</li>
-                        <li class="theme button-beauty">Музыка</li>
+                        <li class="theme button-menu">Животные</li>
+                        <li class="theme button-menu">Рыбы</li>
+                        <li class="theme button-menu">Транспорт</li>
+                        <li class="theme button-menu">Ягоды</li>
+                        <li class="theme button-menu">Космос</li>
+                        <li class="theme button-menu">Музыка</li>
                     </ul>
                 </div> 
             </div>
@@ -44,46 +35,47 @@
     </section>
 
     <!--  Правила -->
-    <section class="rules">
-        <h2 class="rules_header">Правила</h2>
-        <div class="rule button-beauty" style="opacity: 0;">
-            <p>В этой игре вам нужно угадывать по буквам
-            слово на выбранную тему.
-            Если ошибётесь шесть раз - проиграете.
-            Удачной игры!</p>
-        </div>
+    <section class="padding-block-400">
+        <div class="container">
+            <div>
+                <h2 class="rules_header fs-secondary-heading fw-bold">Правила</h2>
+            </div>
+            <div class="rule button-menu" style="opacity: 0;">
+                <p>В этой игре вам нужно угадывать по буквам
+                слово на выбранную тему.
+                Если ошибётесь шесть раз - проиграете.
+                Удачной игры!</p>
+            </div>
         </div>
     </section>
 
     <!-- GAME page (second) -->
-    <section id="Game" class="game">
-        <section class="section_game-base">
+    <section class="padding-block-400">
+        <div class="section_game-base container">
             <div class="div_game-base">
                 <h1 id="topic"></h1>
-                <div id="hangman" class="hangman"></div>
-                <section id="word-guess">
+                <div class="hangman"></div>
+                <div id="word-guess">
                     <div id="parent-letters" class="word"></div>
-                </section>
-                <section id="gameover" style="display: none;">
+                </div>
+            </div>
+            <div id="gameover" style="display: none;">
+                <div class="even-columns">
                     <button class="buttonStartAgain button-beauty">Другое слово</button>
                     <button class="buttonStartAgain bSA-category button-beauty">Сменить категорию</button>
-                </section>
+                </div>
             </div>
-        </section>
-        <section class="section_game-keyboard">
-            <div id="keyboard" class="div_game-keyboard"></div>
-        </section>
+            <div class="section_game-keyboard container">
+                <div id="keyboard" class="div_game-keyboard"></div>
+            </div>
+        </div>
     </section>
 
-    <footer class="padding-block-400 bg-neutral-900 text-neutral-100">
+    <footer class="bg-neutral-900 text-neutral-100">
         <div class="container">
-            <div class="even-columns">
-                <div>
-                    <a href="#"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
-                </div>
-                <div>
-                    <p class="fs-300 text-neutral-100">Учебный проект студентов колледжа Хекслет, 31-я группа.</p>
-                </div>
+            <div>
+                <a href="main.html"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
+                <p class="fs-300 text-neutral-100">Учебный проект студентов колледжа Хекслет, 31-я группа.</p>
             </div>
         </div>
     </footer>
