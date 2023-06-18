@@ -46,17 +46,25 @@ body {
 }
 
 .header {
-padding-top: 3vh;
+  /* padding-top: 3vh;
   padding-left: 5vh;
   padding-bottom: 5vh;
 
-  color: rgb(233, 153, 3);
+  color: rgb(233, 153, 3); */
   /* font-family: 'Zaychik'; */
-  font-family: 'mr_BelladonaStencilG';
+  /* font-family: 'mr_BelladonaStencilG';
 
   font-size: calc(var(--index) * 4);
   text-shadow: 2px 2px black;
-  font-weight: bold;
+  font-weight: bold; */
+
+  width: 45vw;
+  height: 25vh;
+
+  background-image: url(../images/rope/rope.png);
+  /* background-image: url(../images/rope/untitled.png);   */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .themes {
@@ -284,13 +292,9 @@ button {
   background-size: cover;
   border: none;
   font-family: 'mr_BelladonaStencilG';
-<<<<<<< HEAD
-  text-shadow: 2px 2px rgba(12, 1, 1, 0.843);
-=======
   text-shadow: -1px -0.5px 1px rgba(1, 6, 36, 0.578);
 
 
->>>>>>> f717c771aaa9e898acfad1bc7bd0d45e37f33aa2
 }
 #gameover{
   margin-top: 20%;
