@@ -1,10 +1,10 @@
 const wordLists = {
-  animals: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
-  fish: ['креветка', 'мидия', 'краб', 'осьминог', 'кальмар', 'устрица', 'скумбрия', 'лосось', 'тунец', 'корюшка', 'дельфин', 'акула', 'пиранья', 'планктон', 'коралл'],
-  transport: ['вертолёт', 'самолёт', 'автобус', 'автомобиль', 'корабль', 'грузовик', 'паром', 'мотоцикл', 'велосипед', 'самокат', 'лодка', 'самокат', 'поезд', 'метро', 'яхта'],
-  berries: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
-  space: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
-  music: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
+  Животные: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
+  Рыбы: ['креветка', 'мидия', 'краб', 'осьминог', 'кальмар', 'устрица', 'скумбрия', 'лосось', 'тунец', 'корюшка', 'дельфин', 'акула', 'пиранья', 'планктон', 'коралл'],
+  Транспорт: ['вертолёт', 'самолёт', 'автобус', 'автомобиль', 'корабль', 'грузовик', 'паром', 'мотоцикл', 'велосипед', 'самокат', 'лодка', 'самокат', 'поезд', 'метро', 'яхта'],
+  Ягоды: ['арбуз', 'барбарис', 'боярышник', 'брусника', 'голубика', 'еживика', 'земляника', 'калина', 'кизил', 'клюква', 'морошка', 'фейхоа', 'физалис', 'шелковица', 'черёмуха'],
+  Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
+  Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
 
 const maxAttempts = 6;
@@ -66,12 +66,17 @@ const view = {
       if (gameState.openedLetters.includes(letter)) {
         return letter;
       }
-      return '_';
+      return '';
     });
+    let i = 0;
     displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       placeholder.innerText = letter;
+      i += 1;
+      placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
+      if (i === 6) { i = 0; }
+      // placeholder.classList.add(`letter-${letter}`);
       container.appendChild(placeholder);
     });
   },
@@ -83,6 +88,7 @@ const view = {
       const button = document.createElement('button');
       button.disabled = gameState.openedLetters.includes(letter);
       button.innerText = letter;
+      button.classList.add(`button-${letter}`);
       keyboardContainer.appendChild(button);
 
       button.addEventListener('click', () => {
@@ -99,12 +105,10 @@ const view = {
   },
 
   renderTryAgain() {
-    // document.getElementById('gameover').style.display = 'block';
     document.getElementById('word-guess').style.color = 'red';
   },
 
   renderWin() {
-    // document.getElementById('gameover').style.display = 'block';
     document.getElementById('word-guess').style.color = 'green';
   },
 
@@ -135,8 +139,22 @@ document.querySelectorAll('.theme').forEach((theme) => {
 });
 
 document.querySelector('.buttonStartAgain').addEventListener('click', () => {
-  // gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
   gameState.init();
   view.render();
 });
-//пул владимир 1.1
+
+const body = document.getElementById('body');
+document.querySelector('.bSA-category').addEventListener('click', () => {
+  body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+});
+
+const rules = document.querySelector('.rules_header');
+rules.addEventListener('mouseover', () => {
+  document.querySelector('.rule').style.opacity = 1;
+});
+rules.addEventListener('mouseout', () => {
+  document.querySelector('.rule').style.opacity = 0;
+});
+
+
+export { wordLists, alphabetLetters };
