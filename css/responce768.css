@@ -1,3 +1,35 @@
-@media(max-width: 900px){
-    
+@media screen and (orientation: landscape ) and(max-width: 800px){
+    .base {
+        width: 100vw;
+    }
+    .rules {
+        margin: 0;
+    }
+    .themes {
+        margin: 0;
+        
+    }
+    .game h1 {
+        margin: 0;
+        padding: 0;
+    } 
+    #gameover {
+        margin-top: 5%;
+    }
+
+    .section_game-keyboard {
+        width: 64%;
+        }
+}
+
+@media screen and (orientation: portrait) and (max-width: 800px){
+    .game {
+        margin-top: 0;
+    }
+    #gameover {
+        margin-top: 10%;
+    }
+    .section_game-keyboard {
+    width: 64%;
+    }
 }

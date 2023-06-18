@@ -25,7 +25,6 @@ body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
   width: 100vw;
-  height: 200vh;
 
   margin: 0 auto;
 
@@ -303,7 +302,8 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-top: auto;
+  align-items: center;
+  margin-top: 5%;
   margin-bottom: 5%;
   
 }
@@ -315,6 +315,7 @@ button {
   font-size: calc(var(--index) * 1);
   font-family: 'mr_BelladonaStencilG';
   text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
+  padding-bottom: 1.5%;
 
 
 }
@@ -326,12 +327,13 @@ width: calc(var(--index) * 14);
 .section_game-keyboard {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  width: 88%;
+  width: 55%;
   margin-top: 5%;
-  margin-right: 5%;
-  margin-left: 5%;
+  /* margin-right: 5%;
+  margin-left: 5%; */
+  margin: auto;
 }
 
 /* .div_game-keyboard {
@@ -341,3 +343,4 @@ width: calc(var(--index) * 14);
   margin: calc(var(--index) * 0.1);
   margin-bottom: 0;
 }
+

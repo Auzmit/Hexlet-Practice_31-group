@@ -117,7 +117,7 @@ const view = {
     this.renderWord();
     this.renderHangman();
     this.renderKeyboard();
-    document.getElementById('gameover').style.display = 'block';
+    document.getElementById('gameover').style.display = 'flex';
     if (gameState.isGameOver()) {
       this.renderTryAgain();
     }
