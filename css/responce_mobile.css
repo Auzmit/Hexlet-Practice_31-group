@@ -3,6 +3,7 @@
         background-size: cover;
         width: auto;
         height: auto;
+        background-position: -20% -20%;
     }
     .game{
         flex-direction: column;

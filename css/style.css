@@ -61,9 +61,8 @@ body {
   width: 45vw;
   height: 25vh;
 
-  background-image: url(../images/rope/rope_1.png);
-  background-image: url(../images/rope/rope_2.png);
-  /* background-image: url(../images/rope/untitled.png);   */
+  /* background-image: url(../images/rope/rope_3.svg); */
+  background-image: url(../images/rope/rope_3.png);
 
   background-size: contain;
   background-repeat: no-repeat;
