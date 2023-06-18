@@ -127,7 +127,7 @@ padding-top: 3vh;
   margin-right: auto;
 
   text-align: center;
-  text-shadow: 1px 0 1px rgba(12, 1, 1, 0.843);
+  text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
 
 }
 
@@ -262,12 +262,14 @@ padding-top: 3vh;
   /* background-image: url(../images/cube/6/cube_100x100_1.png); */
   background-position: center;
   background-size: cover;
-  text-shadow: 0.5px 0.5px rgba(12, 1, 1, 0.843);
+  text-shadow: -1px -0.5px 1px rgba(1, 6, 36, 0.578);
 
 
 }
 
 button {
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+
   display: inline-block;
   height: calc(var(--index) * 3);
   width: calc(var(--index) * 3);
@@ -282,9 +284,13 @@ button {
   background-size: cover;
   border: none;
   font-family: 'mr_BelladonaStencilG';
-  text-shadow: 1px 0 1px rgba(12, 1, 1, 0.843);
+<<<<<<< HEAD
+  text-shadow: 2px 2px rgba(12, 1, 1, 0.843);
+=======
+  text-shadow: -1px -0.5px 1px rgba(1, 6, 36, 0.578);
 
 
+>>>>>>> f717c771aaa9e898acfad1bc7bd0d45e37f33aa2
 }
 #gameover{
   margin-top: 20%;
@@ -303,7 +309,7 @@ button {
   height: calc(var(--index) * 3);
   font-size: calc(var(--index) * 1);
   font-family: 'mr_BelladonaStencilG';
-  text-shadow: 1px 0.5px rgba(12, 1, 1, 0.843);
+  text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
 
 
 }

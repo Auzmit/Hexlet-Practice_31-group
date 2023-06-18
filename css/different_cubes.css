@@ -88,48 +88,5 @@
 .button-р:hover,
 .button-ц:hover,
 .button-ь:hover {
-  /* transition: rotate .5s, position 1s, top 1s; */
-  /* transition-duration: 1s, 0s, 1s; */
-  /* transition: .5s; */
-  /* width: ; */
-  /* rotate: 8deg; */
   transform: rotate(8deg) scale(1.3, 1.3) translateY(-10%);
-  /* position: relative; */
-  /* top: -5px; */
 }
-
-/* .button-а:not(:hover),
-.button-ё:not(:hover),
-.button-л:not(:hover),
-.button-с:not(:hover),
-.button-ч:not(:hover),
-.button-э:not(:hover),
-.button-б:not(:hover),
-.button-ж:not(:hover),
-.button-м:not(:hover),
-.button-т:not(:hover),
-.button-ш:not(:hover),
-.button-ю:not(:hover),
-.button-в:not(:hover),
-.button-з:not(:hover),
-.button-н:not(:hover),
-.button-у:not(:hover),
-.button-щ:not(:hover),
-.button-я:not(:hover),
-.button-г:not(:hover),
-.button-и:not(:hover),
-.button-о:not(:hover),
-.button-ф:not(:hover),
-.button-ъ:not(:hover),
-.button-д:not(:hover),
-.button-й:not(:hover),
-.button-п:not(:hover),
-.button-х:not(:hover),
-.button-ы:not(:hover),
-.button-е:not(:hover),
-.button-к:not(:hover),
-.button-р:not(:hover),
-.button-ц:not(:hover),
-.button-ь:not(:hover) {
-  transition: .5s;
-} */
