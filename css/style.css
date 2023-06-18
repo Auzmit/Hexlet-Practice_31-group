@@ -261,6 +261,8 @@ padding-top: 3vh;
 }
 
 button {
+  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+
   display: inline-block;
   height: calc(var(--index) * 3);
   width: calc(var(--index) * 3);
@@ -275,8 +277,6 @@ button {
   border: none;
   font-family: 'mr_BelladonaStencilG';
   text-shadow: 2px 2px rgba(12, 1, 1, 0.843);
-
-
 }
 #gameover{
   margin-top: 20%;
