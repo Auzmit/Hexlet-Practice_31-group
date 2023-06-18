@@ -16,12 +16,12 @@
     --clr-accent-400: hsl(233, 63%, 86%);
     --clr-accent-200: hsl(233, 63%, 90%);
 
-    --clr-primary-400: rgb(197, 202, 242);
-    --clr-secondary-400: hsl(233, 14%, 66%);
+    --clr-primary-400: hsl(39, 97%, 46%);
+    --clr-secondary-400: hsl(46, 34%, 58%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
 
-    --clr-neutral-900: hsl(24, 100%, 2%);
+    --clr-neutral-900: hsl(0, 0%, 5%);
 
     /* Шрифты */
     font-family: 'mr_BelladonaStencilG', sans-serif;
@@ -34,15 +34,15 @@
 
     --fs-300: .8125rem;
     --fs-400: .875rem;
-    --fs-500: .9375rem;
-    --fs-600: 1rem;
-    --fs-700: 1.875rem;
-    --fs-800: 2.5rem;
-    --fs-900: 3.5rem;
+    --fs-500: 1rem;
+    --fs-600: 2rem;
+    --fs-700: 2.5rem;
+    --fs-800: 4.5rem;
+    --fs-900: 6.5rem;
 
     --fs-body: var(--fs-600);
     --fs-primary-heading: var(--fs-900);
-    --fs-secondary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-800);
     --fs-nav: var(--fs-700);
     --fs-button: var(--fs-400);
 
@@ -237,7 +237,7 @@ svg {
 
 /* Задана максимальная ширина контейнеров и их отступы по горизантали */
 .container {
-    --max-width: 1440px;
+    --max-width: 1220px;
     --padding: 2rem;
 
     width: min(var(--max-width), 100% - var(--padding));
@@ -275,21 +275,26 @@ body {
 }
 
 /* button */
-.button {
-    cursor: pointer;
-    border: 0;
-    border-radius: .375rem;
-    padding: 1em 2em;
-    font-size: var(--fs-button);
-    font-weight: var(--fw-semi-bold);
-    line-height: 1;
-    color: var(--clr-neutral-900);
-    background-color: var(--clr-accent-400);
+.button-beauty {
+    
+    color: #efe8ea !important;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    background: -webkit-linear-gradient(right, rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), rgb(255, 165, 0), rgba(151, 89, 12, 0.8));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    border: 1px solid #060607;
+    border-radius: calc(var(--index) * 2);
+    vertical-align: middle;
+    /*font-size: 25px; */
 }
 
-.button:hover,
-.button:focus-visible {
-    background-color: var(--clr-accent-200);
+.button-beauty:hover,
+.button-beauty:focus-visible {
+    background-position: 99% 50%;
+    color:  var(--clr-accent-400) !important;
+    border: 1px solid rgba(205, 200, 252, 0);
+    background-color: black;
 }
 
 /* Навигация */
@@ -307,31 +312,29 @@ body {
 }
 
 h1 {
-    padding:  1em;
-    color: rgb(233, 153, 3);  
-    font-size: var(--fs-900);
-    text-shadow: 2px 2px black;
-    font-weight: var(--fw-bold);
-}
-
-.themes {
-    box-sizing: border-box;
-    margin-top: 8vh;
-}
-
-.themes_header {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: calc(var(--index) * 1); 
-    color: rgb(255, 165, 0);
-    font-size: calc(var(--index) * 3);
-    font-weight: bold;
+    padding: 0.6em 0 0 0;
     text-align: center;
-    text-shadow: 2px 2px black;
-    font-family: 'mr_BelladonaStencilG';
+    color: var(--clr-primary-400);
+    text-shadow: 2px 2px var(--clr-neutral-900);
 }
 
-.theme,
+h2 {
+    padding: 1.2em 0 0.3em 0;
+    text-align: center;
+    color: var(--clr-primary-400);
+    text-shadow: 2px 2px var(--clr-neutral-900);
+}
+
+.theme {
+    margin: 0.3em;
+}
+
+.line_1 {
+    display: grid;
+    text-align: center;
+    text-shadow: 1px 0 1px var(--clr-neutral-900);
+}
+
 .rule {
     display: flex;
     justify-content: center;
@@ -349,39 +352,6 @@ h1 {
 
 }
 
-.button-beauty {
-    background: transparent;
-    color: #efe8ea !important;
-    -webkit-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
-    background: -webkit-linear-gradient(right, rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), rgb(255, 165, 0), rgba(151, 89, 12, 0.8));
-    background-position: 1% 50%;
-    background-size: 300% 300%;
-    border: 1px solid #060607;
-    border-radius: calc(var(--index) * 2);
-    vertical-align: middle;
-    /*font-size: 25px; */
-}
-
-.button-beauty:hover,
-.button-beauty:hover {
-    background-position: 99% 50%;
-    color:  rgb(255, 165, 0) !important;
-    border: 1px solid rgba(205, 200, 252, 0);
-    background-color: black;
-}
-
-.line_1 {
-    display: flex;
-    width: 35%;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-    text-shadow: 1px 0 1px rgba(12, 1, 1, 0.843);
-}
 
 .rules {
     /* display: flex; */
