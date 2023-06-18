@@ -1,4 +1,4 @@
-@media(max-width: 1090px){
+@media(max-width: 500px){
     .body{
         background-size: cover;
         width: auto;
@@ -23,4 +23,8 @@
         margin-top: auto;
         width: 88%;
     }
+
+.none{
+    display: none;
+  }
 }
