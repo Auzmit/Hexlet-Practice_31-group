@@ -1,4 +1,4 @@
-// import exampleJsonFile from '../json/words.json';
+// import exampleJsonFile from '../json/words.json' assert { type: 'json' };;
 
 // const wordLists = exampleJsonFile;
 const wordLists = {
