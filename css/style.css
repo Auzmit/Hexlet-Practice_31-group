@@ -22,7 +22,7 @@
 }
 
 body {
-  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+  cursor: url(../cursor/pixel/Pixel/cursor.cur), auto;
 
   width: 100vw;
   height: 200vh;
@@ -277,7 +277,7 @@ body {
 }
 
 button {
-  cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
+  cursor: url(../cursor/pixel/Pixel/cursor.cur), auto;
 
   display: inline-block;
   height: calc(var(--index) * 3);
