@@ -25,6 +25,7 @@ body {
   cursor: url(../src/cursor/pixel/Pixel/cursor.cur), auto;
 
   width: 100vw;
+  height: 200vh;
 
   margin: 0 auto;
 
@@ -57,8 +58,11 @@ body {
   text-shadow: 2px 2px black;
   font-weight: bold; */
 
-  width: 45vw;
-  height: 25vh;
+  /* width: 45vw;
+  height: 25vh; */
+  width: auto;
+  height: 15vh;
+
 
   background-image: url(../images/rope/rope.png);
 
@@ -302,8 +306,8 @@ button {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   
 }
 
