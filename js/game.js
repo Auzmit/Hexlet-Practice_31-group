@@ -121,7 +121,7 @@ const view = {
     this.renderWord();
     this.renderHangman();
     this.renderKeyboard();
-    document.getElementById('gameover').style.display = 'flex';
+    // document.getElementById('gameover').style.display = 'flex';
     if (gameState.isGameOver()) {
       this.renderTryAgain();
     }
@@ -149,7 +149,7 @@ document.querySelector('.buttonStartAgain').addEventListener('click', () => {
 });
 
 const body = document.getElementById('body');
-document.querySelector('.bSA-category').addEventListener('click', () => {
+document.getElementById('icon-category').addEventListener('click', () => {
   body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
 });
 
