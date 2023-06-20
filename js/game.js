@@ -143,7 +143,7 @@ document.querySelectorAll('.theme').forEach((theme) => {
   });
 });
 
-document.querySelector('.buttonStartAgain').addEventListener('click', () => {
+document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
   view.render();
 });

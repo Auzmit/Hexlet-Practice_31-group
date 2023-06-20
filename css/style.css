@@ -67,7 +67,6 @@ body {
   width: auto;
   height: 15vh;
 
-
   background-image: url(../images/rope/rope.png);
 
   background-size: contain;
@@ -124,7 +123,7 @@ body {
 
 .button-beauty:hover,
 .button-beauty:hover {
-  color:  rgb(255, 165, 0) !important;
+  color: rgb(255, 165, 0) !important;
   background-color: black;
   background-position: 99% 50%;
   border: 1px solid rgba(205, 200, 252, 0);
@@ -203,11 +202,57 @@ body {
   padding-top: 3vh;
 }
 
-.game-header .icon-left {
+.button_icon-left,
+.button_icon-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: calc(var(--index) * 2.7);
+  height: calc(var(--index) * 2.7);
+  padding-top: 0;
+  
+  color: #efe8ea !important;
+  /* color: #a8a8a8 !important; */
+  font-size: calc(var(--index) * 1.4);
+
+  transition: all 0.7s ease-out;
+  background: rgba(139, 69, 19, 0.6);
+  /* -webkit-transition: all 0.7s ease-out;
+  background: -webkit-linear-gradient(right, rgba(205, 200, 252, 0), rgba(205, 200, 252, 0), rgb(255, 165, 0), rgba(151, 89, 12, 0.8));
+  background-position: 1% 50%;
+  background-size: 300% 300%; */
+
+  border: 2px solid rgba(244, 165, 96, 0.6);
+  /* border: 1px solid #060607; */
+  border-radius: .345em;
+  /* vertical-align: middle; */
+
+  /*
+  font-family: 'mr_BelladonaStencilG';
+  text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
+  padding-bottom: 1.5%;
+  */
+}
+
+.button_icon-left:hover,
+.button_icon-right:hover {
+  opacity: 1;
+  color: #efe8ea !important;
+  border: 2px solid sandybrown;
+  background: saddlebrown;
+
+  /* color: rgb(255, 165, 0) !important; */
+  /* background-color: black; */
+  /* background-position: 99% 50%; */
+  /* border: 1px solid rgba(205, 200, 252, 0); */
+}
+
+.game-header .button_icon-left {
   margin-left: 35vw;
 }
 
-.game-header .icon-right {
+.game-header .button_icon-right {
   margin-right: 35vw;
 }
 
@@ -311,39 +356,6 @@ button {
   background-position: center;
   background-size: cover;
   border: none;
-}
-
-.buttonStartAgain {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  
-  width: calc(var(--index) * 2.7);
-  height: calc(var(--index) * 2.7);
-  padding-top: 0;
-  
-  color: #a8a8a8 !important;
-  font-size: calc(var(--index) * 1.4);
-  
-  background: rgba(139, 69, 19, 0.6);
-  border: 2px solid rgba(244, 165, 96, 0.6);
-  border-radius: .345em;
-  /*
-  width: calc(var(--index) * 14);
-  width: calc(var(--index) * 5);
-  height: calc(var(--index) * 3);
-  font-size: calc(var(--index) * 1);
-  font-family: 'mr_BelladonaStencilG';
-  text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
-  padding-bottom: 1.5%;
-  */
-}
-
-.buttonStartAgain:hover {
-  opacity: 1;
-  color: #efe8ea !important;
-  border: 2px solid sandybrown;
-  background: saddlebrown;
 }
 
 .section_game-keyboard {
