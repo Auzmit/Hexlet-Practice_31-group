@@ -1,35 +1,56 @@
-@media(max-width: 500px){
+
+@media screen and (orientation: landscape) and (max-width: 850px) {
+    .body{
+        overflow: scroll;
+
+    }
+    .div_game-base {
+        margin: 3vh;
+    }
+    .game h1 {
+        padding: 0;
+        margin: 0;
+
+    }
+    .hangman {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 500px){
     .body{
         background-size: cover;
-        /* width: 100;
-        height: auto; */
+        overflow: scroll;
+
         background-position: -20% -20%;
     }
-
-    .base {
-      margin-top: 0;
-    } 
-    .game{
+    .game {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        margin-top: 7%;
+        /* margin: 0; */
+        /* gap: 20px; */
     }
+    .div_game-base {
+       margin-top: 0;
+    }
+    .game h1 {
+        padding-bottom: 20vh;
 
-    #word-guess {
-        margin-top: 20%;
     }
+    .hangman {
+        margin-bottom: 0;
+    }
+  
     #gameover{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
-        margin-top: 10%;
-        margin-bottom: 3%;
+        /* margin: 0; */
+        gap: 30vh;
         
       }
     .section_game-keyboard{
-        margin-top: 20%;
         width: 88%;
     }
 
@@ -37,3 +58,4 @@
          display: none;
     }
 }
+
