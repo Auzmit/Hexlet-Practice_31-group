@@ -1,4 +1,4 @@
-@media all and (orientation: landscape ) and (max-width: 800px) {
+@media screen and (orientation: landscape ) and (max-width: 800px) {
     body {
         overflow: scroll;
     }
