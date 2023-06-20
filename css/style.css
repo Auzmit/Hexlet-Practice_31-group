@@ -285,9 +285,9 @@ body {
 
   width: calc(var(--width) * 2);
   height: calc(var(--height) * 2);
-  margin-top: auto;
-  margin-bottom: 2%;
-  opacity: 0;
+  /* margin-top: auto; */
+  /* margin-bottom: 2%; */
+  /* opacity: 0; */
 
   /* background: url(../images/human_525x200.png) no-repeat top right; */
   background: url(../images/pryanic_525x200.png) no-repeat top right;
