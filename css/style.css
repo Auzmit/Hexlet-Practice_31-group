@@ -186,29 +186,43 @@ body {
   flex-direction: column;
   /* align-items: center; */
   justify-content: space-around;
-  margin-top: 3%;
+
+  width: 100vw;
+  height: 100vh;
 }
 
 .game-header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
+  row-gap: 20%;
 
-  /* margin: 20%; */
-  /* margin-top: 2%; */
-  /* margin-bottom: 2%; */
+  margin-bottom: 5vh;
+  padding-top: 3vh;
 }
 
-.icon-left {
-  /* float: left; */
-  margin-left: 15vw;
+.game-header .icon-left {
+  margin-left: 35vw;
 }
 
-.icon-right {
-  /* float: right; */
-  margin-right: 15vw;
+.game-header .icon-right {
+  margin-right: 35vw;
+}
+
+.game-header h1 {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  margin: 0;
+  /* padding-top: 2vh; */
+
+  color: rgb(255, 165, 0);
+  font-family: 'mr_BelladonaStencilG';
+  font-size: 40px;
+  text-shadow: 1px 1px rgba(12, 1, 1, 0.843);
 }
 
 .div_game-base {
@@ -217,21 +231,6 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-}
-
-.game h1 {
-  display: flex;
-  justify-content:center;
-
-  margin-top: 0;
-  margin-bottom: auto;
-  padding-top: 0;
-  padding-bottom: 5%;
-
-  color: rgb(255, 165, 0);
-  font-family: 'mr_BelladonaStencilG';
-  font-size: 40px;
-  text-shadow: 1px 1px rgba(12, 1, 1, 0.843);
 }
 
 .hangman {
