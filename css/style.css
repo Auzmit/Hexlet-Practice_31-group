@@ -35,7 +35,7 @@ body {
   background-position: auto 10vw auto auto;
   background-size: cover;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 

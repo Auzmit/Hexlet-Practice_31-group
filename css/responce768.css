@@ -1,4 +1,8 @@
 @media screen and (orientation: landscape ) and(max-width: 800px){
+    .body {
+        overflow: scroll;
+
+    }
     .header {
         width: auto;
         height: 10vh;
@@ -27,6 +31,10 @@
 }
 
 @media screen and (orientation: portrait) and (max-width: 800px){
+    .body {
+        overflow: auto;
+
+    }
 
     .header {
         width: auto;
@@ -36,7 +44,7 @@
         margin-top: 0;
     }
     .game h1 {
-        margin-top: auto;
+        margin-top:  10vh;
     }
     #gameover {
         margin-top: 10%;
