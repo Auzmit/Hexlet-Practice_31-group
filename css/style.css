@@ -283,23 +283,24 @@ body {
   flex-direction: column;
   align-items: center;
 
-  width: var(--width);
-  height: var(--height);
+  width: calc(var(--width) * 2);
+  height: calc(var(--height) * 2);
   margin-top: auto;
   margin-bottom: 2%;
   opacity: 0;
 
-  background: url(../images/human_525x200.png) no-repeat top right;
+  /* background: url(../images/human_525x200.png) no-repeat top right; */
+  background: url(../images/pryanic_525x200.png) no-repeat top right;
   background-size: auto 100%;
 }
 
 .hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
-.hangman[data-step="1"] { background-position-x: calc(var(--width) * -1) }
-.hangman[data-step="2"] { background-position-x: calc(var(--width) * -2) }
-.hangman[data-step="3"] { background-position-x: calc(var(--width) * -3) }
-.hangman[data-step="4"] { background-position-x: calc(var(--width) * -4) }
-.hangman[data-step="5"] { background-position-x: calc(var(--width) * -5) }
-.hangman[data-step="6"] { background-position-x: calc(var(--width) * -6) }
+.hangman[data-step="1"] { background-position-x: calc(var(--width) * -1 * 2) }
+.hangman[data-step="2"] { background-position-x: calc(var(--width) * -2 * 2) }
+.hangman[data-step="3"] { background-position-x: calc(var(--width) * -3 * 2) }
+.hangman[data-step="4"] { background-position-x: calc(var(--width) * -4 * 2) }
+.hangman[data-step="5"] { background-position-x: calc(var(--width) * -5 * 2) }
+.hangman[data-step="6"] { background-position-x: calc(var(--width) * -6 * 2) }
 
 .word {
   display: flex;

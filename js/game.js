@@ -1,6 +1,7 @@
 // import exampleJsonFile from '../json/words.json' assert { type: 'json' };;
 
 // const wordLists = exampleJsonFile;
+// console.log(wordLists);
 const wordLists = {
   Животные: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
   Рыбы: ['креветка', 'мидия', 'краб', 'осьминог', 'кальмар', 'устрица', 'скумбрия', 'лосось', 'тунец', 'корюшка', 'дельфин', 'акула', 'пиранья', 'планктон', 'коралл'],
@@ -9,7 +10,6 @@ const wordLists = {
   Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
-// console.log(wordLists);
 
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
@@ -80,7 +80,6 @@ const view = {
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
       if (i === 6) { i = 0; }
-      // placeholder.classList.add(`letter-${letter}`);
       container.appendChild(placeholder);
     });
   },
@@ -121,7 +120,6 @@ const view = {
     this.renderWord();
     this.renderHangman();
     this.renderKeyboard();
-    // document.getElementById('gameover').style.display = 'flex';
     if (gameState.isGameOver()) {
       this.renderTryAgain();
     }
