@@ -1,0 +1,24 @@
+@media screen and (max-width: 1030px) {
+    .game-header {
+        padding-top: auto;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .game h1 {
+        margin: 0;
+        padding-top:  0;
+        padding-bottom: 0;
+        padding-left: 20%;
+        padding-right: 20%;
+    } 
+    .button_icon-left,
+    .button_icon-right  {
+        margin-top: auto;
+        gap: 40%;
+    }
+
+    .section_game-keyboard{
+        width: 64%;
+    }
+}
