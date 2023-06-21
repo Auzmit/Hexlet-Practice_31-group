@@ -119,15 +119,45 @@ body {
   border-radius: calc(var(--index) * 2);
   vertical-align: middle;
   /*font-size: 25px; */
+
+  /* Стиль под иконки */
+  /*
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  
+  text-shadow: 2px 2px rgb(77, 32, 0);
+  
+  width: auto;
+  height: auto;
+  
+  color: #efe8ea !important;
+  font-size: calc(var(--index) * 1.4);
+
+  transition: all 0.7s ease-out;
+  background: rgba(139, 69, 19, 0.9);
+
+  border: 2px solid rgba(244, 165, 96);
+  border-radius: .345em;
+  */
 }
 
 .button-beauty:hover,
 .button-beauty:hover {
+  
   color: rgb(255, 165, 0) !important;
   background-color: black;
   background-position: 99% 50%;
   border: 1px solid rgba(205, 200, 252, 0);
+  
+  /* Стиль под иконки */
+  /*
+  color: white !important;
+  background-color: rgb(107, 53, 14);
+  text-shadow: 2px 2px rgb(32, 13, 0);
+  */
 }
+
 
 .line_1 {
   display: flex;
