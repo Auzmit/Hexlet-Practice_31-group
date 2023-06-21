@@ -1,27 +1,41 @@
 @media screen and (orientation: landscape) and (max-width: 850px) {
-    .body{
+    #body{
         overflow: scroll !important;
 
     }
     .div_game-base {
-        margin: 3vh;
+        margin: 0;
+    }
+    .game-header {
+        margin: 0;
     }
     .game h1 {
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 5%;
+        padding-right: 5%;
         margin: 0;
 
     }
     .hangman {
-        margin-bottom: 0;
+       margin: 0;
     }
+    .button_icon-left,
+    .button_icon-right {
+        /* display: flex;
+        flex-direction: row; */
+        margin: 0;
+        gap: 30vh;
+    }
+  
 }
 
 @media screen and (orientation: portrait) and (max-width: 500px){
-    .body{
+    #body{
         background-size: cover;
         overflow: scroll;
 
-        background-position: -20% -20%;
+        /* background-position: -20% -20%; */
     }
     .game {
         flex-direction: column;
@@ -32,21 +46,27 @@
     .div_game-base {
        margin-top: 0;
     }
+    .game-header {
+        margin: 0;
+    }
     .game h1 {
-        padding-bottom: 20vh;
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
 
     }
     .hangman {
         margin-bottom: 0;
     }
   
-    #gameover{
+    .button_icon-left,
+    .button_icon-right {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
-        /* margin: 0; */
-        gap: 30vh;
+        margin: 0;
+        gap: 20vh;
         
       }
     .section_game-keyboard{
