@@ -1,5 +1,5 @@
-@media screen and (orientation: landscape ) and (max-width: 800px) {
-    body {
+@media screen and (orientation: landscape ) and (max-width: 900px) {
+    #body {
         overflow: scroll;
     }
     .header {
@@ -16,21 +16,26 @@
         margin: 0;
         
     }
+    .game-header {
+        padding-top: 3vh;
+    }
     .game h1 {
         margin: 0;
         padding: 0;
     } 
-    #gameover {
+    .button_icon-left,
+    .button_icon-right  {
         margin-top: auto;
     }
 
     .section_game-keyboard {
-        width: 64%;
+        width: 55%;
+        padding-bottom: 5vh;
         }
 }
 
 @media screen and (orientation: portrait) and (max-width: 800px){
-    .body {
+    #body {
         overflow: auto;
 
         overflow: scroll;
@@ -43,10 +48,17 @@
     .game {
         margin-top: 0;
     }
+    .game-header {
+        justify-content: center;
+        align-items: center;
+    }
     .game h1 {
         margin-top:  10vh;
+        padding-left: 10%;
+        padding-right: 10%;
     }
-    #gameover {
+    .button_icon-left,
+    .button_icon-right  {
         margin-top: 10%;
     }
     .section_game-keyboard {
