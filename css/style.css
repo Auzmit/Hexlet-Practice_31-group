@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: 'Zaychik';
-  src: url("../fonts/Zaychik/Zaychik-Regular.ttf");
+  font-family: 'Triod';
+  src: url(../fonts/TriodPostnaja.ttf);
 }
 
 :root {
@@ -82,13 +82,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: calc(var(--index) * 1);
+  padding-top: calc(var(--index) * 1.5);
 
   color: rgb(255, 165, 0);
   font-size: calc(var(--index) * 3);
   /* font-weight: bold; */
   text-align: center;
   text-shadow: 2px 2px black;
-  font-family: 'mr_BelladonaStencilG';
+  font-family: 'Triod';
 }
 
 .theme,
@@ -183,7 +184,7 @@ body {
 
   color: rgb(255, 165, 0);
   text-align: center;
-  font-family: 'mr_BelladonaStencilG';
+  font-family: 'Triod';
   font-size: calc(var(--index) * 2);
   text-shadow: 2px 2px black;
   /* font-weight: 900; */
@@ -296,7 +297,7 @@ body {
   /* padding-top: 2vh; */
 
   color: rgb(255, 165, 0);
-  font-family: 'mr_BelladonaStencilG';
+  font-family: 'Triod';
   font-size: 40px;
   text-shadow: 1px 1px rgba(12, 1, 1, 0.843);
 }
