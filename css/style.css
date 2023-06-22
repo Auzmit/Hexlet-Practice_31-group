@@ -28,7 +28,7 @@ body {
   cursor: url(../cursor/pixel/Pixel/cursor.cur), auto;
 
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
 
   margin: 0 auto;
 
@@ -211,7 +211,8 @@ body {
 /* GAME page (second) */
 /* ------------------ */
 .game {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   /* align-items: center; */
   justify-content: space-around;

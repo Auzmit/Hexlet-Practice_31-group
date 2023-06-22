@@ -1,23 +1,28 @@
-/* // window.onbeforeunload = function () {
-window.load = function () {
-window.scrollTo(0, 0);
-} */
+// window.onbeforeunload = function () {
+/* window.load = function () {
+  window.scrollTo(0, 0);
+}; */
 
-/* function onRefresh() {
-  const body = document.getElementById('body');
-  body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
-  console.log('Hello World!');
+function onRefresh() {
+  // document.getElementById('body').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  document.querySelector('.header').scrollIntoView({ block: 'start', behavior: 'smooth' });
 }
 
 if (document.readyState !== 'loading') {
   onRefresh();
+  console.log('1');
 } else {
   document.addEventListener('DOMContentLoaded', () => {
     onRefresh();
+    console.log('2');
   });
-} */
+}
+document.addEventListener('DOMContentLoaded', () => {
+  onRefresh();
+  console.log('3');
+});
 
-window.addEventListener('load', () => {
-  document.getElementById('body').scrollIntoView({ block: 'start', behavior: 'smooth' });
-  console.log('Hello World!');
-}, false);
+/* window.addEventListener('load', () => {
+}, false); */
+/* document.querySelector('.header').scrollIntoView({ block: 'start', behavior: 'smooth' });
+console.log('Hello World!'); */

@@ -134,6 +134,8 @@ const view = {
 const gameTopic = document.getElementById('topic');
 document.querySelectorAll('.theme').forEach((theme) => {
   theme.addEventListener('click', () => {
+    document.getElementById('body').style.height = '200vh';
+    document.getElementById('Game').style.display = 'flex';
     gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
     gameState.init();
