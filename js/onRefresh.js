@@ -3,7 +3,7 @@
   window.scrollTo(0, 0);
 }; */
 
-function onRefresh() {
+/* function onRefresh() {
   // document.getElementById('body').scrollIntoView({ block: 'start', behavior: 'smooth' });
   document.querySelector('.header').scrollIntoView({ block: 'start', behavior: 'smooth' });
 }
@@ -20,7 +20,7 @@ if (document.readyState !== 'loading') {
 document.addEventListener('DOMContentLoaded', () => {
   onRefresh();
   console.log('3');
-});
+}); */
 
 /* window.addEventListener('load', () => {
 }, false); */
