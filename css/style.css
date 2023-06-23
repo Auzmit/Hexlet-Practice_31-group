@@ -13,6 +13,42 @@
   src: url(../fonts/TriodPostnaja.ttf);
 }
 
+@keyframes background-size {
+  from {
+    background-size: auto 0%;
+  }
+  to {
+    background-size: auto 100%;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes text-align_left {
+  from {
+    padding-left: 95%;
+  }
+  to {
+    padding-left: 0%;
+  }
+}
+
+@keyframes text-align_right {
+  from {
+    padding-right: 95%;
+  }
+  to {
+    padding-right: 0%;
+  }
+}
+
 :root {
   --step: 10px;
   --width: calc(var(--step) * 3);
@@ -52,25 +88,15 @@ body {
 }
 
 .header {
-  /* padding-top: 3vh;
-  padding-left: 5vh;
-  padding-bottom: 5vh;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: background-size;
+  animation-timing-function: cubic-bezier(.64,1,.36,1.22);
 
-  color: rgb(233, 153, 3); */
-  /* font-family: 'Zaychik'; */
-  /* font-family: 'mr_BelladonaStencilG';
-
-  font-size: calc(var(--index) * 4);
-  text-shadow: 2px 2px black;
-  font-weight: bold; */
-
-  /* width: 45vw;
-  height: 25vh; */
   width: auto;
   height: 15vh;
 
   background-image: url(../images/rope/rope.png);
-
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -81,6 +107,10 @@ body {
 }
 
 .themes_header {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: opacity, text-align_right;
+
   margin-left: auto;
   margin-right: auto;
   padding-bottom: calc(var(--index) * 1);
@@ -107,6 +137,14 @@ body {
   font-size: calc(var(--index) * 1);
   font-family: 'mr_BelladonaStencilG';
   /* font-weight: bold; */
+}
+
+.theme {
+  opacity: 0;
+  animation-delay: .5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-name: opacity;
 }
 
 .button-beauty {
@@ -181,6 +219,12 @@ body {
 }
 
 .rules_header {
+  opacity: 0;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: opacity, text-align_left;
+
   width: 100vw;
   margin: auto;
 
