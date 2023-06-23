@@ -10,7 +10,7 @@ const wordLists = {
   Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
-const img = ['background-body1', 'background-body2', 'background-body3', 'background-body4', 'background-body5', 'background-body6', 'background-body6']
+const img = ['background-body1', 'background-body2', 'background-body3', 'background-body4', 'background-body5', 'background-body6', 'background-body6'];
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
