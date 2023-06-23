@@ -50,6 +50,7 @@
 }
 
 :root {
+  --speed-main: 3.5s;
   --step: 10px;
   --width: calc(var(--step) * 3);
   --height: calc(var(--step) * 8);
@@ -88,7 +89,7 @@ body {
 }
 
 .header {
-  animation-duration: 2s;
+  animation-duration: var(--speed-main);
   animation-fill-mode: forwards;
   animation-name: background-size;
   animation-timing-function: cubic-bezier(.64,1,.36,1.22);
@@ -107,7 +108,7 @@ body {
 }
 
 .themes_header {
-  animation-duration: 2s;
+  animation-duration: var(--speed-main);
   animation-fill-mode: forwards;
   animation-name: opacity, text-align_right;
 
@@ -134,15 +135,15 @@ body {
   margin: calc(var(--index) * 0.2);
   padding: calc(var(--index) * 0.6) calc(var(--index) * 1.6) calc(var(--index) * 0.6);
 
-  font-size: calc(var(--index) * 1);
   font-family: 'mr_BelladonaStencilG';
+  font-size: calc(var(--index) * 1);
   /* font-weight: bold; */
 }
 
 .theme {
   opacity: 0;
   animation-delay: .5s;
-  animation-duration: 1.5s;
+  animation-duration: 2.5s;
   animation-fill-mode: forwards;
   animation-name: opacity;
 }
@@ -221,7 +222,7 @@ body {
 .rules_header {
   opacity: 0;
   animation-delay: 1s;
-  animation-duration: 2s;
+  animation-duration: var(--speed-main);
   animation-fill-mode: forwards;
   animation-name: opacity, text-align_left;
 
