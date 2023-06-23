@@ -10,7 +10,7 @@ const wordLists = {
   Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
-
+const img = ['background-body1', 'background-body2', 'background-body3', 'background-body4', 'background-body5', 'background-body6', 'background-body6']
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
@@ -42,6 +42,7 @@ const gameState = {
     const isLetterFound = this.getWordLetters().includes(letter);
     if (!isLetterFound) {
       this.attempts += 1;
+      document.body.className = img[this.attempts];
       if (this.isGameOver()) {
         this.endGame();
       }
@@ -145,6 +146,7 @@ document.querySelectorAll('.theme').forEach((theme) => {
 
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
+  document.body.className = '';
   view.render();
 });
 

@@ -39,6 +39,8 @@ body {
   background-size: cover;
 
   overflow: hidden;
+
+  transition: 1s;
 }
 
 /* ------------------ */
@@ -407,4 +409,28 @@ button {
 .div_game-keyboard button {
   margin: calc(var(--index) * 0.1);
   margin-bottom: 0;
+}
+
+.background-body1{
+  background-image: url(../images/changingBackground/1.JPG);
+}
+
+.background-body2{
+  background-image: url(../images/changingBackground/2.JPG);
+}
+
+.background-body3{
+  background-image: url(../images/changingBackground/3.JPG);
+}
+
+.background-body4{
+  background-image: url(../images/changingBackground/4.JPG);
+}
+
+.background-body5{
+  background-image: url(../images/changingBackground/5.JPG);
+}
+
+.background-body6{
+  background-image: url(../images/changingBackground/6.JPG);
 }
