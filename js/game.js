@@ -84,6 +84,7 @@ const view = {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       if (doNeedAppearClass) { placeholder.classList.add('letter-appear'); }
+      placeholder.classList.add('letter-text-appear');
       placeholder.innerText = letter;
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;

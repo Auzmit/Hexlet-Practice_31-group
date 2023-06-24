@@ -47,7 +47,7 @@
     opacity: 0;
     font-size: 0;
   }
-  50% {
+  60% {
     width: calc(var(--index) * 3);
     height: calc(var(--index) * 3);
     font-size: calc(var(--index) * 1.3);
@@ -81,6 +81,17 @@
   }
   to {
     padding-right: 0%;
+  }
+}
+
+@keyframes letter-text-appear {
+  from {
+    /* opacity: 0; */
+    color: rgba(244, 231, 156, 0);
+  }
+  to {
+    /* opacity: 1; */
+    color: rgba(244, 231, 156, 0.693);
   }
 }
 
@@ -465,6 +476,12 @@ body {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: letter-appear;
+}
+
+.letter-text-appear {
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-name: letter-text-appear;
 }
 
 button {
