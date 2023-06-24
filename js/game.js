@@ -94,19 +94,26 @@ const view = {
 
   renderKeyboard() {
     const keyboardContainer = document.getElementById('keyboard');
-    keyboardContainer.innerHTML = '';
-    alphabetLetters.forEach((letter) => {
-      const button = document.createElement('button');
-      button.disabled = gameState.openedLetters.includes(letter);
-      if (button.hasAttribute('disabled')) { button.style.opacity = 0; }
-      button.innerText = letter;
-      button.classList.add(`button-${letter}`);
-      keyboardContainer.appendChild(button);
-
-      button.addEventListener('click', () => {
-        gameState.openLetter(letter);
-        this.render();
+    if (keyboardContainer.innerHTML === '') {
+      alphabetLetters.forEach((letter) => {
+        const button = document.createElement('button');
+        /* button.disabled = gameState.openedLetters.includes(letter);
+        if (button.hasAttribute('disabled')) { button.style.opacity = 0; } */
+        button.innerText = letter;
+        button.classList.add(`button-${letter}`);
+        keyboardContainer.appendChild(button);
+        button.addEventListener('click', () => {
+          gameState.openLetter(letter);
+          this.render();
+        });
       });
+    }
+    alphabetLetters.forEach((letter) => {
+      const button = document.querySelector(`.button-${letter}`);
+      button.disabled = gameState.openedLetters.includes(letter);
+      if (button.hasAttribute('disabled')) {
+        button.style.opacity = 0;
+      } else { button.style.opacity = 1; }
     });
   },
 
