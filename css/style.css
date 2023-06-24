@@ -33,7 +33,7 @@
 
 @keyframes text-align_left {
   from {
-    padding-left: 95%;
+    padding-left: 35%;
   }
   to {
     padding-left: 0%;
@@ -42,7 +42,7 @@
 
 @keyframes text-align_right {
   from {
-    padding-right: 95%;
+    padding-right: 35%;
   }
   to {
     padding-right: 0%;
@@ -108,6 +108,8 @@ body {
 }
 
 .themes_header {
+  opacity: 0;
+  animation-delay: 1s;
   animation-duration: var(--speed-main);
   animation-fill-mode: forwards;
   animation-name: opacity, text-align_right;
@@ -221,7 +223,7 @@ body {
 
 .rules_header {
   opacity: 0;
-  animation-delay: 1s;
+  animation-delay: 2s;
   animation-duration: var(--speed-main);
   animation-fill-mode: forwards;
   animation-name: opacity, text-align_left;
