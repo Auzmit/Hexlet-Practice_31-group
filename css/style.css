@@ -22,6 +22,41 @@
   }
 }
 
+@keyframes letter-disappear {
+  from {
+    width: calc(var(--index) * 3);
+    height: calc(var(--index) * 3);
+    opacity: 1;
+    font-size: calc(var(--index) * 1.3);
+  }
+  40% {
+    font-size: 0;
+  }
+  to {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    font-size: 0;
+  }
+}
+
+@keyframes letter-appear {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    font-size: 0;
+  }
+  50% {
+    width: calc(var(--index) * 3);
+    height: calc(var(--index) * 3);
+    font-size: calc(var(--index) * 1.3);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes opacity {
   from {
     opacity: 0;
@@ -418,6 +453,18 @@ body {
   background-position: center;
   background-size: cover;
   text-shadow: -1px -0.5px 1px rgba(1, 6, 36, 0.578);
+}
+
+.letter-disappear {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: letter-disappear;
+}
+
+.letter-appear {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: letter-appear;
 }
 
 button {

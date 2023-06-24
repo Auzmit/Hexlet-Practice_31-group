@@ -66,6 +66,12 @@ const gameState = {
 const view = {
   renderWord() {
     const container = document.querySelector('.word');
+    let doNeedAppearClass = false;
+    if (container.firstChild) {
+      if (container.firstChild.classList.contains('letter-disappear')) {
+        doNeedAppearClass = true;
+      }
+    }
     container.innerHTML = '';
     const displayedWord = gameState.getWordLetters().map((letter) => {
       if (gameState.openedLetters.includes(letter)) {
@@ -77,6 +83,7 @@ const view = {
     displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
+      if (doNeedAppearClass) { placeholder.classList.add('letter-appear'); }
       placeholder.innerText = letter;
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
@@ -118,16 +125,16 @@ const view = {
   },
 
   render() {
-    this.renderWord();
-    this.renderHangman();
-    this.renderKeyboard();
+    view.renderWord();
+    view.renderHangman();
+    view.renderKeyboard();
     if (gameState.isGameOver()) {
-      this.renderTryAgain();
+      view.renderTryAgain();
     }
     if (gameState.isWin()) {
-      this.renderWin();
+      view.renderWin();
       gameState.endGame();
-      this.renderKeyboard();
+      view.renderKeyboard();
     }
   },
 };
@@ -147,7 +154,14 @@ document.querySelectorAll('.theme').forEach((theme) => {
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
   document.body.className = '';
-  view.render();
+  document.querySelectorAll('.letter').forEach((letter) => {
+    if (letter.classList.contains('letter-appear')) {
+      letter.classList.remove('letter-appear');
+    }
+    letter.classList.add('letter-disappear');
+  });
+  // view.render();
+  setTimeout(view.render, 1001);
 });
 
 const body = document.getElementById('body');
