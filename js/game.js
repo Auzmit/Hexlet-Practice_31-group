@@ -84,7 +84,7 @@ const view = {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       if (doNeedAppearClass) { placeholder.classList.add('letter-appear'); }
-      placeholder.classList.add('letter-text-appear');
+      // placeholder.classList.add('letter-text-appear');
       placeholder.innerText = letter;
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
@@ -98,8 +98,6 @@ const view = {
     if (keyboardContainer.innerHTML === '') {
       alphabetLetters.forEach((letter) => {
         const button = document.createElement('button');
-        /* button.disabled = gameState.openedLetters.includes(letter);
-        if (button.hasAttribute('disabled')) { button.style.opacity = 0; } */
         button.innerText = letter;
         button.classList.add(`button-${letter}`);
         keyboardContainer.appendChild(button);

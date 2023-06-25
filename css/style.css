@@ -84,16 +84,14 @@
   }
 }
 
-@keyframes letter-text-appear {
+/* @keyframes letter-text-appear {
   from {
-    /* opacity: 0; */
     color: rgba(244, 231, 156, 0);
   }
   to {
-    /* opacity: 1; */
     color: rgba(244, 231, 156, 0.693);
   }
-}
+} */
 
 :root {
   --speed-main: 3.5s;
