@@ -73,6 +73,12 @@ const gameState = {
 const view = {
   renderWord() {
     const container = document.querySelector('.word');
+    let doNeedAppearClass = false;
+    if (container.firstChild) {
+      if (container.firstChild.classList.contains('letter-disappear')) {
+        doNeedAppearClass = true;
+      }
+    }
     container.innerHTML = '';
     const displayedWord = gameState.getWordLetters().map((letter) => {
       if (gameState.openedLetters.includes(letter)) {
@@ -84,6 +90,7 @@ const view = {
     displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
+      if (doNeedAppearClass) { placeholder.classList.add('letter-appear'); }
       placeholder.innerText = letter;
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
@@ -94,19 +101,24 @@ const view = {
 
   renderKeyboard() {
     const keyboardContainer = document.getElementById('keyboard');
-    keyboardContainer.innerHTML = '';
-    alphabetLetters.forEach((letter) => {
-      const button = document.createElement('button');
-      button.disabled = gameState.openedLetters.includes(letter);
-      if (button.hasAttribute('disabled')) { button.style.opacity = 0; }
-      button.innerText = letter;
-      button.classList.add(`button-${letter}`);
-      keyboardContainer.appendChild(button);
-
-      button.addEventListener('click', () => {
-        gameState.openLetter(letter);
-        this.render();
+    if (keyboardContainer.innerHTML === '') {
+      alphabetLetters.forEach((letter) => {
+        const button = document.createElement('button');
+        button.innerText = letter;
+        button.classList.add(`button-${letter}`);
+        keyboardContainer.appendChild(button);
+        button.addEventListener('click', () => {
+          gameState.openLetter(letter);
+          this.render();
+        });
       });
+    }
+    alphabetLetters.forEach((letter) => {
+      const button = document.querySelector(`.button-${letter}`);
+      button.disabled = gameState.openedLetters.includes(letter);
+      if (button.hasAttribute('disabled')) {
+        button.style.opacity = 0;
+      } else { button.style.opacity = 1; }
     });
   },
 
@@ -125,16 +137,16 @@ const view = {
   },
 
   render() {
-    this.renderWord();
-    this.renderHangman();
-    this.renderKeyboard();
+    view.renderWord();
+    view.renderHangman();
+    view.renderKeyboard();
     if (gameState.isGameOver()) {
-      this.renderTryAgain();
+      view.renderTryAgain();
     }
     if (gameState.isWin()) {
-      this.renderWin();
+      view.renderWin();
       gameState.endGame();
-      this.renderKeyboard();
+      view.renderKeyboard();
     }
   },
 };
@@ -158,7 +170,14 @@ document.getElementById('icon-word').addEventListener('click', () => {
   blocksImg.forEach((item) => item.style.zIndex = 1);
   blocksImg[0].style.zIndex = 10;
   // document.body.className = '';
-  view.render();
+  document.querySelectorAll('.letter').forEach((letter) => {
+    if (letter.classList.contains('letter-appear')) {
+      letter.classList.remove('letter-appear');
+    }
+    letter.classList.add('letter-disappear');
+  });
+  // view.render();
+  setTimeout(view.render, 1001);
 });
 
 const body = document.getElementById('body');
