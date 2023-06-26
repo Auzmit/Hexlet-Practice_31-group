@@ -1,5 +1,4 @@
 // import exampleJsonFile from '../json/words.json' assert { type: 'json' };;
-
 // const wordLists = exampleJsonFile;
 // console.log(wordLists);
 const wordLists = {
@@ -43,6 +42,7 @@ const gameState = {
     if (!isLetterFound) {
       this.attempts += 1;
       document.body.className = img[this.attempts];
+      // document.body.style.backgroundImage = `url(../images/changingBackground/${this.attempts}.JPG)`;
       if (this.isGameOver()) {
         this.endGame();
       }
@@ -66,12 +66,6 @@ const gameState = {
 const view = {
   renderWord() {
     const container = document.querySelector('.word');
-    let doNeedAppearClass = false;
-    if (container.firstChild) {
-      if (container.firstChild.classList.contains('letter-disappear')) {
-        doNeedAppearClass = true;
-      }
-    }
     container.innerHTML = '';
     const displayedWord = gameState.getWordLetters().map((letter) => {
       if (gameState.openedLetters.includes(letter)) {
@@ -83,8 +77,6 @@ const view = {
     displayedWord.forEach((letter) => {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
-      if (doNeedAppearClass) { placeholder.classList.add('letter-appear'); }
-      // placeholder.classList.add('letter-text-appear');
       placeholder.innerText = letter;
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
@@ -95,24 +87,19 @@ const view = {
 
   renderKeyboard() {
     const keyboardContainer = document.getElementById('keyboard');
-    if (keyboardContainer.innerHTML === '') {
-      alphabetLetters.forEach((letter) => {
-        const button = document.createElement('button');
-        button.innerText = letter;
-        button.classList.add(`button-${letter}`);
-        keyboardContainer.appendChild(button);
-        button.addEventListener('click', () => {
-          gameState.openLetter(letter);
-          this.render();
-        });
-      });
-    }
+    keyboardContainer.innerHTML = '';
     alphabetLetters.forEach((letter) => {
-      const button = document.querySelector(`.button-${letter}`);
+      const button = document.createElement('button');
       button.disabled = gameState.openedLetters.includes(letter);
-      if (button.hasAttribute('disabled')) {
-        button.style.opacity = 0;
-      } else { button.style.opacity = 1; }
+      if (button.hasAttribute('disabled')) { button.style.opacity = 0; }
+      button.innerText = letter;
+      button.classList.add(`button-${letter}`);
+      keyboardContainer.appendChild(button);
+
+      button.addEventListener('click', () => {
+        gameState.openLetter(letter);
+        this.render();
+      });
     });
   },
 
@@ -131,16 +118,16 @@ const view = {
   },
 
   render() {
-    view.renderWord();
-    view.renderHangman();
-    view.renderKeyboard();
+    this.renderWord();
+    this.renderHangman();
+    this.renderKeyboard();
     if (gameState.isGameOver()) {
-      view.renderTryAgain();
+      this.renderTryAgain();
     }
     if (gameState.isWin()) {
-      view.renderWin();
+      this.renderWin();
       gameState.endGame();
-      view.renderKeyboard();
+      this.renderKeyboard();
     }
   },
 };
@@ -160,14 +147,7 @@ document.querySelectorAll('.theme').forEach((theme) => {
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
   document.body.className = '';
-  document.querySelectorAll('.letter').forEach((letter) => {
-    if (letter.classList.contains('letter-appear')) {
-      letter.classList.remove('letter-appear');
-    }
-    letter.classList.add('letter-disappear');
-  });
-  // view.render();
-  setTimeout(view.render, 1001);
+  view.render();
 });
 
 const body = document.getElementById('body');
