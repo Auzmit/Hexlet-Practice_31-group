@@ -125,7 +125,170 @@ svg {
   }
 }
 
-/* Настройка классов с помощью пользовательских переменных */
+/* Основной стиль */
+body {
+    font-size: var(--fs-body);
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-background);
+}
+
+
+/* Кнопки */
+.button {
+    cursor: pointer;
+    border: 0;
+    border-radius: .375rem;
+    padding: 1em 2em;
+    font-size: var(--fs-button);
+    font-weight: var(--fw-semi-bold);
+    line-height: 1;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-accent);
+}
+
+.button:hover,
+.button:focus-visible {
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+    background-color: var(--clr-accent-hover);
+}
+
+/* Навигация */
+.primary-header {
+    padding-top: var(--size-300);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-nav-bar {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    font-size: var(--fs-nav);
+    gap: var(--size-900);
+    font-weight: var(--fw-semi-bold);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--clr-accent);
+}
+
+/* Навигация на маленьких экранах */
+@media (max-width: 50em) {
+    .primary-navigation {
+        display: none;
+
+        position: absolute;
+        padding: var(--size-400);
+        inset: var(--size-900) var(--size-400) auto;
+        background: var(--clr-neutral-900);
+        border-radius: .345em;
+    }
+
+    .nav-list {
+        display: grid;
+        gap: var(--size-400);
+        text-align: center;
+    }
+
+    .nav-list a {
+        color: var(--clr-neutral-100);
+    }
+
+    .primary-navigation[data-visible] {
+        display: block;
+    }
+
+    .mobile-nav-bar {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: 0;
+        padding: 4px 12px;
+    }
+
+    .mobile-nav-bar
+    .icon-close {
+        display: none;
+    }
+}
+
+/* Страница */
+
+/* Карусель */
+.text-center {
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider > * {
+    width: 100%;
+    flex: 0 0 auto;
+    background: var(--clr-primary);
+}
+
+/* Футер */
+.foot-list {
+    align-items: center;
+    display: flex;
+    gap: var(--size-600);
+}
+
+.icon-size {
+    width: var(--size-600);
+}
+
+/* Задана максимальная ширина контейнеров и их отступы по горизантали */
+.container {
+    --max-width: 1110px;
+    --padding: 2rem;
+
+    width: min(var(--max-width), 100% - var(--padding));
+    margin-inline: auto;
+}
+
+/* Взято от сюда  https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
+/* Выбирает все элементы, которые имеют одинаковы родительский элмент, кроме первого */
+/* ".flow > * + *" => .flow :not(:first-child) - from Kevin Powell channel*/
+:where(.flow :not(:first-child)) {
+    margin-top: var(--flow-spacer, 2em);
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+.vertical-align-center {
+    align-items: center;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+/* Адаптив под маленькие экраны */
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
 
 .visually-hidden {
     position: absolute;
@@ -228,143 +391,4 @@ svg {
 }
 .padding-block-400 {
     padding-block: var(--size-400);
-}
-
-/* Задана максимальная ширина контейнеров и их отступы по горизантали */
-.container {
-    --max-width: 1110px;
-    --padding: 2rem;
-
-    width: min(var(--max-width), 100% - var(--padding));
-    margin-inline: auto;
-}
-
-.even-columns {
-    display: grid;
-    gap: 1rem;
-}
-
-/* Адаптив под маленькие экраны */
-@media (min-width: 50em) {
-    .even-columns {
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
-}
-
-/* Основной стиль */
-body {
-    font-size: var(--fs-body);
-    color: var(--clr-neutral-900);
-    background-color: var(--clr-background);
-}
-
-
-/* Кнопки */
-.button {
-    cursor: pointer;
-    border: 0;
-    border-radius: .375rem;
-    padding: 1em 2em;
-    font-size: var(--fs-button);
-    font-weight: var(--fw-semi-bold);
-    line-height: 1;
-    color: var(--clr-neutral-900);
-    background-color: var(--clr-accent);
-}
-
-.button:hover,
-.button:focus-visible {
-    -webkit-transition: all 0.25s ease-in;
-    transition: all 0.25s ease-in;
-    background-color: var(--clr-accent-hover);
-}
-
-/* Навигация */
-.primary-header {
-    padding-top: var(--size-300);
-}
-
-.nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.mobile-nav-bar {
-    display: none;
-}
-
-.nav-list {
-    display: flex;
-    font-size: var(--fs-nav);
-    gap: var(--size-900);
-    font-weight: var(--fw-semi-bold);
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: var(--clr-neutral-900);
-}
-
-.nav-list a:hover,
-.nav-list a:focus {
-    color: var(--clr-accent);
-}
-
-/* Навигация на маленьких экранах */
-@media (max-width: 50em) {
-    .primary-navigation {
-        display: none;
-
-        position: absolute;
-        padding: var(--size-400);
-        inset: var(--size-900) var(--size-400) auto;
-        background: var(--clr-neutral-900);
-        border-radius: .345em;
-    }
-
-    .nav-list {
-        display: grid;
-        gap: var(--size-400);
-        text-align: center;
-    }
-
-    .nav-list a {
-        color: var(--clr-neutral-100);
-    }
-
-    .primary-navigation[data-visible] {
-        display: block;
-    }
-
-    .mobile-nav-bar {
-        display: block;
-        cursor: pointer;
-        background: none;
-        border: 0;
-        padding: 4px 12px;
-    }
-
-    .mobile-nav-bar
-    .icon-close {
-        display: none;
-    }
-}
-
-/* страница */
-
-/* Карусель */
-.text-center {
-    text-align: center;
-}
-
-.slider {
-    display: flex;
-}
-
-.slider > * {
-    width: 100%;
-    flex: 0 0 auto;
-    background: var(--clr-primary);
 }

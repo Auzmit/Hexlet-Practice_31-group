@@ -34,11 +34,6 @@
                         <li><a href="#">Наша команда</a></li>
                     </ul>
                 </nav>
-                <!--
-                <a href="index.html">
-                    <button class="button">Начать игру</button>
-                </a>
-                -->
             </div>
         </div>
     </header>
@@ -48,12 +43,10 @@
         <section class="padding-block-900">
             <div class="container">
                 <div class="even-columns">
-                    <div>
+                    <div class="flow">
                         <h1 class="fs-primary-heading fw-bold">Делаем все возможное и невозможное вместе!</h1>
                         <p>Групповой проект, собранный студентами лучшего колледжа - Хекслет колледжа!</p>
-                        <a href="index.html">
-                            <button class="button">Начать игру</button>
-                        </a>
+                        <button onclick="location.href = 'index.html'" class="button">Начать игру</button>
                     </div>
                     <div>
                         <img id="hero-img" src="images/forMain/8635954.jpg" alt="">
@@ -66,7 +59,7 @@
         <section class="padding-block-900">
             <div class="container">
                 <div class="even-columns">
-                    <div>
+                    <div class="flow">
                         <h2 class="fs-secondary-heading fw-bold">Представляем игру Виселица!</h2>
                         <p>Тут информация об игре. Что такое, почему такое исполение</p>
                     </div>
@@ -81,27 +74,36 @@
         <section class="padding-block-900">
             <div class="container">
                 <div class="even-columns">
-                    <div>
+                    <div class="flow">
                         <h2 class="fs-secondary-heading fw-bold">Мы - группа Diceman!</h2>
                         <p>Собранные по воле случая, как бросок игральной кости.</p>
+                        <!--<img src="images/forMain/826_dice_games.jpg">-->
                     </div>
-                    <div>
-                        <ul class="about" role="list">
+                    <div class="about flow" >
+                        <ul role="list">
                             <li>
-                                <h3 class="fs-600 fw-bold">Познакомися?</h3>
+                                <div class="flow" style="--flow-spacer: 0.7em">
+                                <h3 class="fs-600 fw-bold">Познакомимся?</h3>
                                 <p>Мы 31-я студенческая группа, собранная для прохождения летней учебной практики...</p>
+                                </div>
                             </li>
                             <li>
+                                <div class="flow" style="--flow-spacer: 0.7em">
                                 <h3 class="fs-600 fw-bold">Почему Виселица?</h3>
                                 <p>В качестве проекта мы решили взять за основу Виселицу потому что...</p>
+                                </div>
                             </li>
                             <li>
+                                <div class="flow" style="--flow-spacer: 0.7em">
                                 <h3 class="fs-600 fw-bold">С какими трудностями столкнулись?</h3>
                                 <p>За время практики мы...</p>
+                                </div>
                             </li>
                             <li>
+                                <div class="flow" style="--flow-spacer: 0.7em">
                                 <h3 class="fs-600 fw-bold">Что нам дала эта практика?</h3>
                                 <p>Прохождение практики показало нам каково работать в команде, выявило наши слабые места и тд...</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -118,7 +120,7 @@
                     <img src="" alt="">
                     <h3 class="fw-bold">Никнейм1</h3>
                     <span class="fw-semi-bold">Роль в команде</span>
-                    <p data-width="wide">Комментарий - Из-за реорганизации с жлобственничественностью высококвалифицированный бесперспективняк самоидентифицировался в ожидании вежливого водителя под пальмовыми ветвями.</p>
+                    <p>Комментарий - Из-за реорганизации с жлобственничественностью высококвалифицированный бесперспективняк самоидентифицировался в ожидании вежливого водителя под пальмовыми ветвями.</p>
                 </li>
                 <li>
                     <img src="" alt="">
@@ -151,26 +153,40 @@
                     <p>Комментарий - Из-за реорганизации с жлобственничественностью высококвалифицированный бесперспективняк самоидентифицировался в ожидании вежливого водителя под пальмовыми ветвями.</p>
                 </li>
             </ul>
-            <a href="index.html">
-                <button class="button">Начать игру</button>
-            </a>
+            <button onclick="location.href = 'index.html'" class="button">Начать игру</button>
         </section>
     </main>
 
     <!-- Футер сайта -->
     <footer class="padding-block-400 bg-neutral-900 text-neutral-100">
         <div class="container">
-            <div class="even-columns">
-                <div>
-                    <a href="#"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
-                    <ul aria-label="social links" role="list">
-                        <li><a aria-label="hexly-website" href="https://hexly.ru/">хексли</a></li>
-                        <li><a aria-label="youtube" href="https://www.youtube.com/@hexlyru">ютуб</a></li>
-                        <li><a aria-label="vkontakte" href="https://vk.com/hexlyru">вк</a></li>
-                        <li><a aria-label="telegram" href="https://t.me/hexlet_college">телеграм</a></li>
+            <div class="even-columns vertical-align-center">
+                <div class="nav-wrapper">
+                    <a class="logo" href="#"><img src="images/icons/dice-48-light.png" alt="Logo"></a>
+                    <ul class="foot-list" aria-label="social links" role="list">
+                        <li>
+                            <a aria-label="github" href="https://github.com/Auzmit/31_group">
+                                <img class="icon-size" src="images/icons/icons8-github.svg" alt="github">
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label="youtube" href="https://www.youtube.com/@hexlyru">
+                                <img class="icon-size" src="images/icons/icons8-youtube-play.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label="vkontakte" href="https://vk.com/hexlyru">
+                                <img class="icon-size" src="images/icons/icons8-vk.svg" alt="vkontakte">
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label="telegram" href="https://t.me/hexlet_college">
+                                <img class="icon-size" src="images/icons/icons8-телеграм.svg" alt="telegram">
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div>
+                <div class="justify-self-end">
                     <p class="fs-300 text-neutral-100">Учебный проект студентов колледжа Хекслет, 31-я группа.</p>
                 </div>
             </div>
