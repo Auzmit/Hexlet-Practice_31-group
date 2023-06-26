@@ -15,7 +15,7 @@ const wordLists = {
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
 const blocksImg = document.querySelectorAll('.blockImage');
-blocksImg.forEach((item) => item.style.zIndex = 1);
+blocksImg.forEach((item) => item.style.zIndex == 1);
 blocksImg[0].style.zIndex = 10;
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
