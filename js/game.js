@@ -1,7 +1,14 @@
 // import exampleJsonFile from '../json/words.json' assert { type: 'json' };;
-
 // const wordLists = exampleJsonFile;
 // console.log(wordLists);
+
+setTimeout(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}, 300);
+
 const wordLists = {
   Животные: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
   Рыбы: ['креветка', 'мидия', 'краб', 'осьминог', 'кальмар', 'устрица', 'скумбрия', 'лосось', 'тунец', 'корюшка', 'дельфин', 'акула', 'пиранья', 'планктон', 'коралл'],
@@ -10,7 +17,9 @@ const wordLists = {
   Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
-const img = ['background-body1', 'background-body2', 'background-body3', 'background-body4', 'background-body5', 'background-body6', 'background-body6'];
+const blocksImg = document.querySelectorAll('.blockImage');
+blocksImg.forEach((item) => item.style.zIndex = 1);
+blocksImg[0].style.zIndex = 10;
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
@@ -41,8 +50,9 @@ const gameState = {
 
     const isLetterFound = this.getWordLetters().includes(letter);
     if (!isLetterFound) {
-      this.attempts += 1;
-      document.body.className = img[this.attempts];
+      this.attempts > blocksImg.length ? this.attempts : this.attempts += 1;
+      blocksImg.forEach((item) => item.style.zIndex = 1);
+      blocksImg[this.attempts - 1].style.zIndex = 10;
       if (this.isGameOver()) {
         this.endGame();
       }
@@ -84,7 +94,6 @@ const view = {
       const placeholder = document.createElement('span');
       placeholder.className = 'letter';
       if (doNeedAppearClass) { placeholder.classList.add('letter-appear'); }
-      // placeholder.classList.add('letter-text-appear');
       placeholder.innerText = letter;
       i += 1;
       placeholder.style.backgroundImage = `url('./images/cube/6/cube_100x100_${i}.png')`;
@@ -148,10 +157,12 @@ const view = {
 const gameTopic = document.getElementById('topic');
 document.querySelectorAll('.theme').forEach((theme) => {
   theme.addEventListener('click', () => {
-    document.getElementById('body').style.height = '200vh';
+    // document.getElementById('body').style.height = '200vh';
     document.getElementById('Game').style.display = 'flex';
     gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
+    blocksImg.forEach((item) => item.style.zIndex = 1);
+    blocksImg[0].style.zIndex = 10;
     gameState.init();
     view.render();
   });
@@ -159,7 +170,9 @@ document.querySelectorAll('.theme').forEach((theme) => {
 
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
-  document.body.className = '';
+  blocksImg.forEach((item) => item.style.zIndex = 1);
+  blocksImg[0].style.zIndex = 10;
+  // document.body.className = '';
   document.querySelectorAll('.letter').forEach((letter) => {
     if (letter.classList.contains('letter-appear')) {
       letter.classList.remove('letter-appear');
