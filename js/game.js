@@ -15,7 +15,7 @@ const wordLists = {
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
 const blocksImg = document.querySelectorAll('.blockImage');
-blocksImg.forEach((item) => item.style.zIndex === 1);
+blocksImg.forEach((item) => item.style.zIndex = 1);
 blocksImg[0].style.zIndex = 10;
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
@@ -48,7 +48,7 @@ const gameState = {
     const isLetterFound = this.getWordLetters().includes(letter);
     if (!isLetterFound) {
       this.attempts > blocksImg.length ? this.attempts : this.attempts += 1;
-      blocksImg.forEach((item) => item.style.zIndex === 1);
+      blocksImg.forEach((item) => item.style.zIndex = 1);
       blocksImg[this.attempts - 1].style.zIndex = 10;
       if (this.isGameOver()) {
         this.endGame();
@@ -153,7 +153,7 @@ document.querySelectorAll('.theme').forEach((theme) => {
 
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
-  blocksImg.forEach((item) => item.style.zIndex === 1);
+  blocksImg.forEach((item) => item.style.zIndex = 1);
   blocksImg[0].style.zIndex = 10;
   document.body.className = '';
   view.render();
