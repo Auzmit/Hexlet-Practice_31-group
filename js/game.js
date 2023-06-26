@@ -146,6 +146,8 @@ document.querySelectorAll('.theme').forEach((theme) => {
     document.getElementById('Game').style.display = 'flex';
     gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
+    blocksImg.forEach((item) => item.style.zIndex = 1);
+    blocksImg[0].style.zIndex = 10;
     gameState.init();
     view.render();
   });
@@ -155,7 +157,7 @@ document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
   blocksImg.forEach((item) => item.style.zIndex = 1);
   blocksImg[0].style.zIndex = 10;
-  document.body.className = '';
+  // document.body.className = '';
   view.render();
 });
 
