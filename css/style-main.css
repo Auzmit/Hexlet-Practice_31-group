@@ -3,12 +3,12 @@
     /* Цвета */
     --clr-background: hsl(24, 100%, 99%);
 
-    --clr-accent-500: hsl(233, 40%, 75%);
-    --clr-accent-400: hsl(233, 63%, 86%);
-    --clr-accent-200: hsl(233, 63%, 90%);
+    --clr-accent: hsl(27, 100%, 63%);
+    --clr-accent-hover: hsl(27, 98%, 54%);
 
-    --clr-primary-400: rgb(197, 202, 242);
-    --clr-secondary-400: hsl(233, 14%, 66%);
+    --clr-primary: hsl(233, 63%, 86%);
+
+    --clr-secondary: hsl(230, 88%, 76%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
 
@@ -33,7 +33,7 @@
     --fs-body: var(--fs-600);
     --fs-primary-heading: var(--fs-900);
     --fs-secondary-heading: var(--fs-700);
-    --fs-nav: var(--fs-700);
+    --fs-nav: var(--fs-600);
     --fs-button: var(--fs-400);
 
     /* разметка для отступов */
@@ -141,10 +141,13 @@ svg {
 
 /* Цвета для текста */
 .text-primary {
-    color: var(--clr-primary-400);
+    color: var(--clr-primary);
+}
+.text-secondary {
+    color: var(--clr-secondary);
 }
 .text-accent {
-    color: var(--clr-accent-400);
+    color: var(--clr-accent);
 }
 .text-neutral-100 {
     color: var(--clr-neutral-100)
@@ -158,13 +161,13 @@ svg {
     background-color: var(--clr-background);
 }
 .bg-primary {
-    background-color: var(--clr-primary-400);
+    background-color: var(--clr-primary);
 }
-.bg-secondary-400 {
-    background-color: var(--clr-secondary-400);
+.bg-secondary {
+    background-color: var(--clr-secondary);
 }
 .bg-accent {
-    background-color: var(--clr-accent-400);
+    background-color: var(--clr-accent);
 }
 .bg-neutral-100 {
     background-color: var(--clr-neutral-100)
@@ -256,7 +259,8 @@ body {
     background-color: var(--clr-background);
 }
 
-/* button */
+
+/* Кнопки */
 .button {
     cursor: pointer;
     border: 0;
@@ -266,32 +270,101 @@ body {
     font-weight: var(--fw-semi-bold);
     line-height: 1;
     color: var(--clr-neutral-900);
-    background-color: var(--clr-accent-400);
+    background-color: var(--clr-accent);
 }
 
 .button:hover,
 .button:focus-visible {
-    background-color: var(--clr-accent-200);
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+    background-color: var(--clr-accent-hover);
 }
 
 /* Навигация */
-
 .primary-header {
-    margin-top: var(--size-300);
+    padding-top: var(--size-300);
 }
 
 .nav-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .mobile-nav-bar {
-    cursor: pointer;
-    background: none;
-    border: 0;
-    padding: 4px 12px;
+    display: none;
 }
 
-.mobile-nav-bar .icon-close {
-    display: none;
+.nav-list {
+    display: flex;
+    font-size: var(--fs-nav);
+    gap: var(--size-900);
+    font-weight: var(--fw-semi-bold);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--clr-accent);
+}
+
+/* Навигация на маленьких экранах */
+@media (max-width: 50em) {
+    .primary-navigation {
+        display: none;
+
+        position: absolute;
+        padding: var(--size-400);
+        inset: var(--size-900) var(--size-400) auto;
+        background: var(--clr-neutral-900);
+        border-radius: .345em;
+    }
+
+    .nav-list {
+        display: grid;
+        gap: var(--size-400);
+        text-align: center;
+    }
+
+    .nav-list a {
+        color: var(--clr-neutral-100);
+    }
+
+    .primary-navigation[data-visible] {
+        display: block;
+    }
+
+    .mobile-nav-bar {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: 0;
+        padding: 4px 12px;
+    }
+
+    .mobile-nav-bar
+    .icon-close {
+        display: none;
+    }
+}
+
+/* страница */
+
+/* Карусель */
+.text-center {
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider > * {
+    width: 100%;
+    flex: 0 0 auto;
+    background: var(--clr-primary);
 }
