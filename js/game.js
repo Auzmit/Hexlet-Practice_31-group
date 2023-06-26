@@ -3,7 +3,10 @@
 // console.log(wordLists);
 
 setTimeout(() => {
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 }, 300);
 
 const wordLists = {
@@ -154,7 +157,7 @@ const view = {
 const gameTopic = document.getElementById('topic');
 document.querySelectorAll('.theme').forEach((theme) => {
   theme.addEventListener('click', () => {
-    document.getElementById('body').style.height = '200vh';
+    // document.getElementById('body').style.height = '200vh';
     document.getElementById('Game').style.display = 'flex';
     gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
