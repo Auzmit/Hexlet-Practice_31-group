@@ -3,9 +3,8 @@
 // console.log(wordLists);
 
 setTimeout(() => {
-    window.scrollTo(0, 0);
-}, 300)
-
+  window.scrollTo(0, 0);
+}, 300);
 
 const wordLists = {
   Животные: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],
@@ -15,10 +14,9 @@ const wordLists = {
   Космос: ['пространство', 'звезда', 'планета', 'спутник', 'комета', 'космонавт', 'астронавт', 'ракета', 'метеорит', 'телескоп', 'скафандр', 'невесомость', 'вакуум', 'иллюминатор', 'гравитация'],
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
-const img = ['background-body1', 'background-body2', 'background-body3', 'background-body4', 'background-body5', 'background-body6', 'background-body6'];
-const blocksImg = document.querySelectorAll('.blockImage')
-blocksImg.forEach(item => item.style.zIndex = 1)
-blocksImg[0].style.zIndex = 10
+const blocksImg = document.querySelectorAll('.blockImage');
+blocksImg.forEach(item => item.style.zIndex = 1);
+blocksImg[0].style.zIndex = 10;
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
@@ -51,8 +49,8 @@ const gameState = {
     if (!isLetterFound) {
       this.attempts > blocksImg.length ? this.attempts : this.attempts += 1;
 
-      blocksImg.forEach(item => item.style.zIndex = 1)
-      blocksImg[this.attempts-1].style.zIndex = 10
+      blocksImg.forEach(item => item.style.zIndex = 1);
+      blocksImg[this.attempts-1].style.zIndex = 10;
       if (this.isGameOver()) {
         this.endGame();
       }
@@ -156,8 +154,8 @@ document.querySelectorAll('.theme').forEach((theme) => {
 
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
-  blocksImg.forEach(item => item.style.zIndex = 1)
-  blocksImg[0].style.zIndex = 10
+  blocksImg.forEach(item => item.style.zIndex = 1);
+  blocksImg[0].style.zIndex = 10;
   document.body.className = '';
   view.render();
 });
