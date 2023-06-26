@@ -42,7 +42,6 @@ const gameState = {
     if (!isLetterFound) {
       this.attempts += 1;
       document.body.className = img[this.attempts];
-      // document.body.style.backgroundImage = `url(../images/changingBackground/${this.attempts}.JPG)`;
       if (this.isGameOver()) {
         this.endGame();
       }
