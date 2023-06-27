@@ -126,17 +126,9 @@ const view = {
   },
 
   renderHangman() {
-    /* if (gameState.openedLetters.length === 0) {
-      for (let index = 0; index <= 6; index += 1) {
-        console.log(index);
-        document.querySelector(`.hangman-${gameState.attempts}`).classList.remove('hangman_appear');
-        // document.querySelector(`.hangman-${index}`).classList.add('hangman_disappear');
-      }
-    } */ /* else { */
     document.querySelector(`.hangman-${gameState.attempts}`).classList.remove('hangman_opacity-0');
     document.querySelector(`.hangman-${gameState.attempts}`).classList.remove('hangman_disappear');
     document.querySelector(`.hangman-${gameState.attempts}`).classList.add('hangman_appear');
-    // }
   },
 
   renderTryAgain() {
@@ -165,13 +157,16 @@ const view = {
 const gameTopic = document.getElementById('topic');
 document.querySelectorAll('.theme').forEach((theme) => {
   theme.addEventListener('click', () => {
-    // document.getElementById('body').style.height = '200vh';
     document.getElementById('Game').style.display = 'flex';
     gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
     blocksImg.forEach((item) => item.style.zIndex = 1);
     blocksImg[0].style.zIndex = 10;
     gameState.init();
+    for (let index = 1; index <= 6; index += 1) {
+      document.querySelector(`.hangman-${index}`).classList.remove('hangman_appear');
+      document.querySelector(`.hangman-${index}`).classList.add('hangman_opacity-0');
+    }
     view.render();
   });
 });
@@ -180,9 +175,11 @@ document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
   if (gameState.openedLetters.length === 0) {
     for (let index = 1; index <= 6; index += 1) {
-      console.log(index);
-      document.querySelector(`.hangman-${index}`).classList.remove('hangman_appear');
-      document.querySelector(`.hangman-${index}`).classList.add('hangman_disappear');
+      const hangmanIndex = document.querySelector(`.hangman-${index}`);
+      if (hangmanIndex.classList.contains('hangman_appear')) {
+        hangmanIndex.classList.remove('hangman_appear');
+        hangmanIndex.classList.add('hangman_disappear');
+      }
     }
   }
   blocksImg.forEach((item) => item.style.zIndex = 1);
