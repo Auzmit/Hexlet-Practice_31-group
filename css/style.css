@@ -166,7 +166,8 @@
 
 :root {
   --speed-main: 3.5s;
-  --step: 10px;
+  --speed-hangman: .5s; /* in js must +1: setTimeout(defaultHangmans, 501); */
+  --step: 25px;
   --width: calc(var(--step) * 3);
   --height: calc(var(--step) * 8);
   --index: calc(1vw + 1vh); /* = 26px (on fullscreen) */
@@ -562,6 +563,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -570,24 +572,95 @@ body {
       -ms-flex-align: center;
           align-items: center;
 
-  width: calc(var(--width) * 2);
-  height: calc(var(--height) * 2);
+  width: calc(var(--width));
+  height: calc(var(--height));
   /* margin-top: auto; */
   /* margin-bottom: 2%; */
   /* opacity: 0; */
 
-  /* background: url(../images/human_525x200.png) no-repeat top right; */
-  background: url(../images/pryanic_525x200.png) no-repeat top right;
-  background-size: auto 100%;
+  /* background: url(../images/pryanic_525x200.png) no-repeat top right; */
+  /* background-size: auto 100%; */
 }
 
-.hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
+.hangman_opacity-0 {
+  opacity: 0;
+}
+
+.hangman-0,
+.hangman-1,
+.hangman-2,
+.hangman-3,
+.hangman-4,
+.hangman-5,
+.hangman-6 {
+  /* opacity: 0; */
+  position: absolute;
+  width: calc(var(--width));
+  height: calc(var(--height));
+  background-image: url(../images/pryanic_525x200.png);
+  transition: var(--speed-hangman);
+}
+
+.hangman-0 {
+  z-index: 0;
+  background-position-x: calc(var(--width) * 0);
+}
+.hangman-1 {
+  z-index: 1;
+  background-position-x: calc(var(--width) * -1);
+}
+.hangman-2 {
+  z-index: 2;
+  background-position-x: calc(var(--width) * -2);
+}
+.hangman-3 {
+  z-index: 3;
+  background-position-x: calc(var(--width) * -3);
+}
+.hangman-4 {
+  z-index: 4;
+  background-position-x: calc(var(--width) * -4);
+}
+.hangman-5 {
+  z-index: 5;
+  background-position-x: calc(var(--width) * -5);
+}
+.hangman-6 {
+  z-index: 6;
+  background-position-x: calc(var(--width) * -6);
+}
+
+.hangman_appear {
+  /* -webkit-animation-duration: var(--speed-hangman); */
+          /* animation-duration: var(--speed-hangman); */
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* -webkit-animation-name: opacity; */
+          /* animation-name: opacity; */
+  -webkit-animation-name: hangman;
+          animation-name: hangman;
+}
+
+.hangman_disappear {
+  -webkit-animation-duration: var(--speed-hangman);
+          animation-duration: var(--speed-hangman);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+}
+
+/* .hangman[data-step="0"] { background-position-x: calc(var(--width) * 0) }
 .hangman[data-step="1"] { background-position-x: calc(var(--width) * -1 * 2) }
 .hangman[data-step="2"] { background-position-x: calc(var(--width) * -2 * 2) }
 .hangman[data-step="3"] { background-position-x: calc(var(--width) * -3 * 2) }
 .hangman[data-step="4"] { background-position-x: calc(var(--width) * -4 * 2) }
 .hangman[data-step="5"] { background-position-x: calc(var(--width) * -5 * 2) }
-.hangman[data-step="6"] { background-position-x: calc(var(--width) * -6 * 2) }
+.hangman[data-step="6"] { background-position-x: calc(var(--width) * -6 * 2) } */
 
 .word {
   display: -webkit-box;
