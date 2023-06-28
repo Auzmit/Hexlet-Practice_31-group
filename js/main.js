@@ -9,6 +9,6 @@ navBar.addEventListener('click', () => {
 const slider = new A11YSlider(document.querySelector('.slider'), {
   adaptiveHeight: false,
   arrows: false,
-  dots: false,
+  dots: true,
 });
 /* eslint-enable */
