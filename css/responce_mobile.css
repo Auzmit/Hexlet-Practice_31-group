@@ -1,6 +1,12 @@
 @media screen and (orientation: landscape) and (max-width: 850px) {
     #body{
         overflow: scroll !important;
+        background-position-x: 25%;
+
+
+    }
+    .blockImage{
+        background-position-x: 25%;
 
     }
     .div_game-base {
@@ -17,6 +23,10 @@
         margin: 0;
 
     }
+    .hangmanSection
+    {
+        height: 40vh;
+    }
     .hangman {
        margin: 0;
     }
@@ -27,15 +37,26 @@
         margin: 0;
         gap: 30vh;
     }
-  
+
+    .section_game-keyboard {
+        width: 55%;
+        padding-bottom: 5vh;
+        }
 }
+  
+
 
 @media screen and (orientation: portrait) and (max-width: 500px){
     #body{
         background-size: cover;
         overflow: scroll;
-
+        background-position-x: 15%;
         /* background-position: -20% -20%; */
+    }
+
+    .blockImage{
+        background-position-x: 15%;
+
     }
     .game {
         flex-direction: column;
@@ -50,7 +71,7 @@
         margin: 0;
     }
     .game h1 {
-        padding-bottom: 10%;
+        padding-bottom: 0%;
         padding-left: 5%;
         padding-right: 5%;
 
