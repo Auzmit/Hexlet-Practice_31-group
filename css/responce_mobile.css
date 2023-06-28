@@ -4,6 +4,9 @@
         background-position-x: 25%;
         background-size: cover;
         margin: 0;
+        width: 100vw;
+        height: 200vh;
+        
 
     }
     .blockImage{
