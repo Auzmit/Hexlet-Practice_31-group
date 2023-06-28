@@ -234,6 +234,20 @@ body {
   background-repeat: no-repeat;
 }
 
+
+/* Лого с выходом на командный сайт */
+#logo {
+  position: absolute;
+  top: 9rem;
+  padding-left: 2em;
+  opacity: .3;
+}
+
+#logo:hover{
+  opacity: 1;
+  transition: all .4s ease-in;
+}
+
 .themes {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
