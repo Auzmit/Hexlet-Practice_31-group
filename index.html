@@ -19,12 +19,12 @@
     </head>
     
     <body id="body">
-        <div class="blockImage background-body1"></div>
-        <div class="blockImage background-body2"></div>
-        <div class="blockImage background-body3"></div>
-        <div class="blockImage background-body4"></div>
-        <div class="blockImage background-body5"></div>
-        <div class="blockImage background-body6"></div>
+        <div class="blockImage blockImage_opacity-0"></div>
+        <div class="blockImage blockImage_opacity-0"></div>
+        <div class="blockImage blockImage_opacity-0"></div>
+        <div class="blockImage blockImage_opacity-0"></div>
+        <div class="blockImage blockImage_opacity-0"></div>
+        <div class="blockImage blockImage_opacity-0"></div>
         <!-- TITLE page (first) -->
         <section class="base">
             <div class="header"><!-- Виселица --></div>
@@ -53,7 +53,7 @@
         <!-- GAME page (second) -->
         <section id="Game" class="game">
             <!-- <section class="section_game-base"> -->
-            <section>
+            <section class="game_word">
                 <section class="game-header">
                     <button id="icon-word" class="button_icon-left">
                         <i class="fa-solid fa-retweet"></i>
@@ -65,7 +65,17 @@
                 </section>
 
                 <div class="div_game-base">
-                    <div id="hangman" class="hangman"></div>
+                    <section class="hangmanSection">
+                            <div id="hangman" class="hangman">
+                            <div class="hangman-0 hangman_opacity-0"></div>
+                            <div class="hangman-1 hangman_opacity-0"></div>
+                            <div class="hangman-2 hangman_opacity-0"></div>
+                            <div class="hangman-3 hangman_opacity-0"></div>
+                            <div class="hangman-4 hangman_opacity-0"></div>
+                            <div class="hangman-5 hangman_opacity-0"></div>
+                            <div class="hangman-6 hangman_opacity-0"></div>
+                        </div>
+                   </section>
                     <section id="word-guess">
                         <div id="parent-letters" class="word"></div>
                     </section>
@@ -77,14 +87,7 @@
             </section>
         </section>
 
-        <!-- <script src="json/words.json"></script>  -->
         <script src="js/game.js"></script>
-        <!-- <script src="js/onRefresh.js"></script> -->
-
-        <!-- <script src="js/test1.js"></script> -->
-        <!-- <script src="js/test2.js"></script> -->
-        <!-- <script type="module" src="js/test1.js"></script> -->
-        <!-- <script type="module" src="js/test2.js"></script> -->
     </body>
 
 </html>

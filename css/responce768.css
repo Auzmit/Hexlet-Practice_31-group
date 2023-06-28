@@ -1,4 +1,4 @@
-@media screen and (orientation: landscape ) and (max-width: 900px) {
+@media screen and (orientation: landscape ) and (max-width: 915px) {
     #body {
         overflow: scroll;
     }
@@ -34,11 +34,17 @@
         }
 }
 
-@media screen and (orientation: portrait) and (max-width: 800px){
+@media screen and (orientation: portrait) and (max-width: 820px){
     #body {
         overflow: auto;
 
         overflow: scroll;
+        background-position-x: 7%;
+
+    }
+    .blockImage{
+        background-position-x: 7%;
+
     }
 
     .header {
@@ -62,6 +68,6 @@
         margin-top: 10%;
     }
     .section_game-keyboard {
-    width: 64%;
+    width: 65%;
     }
 }

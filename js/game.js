@@ -18,8 +18,14 @@ const wordLists = {
   Музыка: ['аккордеон', 'банджо', 'флагот', 'кларнет', 'флейта', 'барабан', 'гитара', 'арфа', 'мандолина', 'фортепьяно', 'орган', 'труба', 'саксофон', 'скрипка', 'виолончель'],
 };
 const blocksImg = document.querySelectorAll('.blockImage');
-blocksImg.forEach((item) => item.style.zIndex = 1);
-blocksImg[0].style.zIndex = 10;
+let zIndex = 1;
+blocksImg.forEach((back) => {
+  back.style.backgroundImage = `url('./images/changingBackground/${zIndex}.webp')`;
+  back.style.zIndex = zIndex;
+  zIndex += 1;
+});
+// blocksImg.forEach((item) => item.style.zIndex = 1);
+// blocksImg[0].style.zIndex = 10;
 const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
@@ -42,7 +48,7 @@ const gameState = {
     document.getElementById('word-guess').style.color = 'rgba(244, 231, 156, 0.693)';
     document.querySelector('.hangman').style.opacity = '100%';
     /* for testing: */
-    console.log(this.topic);
+    // console.log(this.topic);
     console.log(this.word);
   },
   openLetter(letter) {
@@ -51,8 +57,8 @@ const gameState = {
     const isLetterFound = this.getWordLetters().includes(letter);
     if (!isLetterFound) {
       this.attempts > blocksImg.length ? this.attempts : this.attempts += 1;
-      blocksImg.forEach((item) => item.style.zIndex = 1);
-      blocksImg[this.attempts - 1].style.zIndex = 10;
+      // blocksImg.forEach((item) => item.style.zIndex = 1);
+      // blocksImg[this.attempts - 1].style.zIndex = 10;
       if (this.isGameOver()) {
         this.endGame();
       }
@@ -125,10 +131,14 @@ const view = {
     });
   },
 
+  renderBackground() {
+    if (gameState.attempts !== 0) {
+      blocksImg[gameState.attempts - 1].classList.remove('blockImage_opacity-0');
+    }
+  },
+
   renderHangman() {
-  // implement this
-  // use gameState.attempts and maxAttempts
-    document.querySelector('.hangman').setAttribute('data-step', gameState.attempts);
+    document.querySelector(`.hangman-${gameState.attempts}`).classList.remove('hangman_opacity-0');
   },
 
   renderTryAgain() {
@@ -141,8 +151,9 @@ const view = {
 
   render() {
     view.renderWord();
-    view.renderHangman();
     view.renderKeyboard();
+    view.renderBackground();
+    view.renderHangman();
     if (gameState.isGameOver()) {
       view.renderTryAgain();
     }
@@ -157,29 +168,38 @@ const view = {
 const gameTopic = document.getElementById('topic');
 document.querySelectorAll('.theme').forEach((theme) => {
   theme.addEventListener('click', () => {
-    // document.getElementById('body').style.height = '200vh';
     document.getElementById('Game').style.display = 'flex';
     gameTopic.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
     gameTopic.innerHTML = theme.innerHTML;
-    blocksImg.forEach((item) => item.style.zIndex = 1);
-    blocksImg[0].style.zIndex = 10;
+    // blocksImg.forEach((item) => item.style.zIndex = 1);
+    // blocksImg[0].style.zIndex = 10;
     gameState.init();
+    for (let index = 1; index <= 6; index += 1) {
+      document.querySelector(`.hangman-${index}`).classList.add('hangman_opacity-0');
+    }
+    blocksImg.forEach((item) => {
+      item.classList.add('blockImage_opacity-0');
+    });
     view.render();
   });
 });
 
 document.getElementById('icon-word').addEventListener('click', () => {
   gameState.init();
-  blocksImg.forEach((item) => item.style.zIndex = 1);
-  blocksImg[0].style.zIndex = 10;
-  // document.body.className = '';
+  // blocksImg.forEach((item) => item.style.zIndex = 1);
+  // blocksImg[0].style.zIndex = 10;
   document.querySelectorAll('.letter').forEach((letter) => {
     if (letter.classList.contains('letter-appear')) {
       letter.classList.remove('letter-appear');
     }
     letter.classList.add('letter-disappear');
   });
-  // view.render();
+  for (let index = 0; index <= 6; index += 1) {
+    document.querySelector(`.hangman-${index}`).classList.add('hangman_opacity-0');
+  }
+  blocksImg.forEach((item) => {
+    item.classList.add('blockImage_opacity-0');
+  });
   setTimeout(view.render, 1001);
 });
 
