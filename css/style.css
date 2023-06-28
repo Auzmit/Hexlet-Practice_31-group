@@ -448,6 +448,10 @@ body {
   height: 100vh;
 }
 
+.game_word {
+  width: 100vw;
+}
+
 .game-header {
   display: -webkit-box;
   display: -ms-flexbox;
