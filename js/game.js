@@ -1,13 +1,49 @@
-// import exampleJsonFile from '../json/words.json' assert { type: 'json' };;
-// const wordLists = exampleJsonFile;
-// console.log(wordLists);
-
 setTimeout(() => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
 }, 300);
+
+const audio = new Audio('./music/Last_Of_Us.mp3');
+const audioIcon = document.getElementById('audioIcon');
+audio.volume = 0;
+
+const audioButton = document.getElementById('audioButton');
+audioButton.addEventListener('click', () => {
+  if (audioButton.classList.contains('off')) {
+    audioButton.classList.remove('off');
+    audioButton.classList.add('on');
+
+    audioIcon.classList.remove('fa-volume-xmark');
+    audioIcon.classList.add('fa-volume-high');
+    audio.volume = 0.75;
+    audio.play();
+  } else
+  /* if (audioIcon.classList.contains('fa-volume-high')) {
+    audioIcon.classList.remove('fa-volume-high');
+    audioIcon.classList.add('fa-volume');
+    audio.volume = 0.5;
+  } else
+  if (audioIcon.classList.contains('fa-volume')) {
+    audioIcon.classList.remove('fa-volume');
+    audioIcon.classList.add('fa-volume-low');
+    audio.volume = 0.05;
+  } */
+  if (audioIcon.classList.contains('fa-volume-high')) {
+    audioIcon.classList.remove('fa-volume-high');
+    audioIcon.classList.add('fa-volume-low');
+    audio.volume = 0.15;
+  } else {
+    audioButton.classList.remove('on');
+    audioButton.classList.add('off');
+
+    audioIcon.classList.remove('fa-volume-low');
+    audioIcon.classList.add('fa-volume-xmark');
+    audio.volume = 0;
+    audio.pause();
+  }
+});
 
 const wordLists = {
   Животные: ['аллигатор', 'антилопа', 'бабуин', 'барсук', 'медведь', 'кошка', 'хамелеон', 'гепард', 'шиншилла', 'кобра', 'койот', 'выхухоль', 'жираф', 'гекон', 'свинья'],

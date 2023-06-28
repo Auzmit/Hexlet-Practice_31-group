@@ -343,7 +343,6 @@ body {
 
 .button-beauty:hover,
 .button-beauty:hover {
-  
   color: rgb(255, 165, 0) !important;
   background-color: black;
   background-position: 99% 50%;
@@ -356,7 +355,6 @@ body {
   text-shadow: 2px 2px rgb(32, 13, 0);
   */
 }
-
 
 .line_1 {
   display: -webkit-box;
@@ -376,9 +374,14 @@ body {
   text-shadow: 1px 0.5px rgba(164, 86, 7, 0.495);
 }
 
+.audio {
+  padding-top: 5vh;
+  display: flex;
+}
+
 .rules {
   /* display: flex; */
-  margin: 8vh auto 0;
+  margin: 3vh auto 0;
 }
 
 .rules_header {
@@ -473,7 +476,8 @@ body {
 }
 
 .button_icon-left,
-.button_icon-right {
+.button_icon-right,
+.button_my-audio {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -515,8 +519,14 @@ body {
   */
 }
 
+.button_my-audio {
+  margin: auto;
+  justify-content: left;
+}
+
 .button_icon-left:hover,
-.button_icon-right:hover {
+.button_icon-right:hover,
+.button_my-audio:hover {
   opacity: 1;
   color: #efe8ea !important;
   border: 2px solid sandybrown;
