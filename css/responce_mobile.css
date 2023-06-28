@@ -3,7 +3,7 @@
         overflow: scroll !important;
         background-position-x: 25%;
         background-size: cover;
-
+        margin: 0;
 
     }
     .blockImage{
