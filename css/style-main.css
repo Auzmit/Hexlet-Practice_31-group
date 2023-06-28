@@ -259,22 +259,62 @@ img {
     height: 100%;
     width: 100%;
     background-size: 300%;
-    background-position: center;
     border-radius: var(--size-300);
+    filter: sepia(70%);
+    animation: pan-image 15s linear infinite;
 }
 
-@keyframes .pic {
-    from {
-        background-position: 0% 0%;
+@keyframes pan-image {  
+    0% {
+      background-position: 10% 90%;
+      background-size: 300%;
     }
-
-    to {
-        background-position: 100% 100%;
+    
+    20% {
+      background-position: 10% 90%;
+      background-size: 200%;
     }
-
-    animation: .pic 15s linear infinite;
-}
-
+    
+    20.0001% { /* -- View 2 -- */
+      background-position: 20% 60%;
+      background-size: 500%;
+    }
+    
+    40% {
+      background-position: 20% 65%;
+      background-size: 500%;
+    }
+    
+    40.0001% { /* -- View 3 -- */
+      background-position: 90% 70%;
+      background-size: 300%;
+    }
+    
+    60% {
+      background-position: 70% 60%;
+      background-size: 300%;
+    }
+    
+    60.0001% { /* -- View 4 -- */
+      background-position: 0% 0%;
+      background-size: 300%;
+    }
+    
+    80% {
+      background-position: 15% 4%;
+      background-size: 300%;
+    }
+    
+    80.0001% { /* -- View 5 -- */
+      background-position: 80% 10%;
+      background-size: 250%;
+    }
+    
+    100% {
+      background-position: 60% 10%;
+      background-size: 200%;
+    }
+  }
 
 /* Слайдер */
 .text-center {
