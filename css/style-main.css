@@ -233,6 +233,15 @@ img {
         background: none;
         border: 0;
         padding: 4px 12px;
+        width: var(--size-600);
+        aspect-ratio: 1;
+
+        background-image: url("/images/icons/menu-open.svg");
+        background-size: contain;
+    }
+
+    .mobile-nav-bar[aria-expanded="true"] {
+        background-image: url("/images/icons/menu-close.svg");
     }
 
     .mobile-nav-bar
