@@ -101,5 +101,9 @@
     .none{
          display: none;
     }
+    #logo {
+        padding-left: 0.5em;
+        top: 5em;
+    }
 }
 

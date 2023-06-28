@@ -7,7 +7,8 @@ navBar.addEventListener('click', () => {
 });
 /* eslint-disable */
 const slider = new A11YSlider(document.querySelector('.slider'), {
-  adaptiveHeight: true,
-  dots: false,
+  adaptiveHeight: false,
+  arrows: false,
+  dots: true,
 });
 /* eslint-enable */

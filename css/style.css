@@ -155,14 +155,7 @@
   }
 }
 
-/* @keyframes letter-text-appear {
-  from {
-    color: rgba(244, 231, 156, 0);
-  }
-  to {
-    color: rgba(244, 231, 156, 0.693);
-  }
-} */
+
 
 :root {
   --speed-main: 3.5s;
@@ -239,6 +232,20 @@ body {
   background-image: url(../images/rope/rope.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+
+/* Лого с выходом на командный сайт */
+#logo {
+  position: absolute;
+  top: 9rem;
+  padding-left: 2em;
+  opacity: .3;
+}
+
+#logo:hover{
+  opacity: 1;
+  transition: all .4s ease-in;
 }
 
 .themes {
