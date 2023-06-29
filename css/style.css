@@ -547,12 +547,12 @@ body {
   /* border: 1px solid rgba(205, 200, 252, 0); */
 }
 
-#audioIcon {
+/* #audioIcon { */
   /* position: relative;
   top: 5%; */
   /* vertical-align: middle; */
   /* margin-left: 4%; */
-} 
+/* }  */
 
 .game-header .button_icon-left {
   margin-left: 35vw;
