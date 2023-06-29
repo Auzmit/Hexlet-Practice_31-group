@@ -734,6 +734,7 @@ body {
 }
 
 #word-guess {
+  margin-top: 6vh;
   font-family: 'mr_BelladonaStencilG';
 }
 
