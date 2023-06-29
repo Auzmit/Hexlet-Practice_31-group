@@ -297,6 +297,7 @@ body {
 
   font-family: 'mr_BelladonaStencilG';
   font-size: calc(var(--index) * 1);
+  text-shadow: 2px 1px 0 rgba(30, 13, 1, 0.6);
   /* font-weight: bold; */
 }
 
