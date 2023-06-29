@@ -6,7 +6,8 @@
     --clr-accent: hsl(27, 100%, 63%);
     --clr-accent-hover: hsl(27, 98%, 54%);
 
-    --clr-primary: hsl(233, 63%, 86%);
+    /* --clr-primary: hsl(233, 63%, 86%); */
+    --clr-primary: hsl(233, 39%, 48%);
 
     --clr-secondary: hsl(230, 88%, 76%);
 
