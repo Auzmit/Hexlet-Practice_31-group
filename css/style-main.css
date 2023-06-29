@@ -7,9 +7,9 @@
     --clr-accent-hover: hsl(27, 98%, 54%);
 
     /* --clr-primary: hsl(233, 63%, 86%); */
-    --clr-primary: hsl(233, 39%, 48%);
+    --clr-primary: hsl(303, 77%, 80%);
 
-    --clr-secondary: hsl(230, 88%, 76%);
+    --clr-secondary: hsl(257, 62%, 73%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
 
@@ -316,6 +316,21 @@ img {
       background-size: 200%;
     }
   }
+
+#game-title {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        rgb(244, 143, 177),
+        rgb(225, 113, 240),
+        rgb(210, 147, 224),
+        rgb(244, 143, 177)
+        );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 #introduction {
     animation: background-pan 3s linear infinite;
