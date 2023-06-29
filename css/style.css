@@ -387,6 +387,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  -webkit-animation-duration: var(--speed-main);
+          animation-duration: var(--speed-main);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
 }
 
 .rules {
