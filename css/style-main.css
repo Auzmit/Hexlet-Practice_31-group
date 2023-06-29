@@ -255,7 +255,7 @@ img {
     aspect-ratio: 1/1.1;
 }
 .pic-container > .pic {
-    background-image: url("/images/forMain/ded.jpg");
+    background-image: url("../images/forMain/ded.jpg");
     height: 100%;
     width: 100%;
     background-size: 300%;
