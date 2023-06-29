@@ -9,8 +9,8 @@
         
 
     }
-    #audioIcon {
-        padding-right: 2%;
+    .button_my-audio {
+        padding-right: 6%;
     }
     .blockImage{
         background-position-x: 25%;
@@ -60,8 +60,8 @@
         background-position-x: 15%;
         /* background-position: -20% -20%; */
     }
-    #audioIcon {
-        padding-right: 2%;
+    .button_my-audio {
+        padding-right: 6%;
     }
     .blockImage{
         background-position-x: 15%;
