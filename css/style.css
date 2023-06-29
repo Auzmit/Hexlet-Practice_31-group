@@ -539,6 +539,13 @@ body {
 .button_my-audio {
   margin: auto;
   justify-content: left;
+
+  -webkit-animation-duration: var(--speed-main);
+          animation-duration: var(--speed-main);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
 }
 
 .button_icon-left:hover,
