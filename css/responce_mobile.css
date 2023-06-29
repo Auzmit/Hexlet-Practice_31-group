@@ -1,4 +1,4 @@
-@media screen and (orientation: landscape) and (max-width: 850px) {
+@media screen and (orientation: landscape) and (max-width: 870px) {
     #body{
         overflow: scroll !important;
         background-position-x: 25%;

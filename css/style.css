@@ -241,6 +241,7 @@ body {
   top: 9rem;
   padding-left: 2em;
   opacity: .3;
+  z-index: 4;
 }
 
 #logo:hover{
@@ -384,6 +385,8 @@ body {
 .audio {
   padding-top: 5vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rules {
