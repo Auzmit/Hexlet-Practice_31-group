@@ -162,7 +162,7 @@
   --speed-hangman: .5s; /* in js must +1: setTimeout(defaultHangmans, 501); */
   --step: 25px;
   --width: calc(var(--step) * 3);
-  --height: calc(var(--step) * 8);
+  --height: calc(var(--step) * 6);
   --index: calc(1vw + 1vh); /* = 26px (on fullscreen) */
 }
 

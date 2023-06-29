@@ -63,8 +63,13 @@
 
     }
     .game {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         /* margin: 0; */
         /* gap: 20px; */
     }
@@ -86,10 +91,17 @@
   
     .button_icon-left,
     .button_icon-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         margin: 0;
         gap: 20vh;
         
@@ -106,4 +118,3 @@
         top: 5em;
     }
 }
-
