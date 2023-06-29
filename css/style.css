@@ -385,8 +385,7 @@ body {
 .audio {
   padding-top: 5vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .rules {
@@ -490,7 +489,7 @@ body {
 .button_my-audio {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
