@@ -192,13 +192,24 @@ img {
     font-weight: var(--fw-semi-bold);
 }
 
-.nav-list a {
+/* .nav-list a {
     text-decoration: none;
     color: var(--clr-neutral-900);
 }
 
 .nav-list a:hover,
 .nav-list a:focus {
+    color: var(--clr-accent);
+} */
+
+.nav-list li {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+}
+
+.nav-list li:hover,
+.nav-list li:focus {
+    cursor: pointer;
     color: var(--clr-accent);
 }
 
