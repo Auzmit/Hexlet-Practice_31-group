@@ -66,9 +66,12 @@ const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
 
+const excludedWords = []
+
 function pickRandomWord(list) {
-  const index = Math.trunc(Math.random() * list.length);
-  return list[index];
+  const filteredList = list.filter(word => !excludedWords.includes(word));
+  const index = Math.trunc(Math.random() * filteredList.length);
+  return filteredList[index];
 }
 
 const gameState = {
@@ -155,6 +158,9 @@ const view = {
         button.addEventListener('click', () => {
           gameState.openLetter(letter);
           this.render();
+          if (gameState.isWin() || gameState.isGameOver()) {
+            excludedWords.push(gameState.word) 
+          }
         });
       });
     }
