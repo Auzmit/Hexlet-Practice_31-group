@@ -268,11 +268,16 @@ const restartHandler = () => {
 
 document.getElementById('icon-word').addEventListener('click', restartHandler);
 
+const body = document.getElementById('body');
+document.getElementById('icon-category').addEventListener('click', () => {
+  body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+});
+
 document.addEventListener('keyup', (e) => {
   console.log(e.key);
   const letterPressed = e.key;
   if (letterPressed.match(/^[а-яА-ЯёЁ]$/)) {
-    view.openLetterHandler(letterPressed)();
+    view.openLetterHandler(letterPressed.toLocaleLowerCase())();
   }
   if (letterPressed === 'Enter') {
     if (gameState.isGameOver() || gameState.isWin()) {
@@ -280,11 +285,9 @@ document.addEventListener('keyup', (e) => {
       restartHandler();
     }
   }
-});
-
-const body = document.getElementById('body');
-document.getElementById('icon-category').addEventListener('click', () => {
-  body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+  if (letterPressed === 'Backspace') {
+    body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+  }
 });
 
 const rules = document.querySelector('.rules_header');
