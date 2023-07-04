@@ -66,9 +66,13 @@ const maxAttempts = 6;
 const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 const alphabetLetters = alphabet.split('');
 
+const excludedWords = [];
+
 function pickRandomWord(list) {
-  const index = Math.trunc(Math.random() * list.length);
-  return list[index];
+  const filteredList = list.filter((word) => !excludedWords.includes(word));
+  if (filteredList.length === 0) return null;
+  const index = Math.trunc(Math.random() * filteredList.length);
+  return filteredList[index];
 }
 
 const gameState = {
@@ -88,6 +92,7 @@ const gameState = {
     console.log(this.word);
   },
   openLetter(letter) {
+    if (this.openedLetters.includes(letter)) return;
     this.openedLetters.push(letter);
 
     const isLetterFound = this.getWordLetters().includes(letter);
@@ -144,6 +149,16 @@ const view = {
     });
   },
 
+  openLetterHandler(letter) {
+    return () => {
+      gameState.openLetter(letter);
+      this.render();
+      if (gameState.isWin() || gameState.isGameOver()) {
+        excludedWords.push(gameState.word);
+      }
+    };
+  },
+
   renderKeyboard() {
     const keyboardContainer = document.getElementById('keyboard');
     if (keyboardContainer.innerHTML === '') {
@@ -152,12 +167,10 @@ const view = {
         button.innerText = letter;
         button.classList.add(`button-${letter}`);
         keyboardContainer.appendChild(button);
-        button.addEventListener('click', () => {
-          gameState.openLetter(letter);
-          this.render();
-        });
+        button.addEventListener('click', this.openLetterHandler(letter));
       });
     }
+
     alphabetLetters.forEach((letter) => {
       const button = document.querySelector(`.button-${letter}`);
       button.disabled = gameState.openedLetters.includes(letter);
@@ -185,7 +198,20 @@ const view = {
     document.getElementById('word-guess').style.color = 'green';
   },
 
+  errorElement: document.createElement('p'),
+
+  appendErrorMessage() {
+    console.log('слова закончились');
+    view.errorElement.classList.add('error-message');
+    view.errorElement.innerText = 'К сожалению, вы уже видели все слова на эту тему. Попробуйте другую тему или перезагрузите страницу';
+    document.querySelector('#parent-letters').append(view.errorElement);
+  },
+
   render() {
+    if (gameState.word === null) {
+      view.appendErrorMessage();
+      return;
+    }
     view.renderWord();
     view.renderKeyboard();
     view.renderBackground();
@@ -199,6 +225,7 @@ const view = {
       view.renderKeyboard();
     }
   },
+
 };
 
 const gameTopic = document.getElementById('topic');
@@ -220,7 +247,7 @@ document.querySelectorAll('.theme').forEach((theme) => {
   });
 });
 
-document.getElementById('icon-word').addEventListener('click', () => {
+const restartHandler = () => {
   gameState.init();
   // blocksImg.forEach((item) => item.style.zIndex = 1);
   // blocksImg[0].style.zIndex = 10;
@@ -237,11 +264,30 @@ document.getElementById('icon-word').addEventListener('click', () => {
     item.classList.add('blockImage_opacity-0');
   });
   setTimeout(view.render, 1001);
-});
+};
+
+document.getElementById('icon-word').addEventListener('click', restartHandler);
 
 const body = document.getElementById('body');
 document.getElementById('icon-category').addEventListener('click', () => {
   body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+});
+
+document.addEventListener('keyup', (e) => {
+  console.log(e.key);
+  const letterPressed = e.key;
+  if (letterPressed.match(/^[а-яА-ЯёЁ]$/)) {
+    view.openLetterHandler(letterPressed.toLocaleLowerCase())();
+  }
+  if (letterPressed === 'Enter') {
+    if (gameState.isGameOver() || gameState.isWin()) {
+      console.log('restrat');
+      restartHandler();
+    }
+  }
+  if (letterPressed === 'Backspace') {
+    body.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'end' });
+  }
 });
 
 const rules = document.querySelector('.rules_header');
