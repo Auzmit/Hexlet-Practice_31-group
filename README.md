@@ -2,10 +2,7 @@
 Group 31 project for practice in June 2023
 
 # Try it now!
-[![Website](https://img.shields.io/website?style=plastic&url=https%3A%2F%2Fauzmit.github.io%2FHexlet-Practice_31_group%2F)](https://auzmit.github.io/Hexlet-Practice_31-group/)
 [![Website](https://img.shields.io/website?style=plastic&url=https%3A%2F%2Fauzmit.github.io%2FHexlet-Practice_31-group%2F)](https://auzmit.github.io/Hexlet-Practice_31-group/)
-
-
 
 <br />
 
