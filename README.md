@@ -4,21 +4,21 @@ Group 31 project for practice in June 2023
 # Try it now!
 [![Website](https://img.shields.io/website?style=plastic&url=https%3A%2F%2Fauzmit.github.io%2FHexlet-Practice_31-group%2F)](https://auzmit.github.io/Hexlet-Practice_31-group/)
 
-<br />
+<br/>
 
 ### Github actions
-[![Actions Status](https://github.com/Auzmit/31_group/actions/workflows/test-on-push.yml/badge.svg?event=push)](https://github.com/Auzmit/31_group/actions/workflows/test-on-push.yml)
+[![Actions Status](https://github.com/Auzmit/Hexlet-Practice_31-group/actions/workflows/test-on-push.yml/badge.svg?event=push)](https://github.com/Auzmit/Hexlet-Practice_31-group/actions/workflows/test-on-push.yml)
 
 ### Codeclimate
-[![Maintainability](https://api.codeclimate.com/v1/badges/706d394fd071c4272f1d/maintainability)](https://codeclimate.com/github/Auzmit/31_group/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/706d394fd071c4272f1d/test_coverage)](https://codeclimate.com/github/Auzmit/31_group/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/706d394fd071c4272f1d/maintainability)](https://codeclimate.com/github/Auzmit/Hexlet-Practice_31-group/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/706d394fd071c4272f1d/test_coverage)](https://codeclimate.com/github/Auzmit/Hexlet-Practice_31-group/test_coverage)
 
 ### Setup
 ```bash
 make install
 ```
 
-<br />
+<br/>
 
 ### We use:
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
@@ -69,6 +69,6 @@ make install
 
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Auzmit/31_group)
-![GitHub last commit](https://img.shields.io/github/last-commit/Auzmit/31_group)
-![GitHub watchers](https://img.shields.io/github/watchers/Auzmit/31_group?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/Auzmit/Hexlet-Practice_31-group)
+![GitHub last commit](https://img.shields.io/github/last-commit/Auzmit/Hexlet-Practice_31-group)
+![GitHub watchers](https://img.shields.io/github/watchers/Auzmit/Hexlet-Practice_31-group?style=social)
