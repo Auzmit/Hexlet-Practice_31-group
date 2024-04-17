@@ -67,7 +67,7 @@ make install
 </tr>
 </table>
 
-<br />
+<br/>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Auzmit/Hexlet-Practice_31-group)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Auzmit/Hexlet-Practice_31-group)
